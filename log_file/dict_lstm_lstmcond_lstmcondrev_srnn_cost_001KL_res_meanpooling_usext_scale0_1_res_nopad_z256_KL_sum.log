@@ -1,0 +1,17 @@
+Using gpu device 1: GeForce GTX TITAN Z (CNMeM is disabled, cuDNN 4007)
+current save dir  /home/guoyu/results/MSR-VTT/dict_lstm_lstmcond_lstmcondrev_srnn_cost_001KL_res_meanpooling_usext_scale0_1_res_nopad_z256_KL_sum/save_dir/
+creating directory /home/guoyu/results/MSR-VTT/dict_lstm_lstmcond_lstmcondrev_srnn_cost_001KL_res_meanpooling_usext_scale0_1_res_nopad_z256_KL_sum/save_dir/
+erasing everything in  /home/guoyu/results/MSR-VTT/dict_lstm_lstmcond_lstmcondrev_srnn_cost_001KL_res_meanpooling_usext_scale0_1_res_nopad_z256_KL_sum/save_dir/
+rm: cannot remove ‘/home/guoyu/results/MSR-VTT/dict_lstm_lstmcond_lstmcondrev_srnn_cost_001KL_res_meanpooling_usext_scale0_1_res_nopad_z256_KL_sum/save_dir//*’: No such file or directory
+saving model config into /home/guoyu/results/MSR-VTT/dict_lstm_lstmcond_lstmcondrev_srnn_cost_001KL_res_meanpooling_usext_scale0_1_res_nopad_z256_KL_sum/save_dir/model_config.pkl
+Model Type: attention
+Dataset: msr-vtt
+Command: train_model.py
+training an attention model
+/home/guoyu/code/code_by_myself/MP_lstm-lstm_srnn_bonuli_usext/model_SRNN_lstm_gru.py:19: UserWarning: Feeding context to output directly seems to hurt.
+  warnings.warn('Feeding context to output directly seems to hurt.')
+Loading data
+loading youtube2text googlenet features
+uneven minibath chunking, overall 64, last one 20
+uneven minibath chunking, overall 200, last one 140
+init params

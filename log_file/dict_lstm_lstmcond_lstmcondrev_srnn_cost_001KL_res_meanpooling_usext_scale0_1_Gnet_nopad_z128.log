@@ -1,0 +1,9 @@
+Using gpu device 1: GeForce GTX TITAN Z (CNMeM is disabled, cuDNN 4007)
+Traceback (most recent call last):
+  File "train_model.py", line 9, in <module>
+    import model_SRNN_lstm_gru
+  File "/home/guoyu/code/code_by_myself/MP_lstm-lstm_srnn_bonuli_usext/model_SRNN_lstm_gru.py", line 7, in <module>
+    import data_engine_googlenet
+  File "/home/guoyu/code/code_by_myself/MP_lstm-lstm_srnn_bonuli_usext/data_engine_googlenet.py", line 8, in <module>
+    import tables
+ImportError: No module named tables

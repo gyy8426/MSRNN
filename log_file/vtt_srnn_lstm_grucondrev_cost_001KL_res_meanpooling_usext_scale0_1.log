@@ -1,0 +1,32 @@
+Using gpu device 0: GeForce GTX TITAN Z (CNMeM is disabled, cuDNN 4007)
+current save dir  /home/guoyu/results/msr-vtt/vtt_srnn_lstm_grucondrev_cost_001KL_res_meanpooling_usext_scale0_1/save_dir/
+creating directory /home/guoyu/results/msr-vtt/vtt_srnn_lstm_grucondrev_cost_001KL_res_meanpooling_usext_scale0_1/save_dir/
+erasing everything in  /home/guoyu/results/msr-vtt/vtt_srnn_lstm_grucondrev_cost_001KL_res_meanpooling_usext_scale0_1/save_dir/
+rm: cannot remove ‘/home/guoyu/results/msr-vtt/vtt_srnn_lstm_grucondrev_cost_001KL_res_meanpooling_usext_scale0_1/save_dir//*’: No such file or directory
+saving model config into /home/guoyu/results/msr-vtt/vtt_srnn_lstm_grucondrev_cost_001KL_res_meanpooling_usext_scale0_1/save_dir/model_config.pkl
+Model Type: attention
+Dataset: msr-vtt
+Command: train_model.py
+training an attention model
+/home/guoyu/code/code_by_myself/MP_lstm-lstm_srnn_bonuli_usext/model_SRNN_lstm_gru.py:17: UserWarning: Feeding context to output directly seems to hurt.
+  warnings.warn('Feeding context to output directly seems to hurt.')
+Loading data
+loading youtube2text googlenet features
+Traceback (most recent call last):
+  File "train_model.py", line 105, in <module>
+    sys.exit(main(state))
+  File "train_model.py", line 91, in main
+    train_from_scratch(config, state, channel)
+  File "train_model.py", line 84, in train_from_scratch
+    model_SRNN_lstm_gru.train_from_scratch(state, channel)
+  File "/home/guoyu/code/code_by_myself/MP_lstm-lstm_srnn_bonuli_usext/model_SRNN_lstm_gru.py", line 844, in train_from_scratch
+    model.train(**state.attention)
+  File "/home/guoyu/code/code_by_myself/MP_lstm-lstm_srnn_bonuli_usext/model_SRNN_lstm_gru.py", line 443, in train
+    K, OutOf)
+  File "/home/guoyu/code/code_by_myself/MP_lstm-lstm_srnn_bonuli_usext/data_engine.py", line 26, in __init__
+    self.load_data()
+  File "/home/guoyu/code/code_by_myself/MP_lstm-lstm_srnn_bonuli_usext/data_engine.py", line 157, in load_data
+    self.Wemb = utils.load_pkl(dataset_path + 'word2vec/Wemb.pkl')
+  File "/home/guoyu/code/code_by_myself/MP_lstm-lstm_srnn_bonuli_usext/utils.py", line 184, in load_pkl
+    f = open(path, 'rb')
+IOError: [Errno 2] No such file or directory: '/mnt/disk3/guozhao/predatas//MSR-VTT/word2vec/Wemb.pkl'

@@ -1,0 +1,484 @@
+cons : -8.0
+tempKL_decay : 1.02
+verbose : True
+metric : everything
+lrate : 0.0001
+isGlobal : True
+dataset : youtube2text
+patience : 20
+OutOf : None
+n_layers_init : 0
+max_epochs : 500
+tempKL_start : 0.01
+dispFreq : 10
+num_hidden_mlp : 256
+save_model_dir : /home/guoyu/results/youtube/test/dict_lstm_lstmcond_lstmcondrev_srnn_cost_001KL_res_meanpooling_usext_scale0_1_resNet_nopad_z256_KL_sum/save_dir/
+a_layer_type : lstm_cond
+prev2out : True
+decay : 1.2
+video_feature : googlenet
+clip_c : 10.0
+smoothing : True
+latent_size_z : 256
+rnn_word_dim : 512
+ctx_dim : -1
+LB_beta_init : 1.0
+valid_batch_size : 200
+reload_ : False
+nonlin_decoder : clipped_very_leaky_rectify
+n_layers_out : 1
+optimizer : adadelta
+validFreq : 1000
+encoder_dim : 1024
+K : 28
+batch_size : 64
+selector : True
+latent_size_a : 512
+alpha_entropy_r : 0.0
+n_words : 20000
+att_fun : None
+decay_c : 0.0001
+from_dir : /home/guoyu/results/youtube/test/dict_lstm_lstmcond_lstmcondrev_srnn_cost_001KL_res_meanpooling_usext_scale0_1_resNet_nopad_z256_KL_sum/from_dir/
+rnn_cond_wv_dim : 512
+use_dropout : True
+loss_fun : cost_KL
+sampleFreq : 100
+alpha_c : 0.70602
+tolerance_softmax : 1e-08
+scale_decay : 1.0
+saveFreq : -1
+flat_mlp_num : 1
+maxlen : 30
+srnn_scale : 0.1
+no_decay_epochs : 20
+tempKL_type : linear
+unroll_scan : False
+debug : False
+ctx2out : True
+decay_type : exponential
+dim_word : 512
+use_mu_residual_q : True
+tempKL_epochs : 20
+loading youtube2text googlenet features
+uneven minibath chunking, overall 64, last one 12
+uneven minibath chunking, overall 200, last one 91
+uneven minibath chunking, overall 200, last one 168
+Reloading model params...
+ctx_dim is  2048
+murnn using lstm cond
+<bound method OrderedDict.keys of OrderedDict([('Wemb', Wemb), ('emb_ff1_W', emb_ff1_W), ('emb_ff1_b', emb_ff1_b), ('tu_rnn_W', tu_rnn_W), ('tu_rnn_U', tu_rnn_U), ('tu_rnn_b', tu_rnn_b), ('mu_rnn_W', mu_rnn_W), ('mu_rnn_V', mu_rnn_V), ('mu_rnn_U', mu_rnn_U), ('mu_rnn_b', mu_rnn_b), ('a_rnn_W', a_rnn_W), ('a_rnn_V', a_rnn_V), ('a_rnn_U', a_rnn_U), ('a_rnn_b', a_rnn_b), ('mean_prior_dense1_W', mean_prior_dense1_W), ('mean_prior_dense1_b', mean_prior_dense1_b), ('mean_prior_dense2_W', mean_prior_dense2_W), ('mean_prior_dense2_b', mean_prior_dense2_b), ('log_var_prior_dense1_W', log_var_prior_dense1_W), ('log_var_prior_dense1_b', log_var_prior_dense1_b), ('log_var_prior_dense2_W', log_var_prior_dense2_W), ('log_var_prior_dense2_b', log_var_prior_dense2_b), ('mean_q_dense1_W', mean_q_dense1_W), ('mean_q_dense1_b', mean_q_dense1_b), ('mean_q_dense2_W', mean_q_dense2_W), ('mean_q_dense2_b', mean_q_dense2_b), ('log_var_q_dense1_W', log_var_q_dense1_W), ('log_var_q_dense1_b', log_var_q_dense1_b), ('log_var_q_dense2_W', log_var_q_dense2_W), ('log_var_q_dense2_b', log_var_q_dense2_b), ('ff_logit_zd_W', ff_logit_zd_W), ('ff_logit_zd_b', ff_logit_zd_b)])>
+buliding sampler
+Building f_init... Done
+building f_next...
+Done
+ground truth!
+a man slices a potato
+
+
+a man cuts a potato into sections
+
+
+a man is cutting a potato
+
+
+a man is slicing a potato into pieces
+
+
+a man is slicing a potato
+
+
+a man is slicing a potato
+
+
+a man is slicing a potato
+
+
+a man is slicing potato
+
+
+a man sliced a potatoe
+
+
+a man slices a peeled potato into thick slices and thereafter cuts each of them into half
+
+
+a man slices a potato
+
+
+a person cuts up potatos
+
+
+a person is chopping a vegetable into thick slices
+
+
+a person is chopping up potatoes
+
+
+a person is slicing a potato
+
+
+someone is cutting potato
+
+
+someone is cutting potatoes
+
+
+someone is slicing a potato
+
+
+the man is slicing a potato
+
+
+the man is slicing potatoes
+
+
+the man sliced a potatoe
+
+
+a lady cutting potatto with knife
+
+
+a man is cutting a potatoe
+
+
+a man telling the style for cutting a patato
+
+
+a person is chopping potatoes
+
+
+greek gyro sandwich recipe with tzatziki sauce
+
+
+greek gyro sandwich recipe with tzatziki sauce step 1 homemade french fries recipe
+
+
+he is cutting
+
+
+how to make greek gyro sandwich recipe with tzatziki sauce
+
+
+man slicing a potato
+
+
+the chef is making greek gyro sandwich with tzatziki sauce
+
+
+the women are making the gyro sandwich recipe
+
+
+a guy is preparing the gyro recipe
+
+
+a man cuts a vegetable
+
+
+a man cutting a potato through a knife inorder to make sandwiches
+
+
+a man is cutting a potato
+
+
+a man is cutting potato into pieces
+
+
+a man is cutting potato
+
+
+a man is cutting the potato using knife
+
+
+a man is preparing food
+
+
+a man is slicing a potato
+
+
+a man is slicing a potato
+
+
+a man is slicing a potato
+
+
+a man is slicing a potato
+
+
+a man is slicing a potato
+
+
+a man is slicing a potato
+
+
+a man is slicing potatoes
+
+
+a person is cutting the aloe
+
+
+man cutting a potato into pieces
+
+
+man makes gyro sandwich
+
+
+someone is cutting a potato on a ctting board
+
+
+someone is slicing vegetable
+
+
+a man is slicing potatoes
+
+
+the person is cutting the potato
+
+
+sample 
+
+a man is slicing a potato
+ground truth!
+the lady is slicing onions
+
+
+a woman is slicing partially into half of an onion
+
+
+a woman slices an onion
+
+
+w woman is making narrow cuts in a piece of onion
+
+
+a woman is cutting an onion
+
+
+a woman is slicing an onion
+
+
+a woman is chopping an onion
+
+
+a woman is slicing onion
+
+
+a woman is cutting through an onion
+
+
+a woman is slicing an onion with a knife
+
+
+a woman carefully slices an onion
+
+
+a woman is slicing an onion
+
+
+a woman is slicing an onion
+
+
+a japanese woman is slicing an onion in the kitchen
+
+
+the lady sliced an onion
+
+
+the woman is slicing onions
+
+
+a woman is slicing an onion
+
+
+an onion is sliced
+
+
+a woman cuts up an onion
+
+
+the lady cut an onion
+
+
+man cutting an onion with knief
+
+
+the women is cutting the something
+
+
+a woman is cutting a vegetable
+
+
+a woman slices an onion
+
+
+a woman is cutting an onion
+
+
+a lady was choping the onion in small pieces with dog
+
+
+a woman is slicing an onion
+
+
+a woman coking
+
+
+she is cutting vegetable
+
+
+one chinees lady doing some preparation for omurice with his dog
+
+
+the lady sliced the onion
+
+
+a woman is cutting onions
+
+
+the woman is dicing onions
+
+
+a women is trying to made food
+
+
+a woman is cutting an onion
+
+
+super preparing detail for omurice
+
+
+a woman demonstrates proper onion cutting technique
+
+
+sample 
+
+a woman is slicing an onion
+ground truth!
+a woman is cutting meat
+
+
+someone is cutting up raw meat into bite-sized pieces
+
+
+a person cuts chicken
+
+
+someone is cutting a piece of meat into smaller pieces
+
+
+a person is slicing a meat into pieces
+
+
+a chef slices a piece of chicken
+
+
+a woman is cutting meat
+
+
+a man is cutting meat into small pieces
+
+
+a woman is slicing meat with a knife
+
+
+a person cuts a raw piece of meat
+
+
+someone is cutting meat
+
+
+someone is slicing meat
+
+
+a woman is slicing up some meat
+
+
+the lady cut the meat into pieces
+
+
+the woman is slicing chicken
+
+
+meat is cut
+
+
+a woman cuts some meat
+
+
+a person is slicing raw chicken meat into small pieces
+
+
+the lady cut the meat into pieces
+
+
+easiast way to make amurice
+
+
+a woman is cutting meat
+
+
+the person is cutting the something
+
+
+chopping up boneless chicken
+
+
+a woman is cutting chicken
+
+
+a lady is slicing the meat in to pieces
+
+
+a lady is cutting meat
+
+
+a person is cutting some meat
+
+
+a woman is cutting up meat
+
+
+a lady is cutting the chicken meat into half inch pieces
+
+
+cooking the chiken
+
+
+a man is cuttinga slioces of meat
+
+
+someone is cutting some chicken
+
+
+someone is slicing meat
+
+
+a person is saying about to make omurice
+
+
+a chinese lady cutting some flesh inorder to make omurice
+
+
+a woman is cutting meat
+
+
+a person telling that how to make omurice
+
+
+a man cooking his kichen
+
+
+the woman is slicing chicken
+
+
+the person is cutting chicken
+
+
+anyone is making dish
+
+
+a woman is cutting up a piece of chicken
+
+
+sample 
+
+a woman is cutting meat

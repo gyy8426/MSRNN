@@ -1,0 +1,26 @@
+WARNING (theano.sandbox.cuda): The cuda backend is deprecated and will be removed in the next release (v0.10).  Please switch to the gpuarray backend. You can get more information about how to switch at this URL:
+ https://github.com/Theano/Theano/wiki/Converting-to-the-new-gpu-back-end%28gpuarray%29
+
+ERROR (theano.sandbox.cuda): ERROR: Not using GPU. Initialisation of device 0 failed:
+initCnmem: cnmemInit call failed! Reason=CNMEM_STATUS_OUT_OF_MEMORY. numdev=1
+
+WARNING (theano.sandbox.cuda): The cuda backend is deprecated and will be removed in the next release (v0.10).  Please switch to the gpuarray backend. You can get more information about how to switch at this URL:
+ https://github.com/Theano/Theano/wiki/Converting-to-the-new-gpu-back-end%28gpuarray%29
+
+ERROR (theano.sandbox.cuda): ERROR: Not using GPU. Initialisation of device gpu failed:
+initCnmem: cnmemInit call failed! Reason=CNMEM_STATUS_OUT_OF_MEMORY. numdev=1
+
+Traceback (most recent call last):
+  File "train_model.py", line 6, in <module>
+    import utils
+  File "/home/guoyuyu/code/code_by_myself/video_caption/MS_RNN-Multi-Modal-Stochastic-RNNs-for-Video-Captioning/utils.py", line 5, in <module>
+    import theano
+  File "/home/guoyuyu/deeplearning_framework/Theano/theano/__init__.py", line 116, in <module>
+    theano.sandbox.cuda.tests.test_driver.test_nvidia_driver1()
+  File "/home/guoyuyu/deeplearning_framework/Theano/theano/sandbox/cuda/tests/test_driver.py", line 30, in test_nvidia_driver1
+    A = cuda.shared_constructor(a)
+  File "/home/guoyuyu/deeplearning_framework/Theano/theano/sandbox/cuda/var.py", line 166, in float32_shared_constructor
+    enable_cuda=False)
+  File "/home/guoyuyu/deeplearning_framework/Theano/theano/sandbox/cuda/__init__.py", line 589, in use
+    gpu_init(use.device_number, config.lib.cnmem)
+RuntimeError: ('initCnmem: cnmemInit call failed! Reason=CNMEM_STATUS_OUT_OF_MEMORY. numdev=1\n', 'You asked to force this device and it failed. No fallback to the cpu or other gpu device.')

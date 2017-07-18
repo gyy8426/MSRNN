@@ -1,0 +1,123 @@
+Using gpu device 0: GeForce GTX TITAN Z (CNMeM is disabled, cuDNN 4007)
+current save dir  /home/guoyu/results/MSR-VTT/word2vec_lstm_lstmcond_lstmcondrev_srnn_cost_001KL_res_meanpooling_usext_scale0_1_resc3d_nopad_z256_KL_sum_vtt/save_dir/
+/home/guoyu/results/MSR-VTT/word2vec_lstm_lstmcond_lstmcondrev_srnn_cost_001KL_res_meanpooling_usext_scale0_1_resc3d_nopad_z256_KL_sum_vtt/save_dir/ already exists!
+saving model config into /home/guoyu/results/MSR-VTT/word2vec_lstm_lstmcond_lstmcondrev_srnn_cost_001KL_res_meanpooling_usext_scale0_1_resc3d_nopad_z256_KL_sum_vtt/save_dir/model_config.pkl
+Model Type: attention
+Dataset: msr-vtt
+Command: train_model.py
+training an attention model
+/home/guoyu/code/code_by_myself/MP_lstm-lstm_srnn_bonuli_usext/model_SRNN_lstm_gru.py:20: UserWarning: Feeding context to output directly seems to hurt.
+  warnings.warn('Feeding context to output directly seems to hurt.')
+Loading data
+loading youtube2text googlenet features
+uneven minibath chunking, overall 256, last one 212
+uneven minibath chunking, overall 200, last one 140
+batch size is 256
+init params
+tempKL_decay : 1.02
+num_hidden_mlp : 256
+lrate : 0.0001
+isGlobal : True
+decay_c : 0.0001
+patience : 20
+OutOf : None
+n_layers_init : 0
+tempKL_start : 0.01
+optimizer : adadelta
+temperature_KL : 1.0
+verbose : True
+decay : 1.2
+clip_c : 10.0
+smoothing : True
+rnn_word_dim : 512
+LB_beta_init : 1.0
+random_seed : 1234
+alpha_c : 0.70602
+selector : True
+save_model_dir : /home/guoyu/results/MSR-VTT/word2vec_lstm_lstmcond_lstmcondrev_srnn_cost_001KL_res_meanpooling_usext_scale0_1_resc3d_nopad_z256_KL_sum_vtt/save_dir/
+dataset : msr-vtt
+from_dir : /home/guoyu/results/MSR-VTT/word2vec_lstm_lstmcond_lstmcondrev_srnn_cost_001KL_res_meanpooling_usext_scale0_1_resc3d_nopad_z256_KL_sum_vtt/from_dir/
+rnn_cond_wv_dim : 512
+loss_fun : cost_KL
+alpha_entropy_r : 0.0
+scale_decay : 1.0
+att_fun : None
+tempKL_type : linear
+unroll_scan : False
+debug : False
+decay_type : exponential
+reload_ : False
+cons : -8.0
+metric : everything
+tempKL_epochs : 20
+max_epochs : 500
+dispFreq : 10
+validFreq : 1000
+a_layer_type : lstm_cond
+prev2out : True
+video_feature : googlenet
+latent_size_z : 256
+ctx_dim : 2048
+valid_batch_size : 200
+nonlin_decoder : clipped_very_leaky_rectify
+word2vec : True
+encoder_dim : 1024
+K : 28
+batch_size : 256
+latent_size_a : 512
+n_words : 20625
+encoder : none
+use_dropout : True
+tolerance_softmax : 1e-08
+dim_word : 300
+sampleFreq : 100
+n_layers_out : 1
+saveFreq : -1
+flat_mlp_num : 1
+maxlen : 30
+srnn_scale : 0.1
+no_decay_epochs : 20
+ctx2out : True
+use_mu_residual_q : False
+murnn using lstm cond
+<bound method OrderedDict.keys of OrderedDict([('emb_ff1_W', emb_ff1_W), ('emb_ff1_b', emb_ff1_b), ('tu_rnn_W', tu_rnn_W), ('tu_rnn_U', tu_rnn_U), ('tu_rnn_b', tu_rnn_b), ('mu_rnn_W', mu_rnn_W), ('mu_rnn_V', mu_rnn_V), ('mu_rnn_U', mu_rnn_U), ('mu_rnn_b', mu_rnn_b), ('a_rnn_W', a_rnn_W), ('a_rnn_V', a_rnn_V), ('a_rnn_U', a_rnn_U), ('a_rnn_b', a_rnn_b), ('mean_prior_dense1_W', mean_prior_dense1_W), ('mean_prior_dense1_b', mean_prior_dense1_b), ('mean_prior_dense2_W', mean_prior_dense2_W), ('mean_prior_dense2_b', mean_prior_dense2_b), ('log_var_prior_dense1_W', log_var_prior_dense1_W), ('log_var_prior_dense1_b', log_var_prior_dense1_b), ('log_var_prior_dense2_W', log_var_prior_dense2_W), ('log_var_prior_dense2_b', log_var_prior_dense2_b), ('mean_q_dense1_W', mean_q_dense1_W), ('mean_q_dense1_b', mean_q_dense1_b), ('mean_q_dense2_W', mean_q_dense2_W), ('mean_q_dense2_b', mean_q_dense2_b), ('log_var_q_dense1_W', log_var_q_dense1_W), ('log_var_q_dense1_b', log_var_q_dense1_b), ('log_var_q_dense2_W', log_var_q_dense2_W), ('log_var_q_dense2_b', log_var_q_dense2_b), ('ff_logit_zd_W', ff_logit_zd_W), ('ff_logit_zd_b', ff_logit_zd_b)])>
+murnn using lstm cond
+buliding sampler
+Building f_init... Done
+building f_next...
+Done
+building f_log_probs
+compute grad
+build train fns
+compilation took 93.8636 sec
+Optimization
+Epoch  0
+Error allocating 570240000 bytes of device memory (out of memory). Driver report 303673344 bytes free and 6434443264 bytes total 
+Traceback (most recent call last):
+  File "train_model.py", line 105, in <module>
+    sys.exit(main(state))
+  File "train_model.py", line 91, in main
+    train_from_scratch(config, state, channel)
+  File "train_model.py", line 84, in train_from_scratch
+    model_SRNN_lstm_gru.train_from_scratch(state, channel)
+  File "/home/guoyu/code/code_by_myself/MP_lstm-lstm_srnn_bonuli_usext/model_SRNN_lstm_gru.py", line 868, in train_from_scratch
+    model.train(**state.attention)
+  File "/home/guoyu/code/code_by_myself/MP_lstm-lstm_srnn_bonuli_usext/model_SRNN_lstm_gru.py", line 630, in train
+    rvals = f_grad_shared(x, mask, ctx, ctx_mask, x_t_3,temp_KL)
+  File "/home/guoyu/code/dp_framework/Theano/theano/compile/function_module.py", line 886, in __call__
+    storage_map=getattr(self.fn, 'storage_map', None))
+  File "/home/guoyu/code/dp_framework/Theano/theano/gof/link.py", line 325, in raise_with_op
+    reraise(exc_type, exc_value, exc_trace)
+  File "/home/guoyu/code/dp_framework/Theano/theano/compile/function_module.py", line 873, in __call__
+    self.fn() if output_subset is None else\
+MemoryError: Error allocating 570240000 bytes of device memory (out of memory).
+Apply node that caused the error: GpuFromHost(AdvancedIncSubtensor{inplace=False,  set_instead_of_inc=False}.0)
+Toposort index: 1037
+Inputs types: [TensorType(float32, matrix)]
+Inputs shapes: [(6912, 20625)]
+Inputs strides: [(82500, 4)]
+Inputs values: ['not shown']
+Outputs clients: [[GpuDimShuffle{0,x,1,x}(GpuFromHost.0)]]
+
+HINT: Re-running with most Theano optimization disabled could give you a back-trace of when this node was created. This can be done with by setting the Theano flag 'optimizer=fast_compile'. If that does not work, Theano optimizations can be disabled with 'optimizer=None'.
+HINT: Use the Theano flag 'exception_verbosity=high' for a debugprint and storage map footprint of this apply node.

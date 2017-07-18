@@ -1,0 +1,3429 @@
+WARNING (theano.sandbox.cuda): The cuda backend is deprecated and will be removed in the next release (v0.10).  Please switch to the gpuarray backend. You can get more information about how to switch at this URL:
+ https://github.com/Theano/Theano/wiki/Converting-to-the-new-gpu-back-end%28gpuarray%29
+
+INFO (theano.gof.compilelock): Waiting for existing lock by process '31525' (I am process '31449')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/guoyu/.theano/compiledir_Linux-3.16--generic-x86_64-with-Ubuntu-14.04-trusty-x86_64-2.7.6-64/lock_dir
+Using gpu device 1: GeForce GTX TITAN Z (CNMeM is disabled, cuDNN 5005)
+current save dir  /home/guoyu/results/youtube/srnn_lstm_lstmrev_cost_06KL_res_meanpooling_usext_scale0_01/save_dir/
+/home/guoyu/results/youtube/srnn_lstm_lstmrev_cost_06KL_res_meanpooling_usext_scale0_01/save_dir/ already exists!
+erasing everything in  /home/guoyu/results/youtube/srnn_lstm_lstmrev_cost_06KL_res_meanpooling_usext_scale0_01/save_dir/
+saving model config into /home/guoyu/results/youtube/srnn_lstm_lstmrev_cost_06KL_res_meanpooling_usext_scale0_01/save_dir/model_config.pkl
+Model Type: attention
+Dataset: youtube2text
+Command: train_model.py
+training an attention model
+/home/guoyu/code/code_by_myself/MP_lstm-gru_srnn_bonuli_usext/model_SRNN_lstm_gru.py:17: UserWarning: Feeding context to output directly seems to hurt.
+  warnings.warn('Feeding context to output directly seems to hurt.')
+Loading data
+loading youtube2text googlenet features
+uneven minibath chunking, overall 64, last one 12
+uneven minibath chunking, overall 200, last one 91
+uneven minibath chunking, overall 200, last one 168
+init params
+<bound method OrderedDict.keys of OrderedDict([('Wemb', Wemb), ('emb_ff1_W', emb_ff1_W), ('emb_ff1_b', emb_ff1_b), ('tu_rnn_W', tu_rnn_W), ('tu_rnn_U', tu_rnn_U), ('tu_rnn_b', tu_rnn_b), ('mu_rnn_W', mu_rnn_W), ('mu_rnn_V', mu_rnn_V), ('mu_rnn_U', mu_rnn_U), ('mu_rnn_b', mu_rnn_b), ('a_rnn_W', a_rnn_W), ('a_rnn_U', a_rnn_U), ('a_rnn_b', a_rnn_b), ('mean_prior_dense1_W', mean_prior_dense1_W), ('mean_prior_dense1_b', mean_prior_dense1_b), ('mean_prior_dense2_W', mean_prior_dense2_W), ('mean_prior_dense2_b', mean_prior_dense2_b), ('log_var_prior_dense1_W', log_var_prior_dense1_W), ('log_var_prior_dense1_b', log_var_prior_dense1_b), ('log_var_prior_dense2_W', log_var_prior_dense2_W), ('log_var_prior_dense2_b', log_var_prior_dense2_b), ('mean_q_dense1_W', mean_q_dense1_W), ('mean_q_dense1_b', mean_q_dense1_b), ('mean_q_dense2_W', mean_q_dense2_W), ('mean_q_dense2_b', mean_q_dense2_b), ('log_var_q_dense1_W', log_var_q_dense1_W), ('log_var_q_dense1_b', log_var_q_dense1_b), ('log_var_q_dense2_W', log_var_q_dense2_W), ('log_var_q_dense2_b', log_var_q_dense2_b), ('ff_logit_zd_W', ff_logit_zd_W), ('ff_logit_zd_b', ff_logit_zd_b)])>
+Using residuals for mean_q
+buliding sampler
+Building f_init... Done
+building f_next...
+Done
+building f_log_probs
+compute grad
+build train fns
+compilation took 267.1790 sec
+Optimization
+Epoch  0
+Epoch  0 Update  10 Train cost mean so far 49.8484344482 Train kl_divergence_tot mean so far 11.8243436813  lower_bound mean so far is  14.1633176804 loss mean so far is  58.4494018555 
+ fetching data time spent (sec) 0.349  update time spent (sec) 60.169  
+ lrate is  0.0001  temp_KL is  0.600262463093
+Epoch  0 Update  20 Train cost mean so far 44.2650909424 Train kl_divergence_tot mean so far 3.49616193771  lower_bound mean so far is  8.6900177002 loss mean so far is  47.868057251 
+ fetching data time spent (sec) 1.512  update time spent (sec) 1.439  
+ lrate is  0.0001  temp_KL is  0.600524961948
+Epoch  0 Update  30 Train cost mean so far 41.5897369385 Train kl_divergence_tot mean so far 0.550513029099  lower_bound mean so far is  6.60500907898 loss mean so far is  43.4233436584 
+ fetching data time spent (sec) 1.333  update time spent (sec) 2.916  
+ lrate is  0.0001  temp_KL is  0.600787401199
+Epoch  0 Update  40 Train cost mean so far 40.3764038086 Train kl_divergence_tot mean so far 0.86535179615  lower_bound mean so far is  6.39066505432 loss mean so far is  42.3984413147 
+ fetching data time spent (sec) 1.774  update time spent (sec) 3.035  
+ lrate is  0.0001  temp_KL is  0.60104984045
+Epoch  0 Update  50 Train cost mean so far 42.5749206543 Train kl_divergence_tot mean so far 0.418931663036  lower_bound mean so far is  6.39247226715 loss mean so far is  44.3269920349 
+ fetching data time spent (sec) 0.983  update time spent (sec) 1.103  
+ lrate is  0.0001  temp_KL is  0.601312339306
+Epoch  0 Update  60 Train cost mean so far 36.5414886475 Train kl_divergence_tot mean so far 0.465253680944  lower_bound mean so far is  5.90276765823 loss mean so far is  38.3198928833 
+ fetching data time spent (sec) 0.626  update time spent (sec) 1.364  
+ lrate is  0.0001  temp_KL is  0.601574778557
+Epoch  0 Update  70 Train cost mean so far 44.1882896423 Train kl_divergence_tot mean so far 0.594991147518  lower_bound mean so far is  6.26342010498 loss mean so far is  46.0425796509 
+ fetching data time spent (sec) 0.416  update time spent (sec) 1.414  
+ lrate is  0.0001  temp_KL is  0.601837277412
+Epoch  0 Update  80 Train cost mean so far 41.5320129395 Train kl_divergence_tot mean so far 0.572246968746  lower_bound mean so far is  6.29563474655 loss mean so far is  43.370426178 
+ fetching data time spent (sec) 0.323  update time spent (sec) 1.534  
+ lrate is  0.0001  temp_KL is  0.602099716663
+Epoch  0 Update  90 Train cost mean so far 37.9038391113 Train kl_divergence_tot mean so far 0.607591867447  lower_bound mean so far is  6.15636920929 loss mean so far is  39.7617263794 
+ fetching data time spent (sec) 0.406  update time spent (sec) 1.138  
+ lrate is  0.0001  temp_KL is  0.602362215519
+Epoch  0 Update  100 Train cost mean so far 43.7396430969 Train kl_divergence_tot mean so far 1.0911591053  lower_bound mean so far is  6.55827617645 loss mean so far is  45.8874053955 
+ fetching data time spent (sec) 0.444  update time spent (sec) 2.085  
+ lrate is  0.0001  temp_KL is  0.60262465477
+------------- sampling from train ----------
+Truth  0 :  a man is turning over tables in anger
+Sample ( 0 )  :  a man is
+Truth  1 :  the plane took off the runway
+Sample ( 1 )  :  a
+Truth  2 :  a kitten is meowing
+Sample ( 2 )  :  a man is
+Truth  3 :  the badger came out of his hole and walked on the grass
+Sample ( 3 )  :  a
+Truth  4 :  the lady stired the rice in the water
+Sample ( 4 )  :  a person is cutting
+Truth  5 :  a boller is balling
+Sample ( 5 )  :  a
+Truth  6 :  a boy is pointing to different numbers on a wall calendar
+Sample ( 6 )  :  a man is
+Truth  7 :  a lady is talking and washing her hands
+Sample ( 7 )  : 
+Truth  8 :  a man is scooping food out of a pot on the stove into a bowl
+Sample ( 8 )  :  a
+Truth  9 :  the boy ran and fell
+Sample ( 9 )  :  a
+------------- sampling from valid ----------
+Truth  0 :  a man playing a guitar
+Sample ( 0 )  :  a man is
+Truth  1 :  the lady came down the tree on a vine
+Sample ( 1 )  : 
+Truth  2 :  a man dances on a bench
+Sample ( 2 )  : 
+Truth  3 :  a man is dancing
+Sample ( 3 )  :  a man is
+Truth  4 :  a man is dancing
+Sample ( 4 )  : 
+Truth  5 :  the man is teaching how to cook turkey
+Sample ( 5 )  : 
+Truth  6 :  a man is playing a flute for a woman
+Sample ( 6 )  : 
+Truth  7 :  a cat is sliding upside down under a couch
+Sample ( 7 )  : 
+Truth  8 :  a man seated on a huge rock in an outdoor location is playing a flute as a woman watches him
+Sample ( 8 )  : 
+Truth  9 :  broccoli is peeled with a knife
+Sample ( 9 )  :  a person is cutting
+Epoch  0 Update  110 Train cost mean so far 36.4560317993 Train kl_divergence_tot mean so far 1.17722928524  lower_bound mean so far is  6.03701639175 loss mean so far is  38.6524391174 
+ fetching data time spent (sec) 0.203  update time spent (sec) 1.1  
+ lrate is  0.0001  temp_KL is  0.602887153625
+Epoch  0 Update  120 Train cost mean so far 42.7685470581 Train kl_divergence_tot mean so far 0.648549973965  lower_bound mean so far is  6.07740879059 loss mean so far is  44.6438064575 
+ fetching data time spent (sec) 0.52  update time spent (sec) 4.442  
+ lrate is  0.0001  temp_KL is  0.603149592876
+Epoch  0 Update  130 Train cost mean so far 40.3481063843 Train kl_divergence_tot mean so far 0.637784063816  lower_bound mean so far is  6.01621437073 loss mean so far is  42.2142982483 
+ fetching data time spent (sec) 0.172  update time spent (sec) 2.4  
+ lrate is  0.0001  temp_KL is  0.603412091732
+Epoch  0 Update  140 Train cost mean so far 42.1967468262 Train kl_divergence_tot mean so far 1.80428600311  lower_bound mean so far is  6.62347459793 loss mean so far is  44.7649688721 
+ fetching data time spent (sec) 0.296  update time spent (sec) 1.507  
+ lrate is  0.0001  temp_KL is  0.603674530983
+Epoch  0 Update  150 Train cost mean so far 33.7139511108 Train kl_divergence_tot mean so far 0.458449602127  lower_bound mean so far is  5.6577539444 loss mean so far is  35.4668312073 
+ fetching data time spent (sec) 0.412  update time spent (sec) 3.171  
+ lrate is  0.0001  temp_KL is  0.603937029839
+Epoch  0 Update  160 Train cost mean so far 35.2588577271 Train kl_divergence_tot mean so far 0.929757535458  lower_bound mean so far is  6.061439991 loss mean so far is  37.2941513062 
+ fetching data time spent (sec) 0.179  update time spent (sec) 2.087  
+ lrate is  0.0001  temp_KL is  0.60419946909
+Epoch  0 Update  170 Train cost mean so far 36.2026519775 Train kl_divergence_tot mean so far 0.546162068844  lower_bound mean so far is  5.84801435471 loss mean so far is  38.0037879944 
+ fetching data time spent (sec) 0.658  update time spent (sec) 3.414  
+ lrate is  0.0001  temp_KL is  0.604461967945
+Epoch  0 Update  180 Train cost mean so far 38.3586959839 Train kl_divergence_tot mean so far 0.739449262619  lower_bound mean so far is  5.58948659897 loss mean so far is  40.2744064331 
+ fetching data time spent (sec) 0.623  update time spent (sec) 1.767  
+ lrate is  0.0001  temp_KL is  0.604724407196
+Epoch  0 Update  190 Train cost mean so far 37.1924858093 Train kl_divergence_tot mean so far 0.601209044456  lower_bound mean so far is  5.82199859619 loss mean so far is  39.0224952698 
+ fetching data time spent (sec) 0.579  update time spent (sec) 1.246  
+ lrate is  0.0001  temp_KL is  0.604986906052
+Epoch  0 Update  200 Train cost mean so far 32.8050727844 Train kl_divergence_tot mean so far 0.334514200687  lower_bound mean so far is  5.06953668594 loss mean so far is  34.4716873169 
+ fetching data time spent (sec) 0.422  update time spent (sec) 3.673  
+ lrate is  0.0001  temp_KL is  0.605249345303
+------------- sampling from train ----------
+Truth  0 :  a man is dancing on the ceiling
+Sample ( 0 )  :  a man is riding a a
+Truth  1 :  food is poured and mixed on a hot plate
+Sample ( 1 )  :  a man is slicing a a
+Truth  2 :  a young man is dancing
+Sample ( 2 )  :  a man is playing a a
+Truth  3 :  a woman makes a phone call
+Sample ( 3 )  :  a man is a a a
+Truth  4 :  a man is singing into a microphone
+Sample ( 4 )  :  a man is playing a
+Truth  5 :  a man and a woman race each other swimming across a pool
+Sample ( 5 )  :  a man is a a a
+Truth  6 :  a woman is slicing garlic
+Sample ( 6 )  :  a man is slicing a
+Truth  7 :  a person is mixing a pot of rice
+Sample ( 7 )  :  a man is slicing a a
+Truth  8 :  a boy is running
+Sample ( 8 )  :  a man is riding a a
+Truth  9 :  a play takes off
+Sample ( 9 )  :  a man is riding a a
+------------- sampling from valid ----------
+Truth  0 :  a baby is smiling and laughing and crawling on the floor
+Sample ( 0 )  :  a man is a a a
+Truth  1 :  a person stirs a bowl full of food
+Sample ( 1 )  :  a man is slicing a a
+Truth  2 :  a man is cutting a potato in half
+Sample ( 2 )  :  a man is slicing a
+Truth  3 :  frankenstein is carrying a man over his shoulder
+Sample ( 3 )  :  a man is riding a a
+Truth  4 :  a lady took her dog for a walk
+Sample ( 4 )  :  a man is a a a
+Truth  5 :  the person is doing the pencil sharping them
+Sample ( 5 )  :  a man is slicing a
+Truth  6 :  a person is playing the guitar
+Sample ( 6 )  :  a man is playing a
+Truth  7 :  a man is taking the knife and cut the vegetable
+Sample ( 7 )  :  a man is slicing a
+Truth  8 :  kids are playing in a bath tub
+Sample ( 8 )  :  a man is a a a a
+Truth  9 :  two baby beavers moving about in their play pen
+Sample ( 9 )  :  a cat is a a a a
+Epoch  0 Update  210 Train cost mean so far 32.6469802856 Train kl_divergence_tot mean so far 1.03879570961  lower_bound mean so far is  5.49947881699 loss mean so far is  34.7380142212 
+ fetching data time spent (sec) 7.348  update time spent (sec) 19.528  
+ lrate is  0.0001  temp_KL is  0.605511784554
+Epoch  0 Update  220 Train cost mean so far 38.5596237183 Train kl_divergence_tot mean so far 0.575853347778  lower_bound mean so far is  5.58300685883 loss mean so far is  40.3679466248 
+ fetching data time spent (sec) 1.372  update time spent (sec) 1.731  
+ lrate is  0.0001  temp_KL is  0.605774283409
+Epoch  0 Update  230 Train cost mean so far 38.5877609253 Train kl_divergence_tot mean so far 1.24052739143  lower_bound mean so far is  6.53301811218 loss mean so far is  40.797542572 
+ fetching data time spent (sec) 1.009  update time spent (sec) 13.556  
+ lrate is  0.0001  temp_KL is  0.60603672266
+Epoch  0 Update  240 Train cost mean so far 38.8520965576 Train kl_divergence_tot mean so far 1.85251569748  lower_bound mean so far is  6.55784273148 loss mean so far is  41.4316558838 
+ fetching data time spent (sec) 0.947  update time spent (sec) 15.6  
+ lrate is  0.0001  temp_KL is  0.606299221516
+Epoch  0 Update  250 Train cost mean so far 37.8808670044 Train kl_divergence_tot mean so far 0.600398302078  lower_bound mean so far is  5.55578708649 loss mean so far is  39.6990890503 
+ fetching data time spent (sec) 1.806  update time spent (sec) 3.523  
+ lrate is  0.0001  temp_KL is  0.606561660767
+Epoch  0 Update  260 Train cost mean so far 41.4223861694 Train kl_divergence_tot mean so far 0.276167690754  lower_bound mean so far is  5.69136428833 loss mean so far is  43.0421791077 
+ fetching data time spent (sec) 1.112  update time spent (sec) 3.562  
+ lrate is  0.0001  temp_KL is  0.606824159622
+Epoch  0 Update  270 Train cost mean so far 42.5672454834 Train kl_divergence_tot mean so far 0.332476139069  lower_bound mean so far is  5.94107103348 loss mean so far is  44.2193832397 
+ fetching data time spent (sec) 0.683  update time spent (sec) 1.719  
+ lrate is  0.0001  temp_KL is  0.607086598873
+Epoch  0 Update  280 Train cost mean so far 37.8865585327 Train kl_divergence_tot mean so far 0.336922645569  lower_bound mean so far is  5.42519950867 loss mean so far is  39.5398597717 
+ fetching data time spent (sec) 0.848  update time spent (sec) 2.765  
+ lrate is  0.0001  temp_KL is  0.607349097729
+Epoch  0 Update  290 Train cost mean so far 38.0987319946 Train kl_divergence_tot mean so far 0.408505469561  lower_bound mean so far is  6.11904144287 loss mean so far is  39.7941436768 
+ fetching data time spent (sec) 0.375  update time spent (sec) 1.256  
+ lrate is  0.0001  temp_KL is  0.60761153698
+Epoch  0 Update  300 Train cost mean so far 37.3906707764 Train kl_divergence_tot mean so far 0.41917181015  lower_bound mean so far is  5.63301467896 loss mean so far is  39.0911560059 
+ fetching data time spent (sec) 0.443  update time spent (sec) 2.197  
+ lrate is  0.0001  temp_KL is  0.607874035835
+------------- sampling from train ----------
+Truth  0 :  a man slices bread
+Sample ( 0 )  :  a man is
+Truth  1 :  the cat is playing in forest
+Sample ( 1 )  :  a cat is
+Truth  2 :  a woman is pouring eggs into a pan
+Sample ( 2 )  :  a
+Truth  3 :  a hampster is eating
+Sample ( 3 )  :  a cat is
+Truth  4 :  someone is washing their foot with a toothbrush
+Sample ( 4 )  :  a man is
+Truth  5 :  someone is seasoning beans
+Sample ( 5 )  :  a man is
+Truth  6 :  the car ran into the building
+Sample ( 6 )  :  a
+Truth  7 :  a man cooking his kichen
+Sample ( 7 )  :  a man is
+Truth  8 :  a man is cleaning a floor with an industrial machine
+Sample ( 8 )  :  a man is
+Truth  9 :  a monkey is swinging on the trees
+Sample ( 9 )  :  a man is
+------------- sampling from valid ----------
+Truth  0 :  steve martin performs onstage
+Sample ( 0 )  :  a man is
+Truth  1 :  a cat is under a sofa
+Sample ( 1 )  :  a cat is
+Truth  2 :  the man is running
+Sample ( 2 )  :  a
+Truth  3 :  a person showing the applications of the computer
+Sample ( 3 )  :  a
+Truth  4 :  a dog is walking
+Sample ( 4 )  :  a man is
+Truth  5 :  a dog is running on the road
+Sample ( 5 )  :  a
+Truth  6 :  a man is cutting an onion
+Sample ( 6 )  :  a man is
+Truth  7 :  a cat is walking on its two front paws
+Sample ( 7 )  :  a man is
+Truth  8 :  the man is playing the piano
+Sample ( 8 )  :  a man is
+Truth  9 :  a man is slicing a potato
+Sample ( 9 )  :  a man is
+Epoch  0 Update  310 Train cost mean so far 39.1890640259 Train kl_divergence_tot mean so far 0.833314299583  lower_bound mean so far is  5.80979394913 loss mean so far is  41.1395835876 
+ fetching data time spent (sec) 0.593  update time spent (sec) 2.518  
+ lrate is  0.0001  temp_KL is  0.608136475086
+Epoch  0 Update  320 Train cost mean so far 38.3988265991 Train kl_divergence_tot mean so far 0.258789479733  lower_bound mean so far is  5.6762304306 loss mean so far is  39.9986038208 
+ fetching data time spent (sec) 0.251  update time spent (sec) 1.811  
+ lrate is  0.0001  temp_KL is  0.608398973942
+Epoch  0 Update  330 Train cost mean so far 33.9578514099 Train kl_divergence_tot mean so far 0.538652181625  lower_bound mean so far is  5.72885513306 loss mean so far is  35.7266197205 
+ fetching data time spent (sec) 0.34  update time spent (sec) 1.19  
+ lrate is  0.0001  temp_KL is  0.608661413193
+Epoch  0 Update  340 Train cost mean so far 36.0749435425 Train kl_divergence_tot mean so far 0.468941032887  lower_bound mean so far is  5.61046028137 loss mean so far is  37.8000793457 
+ fetching data time spent (sec) 1.141  update time spent (sec) 1.52  
+ lrate is  0.0001  temp_KL is  0.608923912048
+Epoch  0 Update  350 Train cost mean so far 34.8394699097 Train kl_divergence_tot mean so far 0.610746979713  lower_bound mean so far is  5.37489128113 loss mean so far is  36.6492385864 
+ fetching data time spent (sec) 6.452  update time spent (sec) 3.86  
+ lrate is  0.0001  temp_KL is  0.609186351299
+Epoch  0 Update  360 Train cost mean so far 36.2681121826 Train kl_divergence_tot mean so far 0.370108753443  lower_bound mean so far is  5.72376728058 loss mean so far is  37.9302635193 
+ fetching data time spent (sec) 1.321  update time spent (sec) 2.107  
+ lrate is  0.0001  temp_KL is  0.60944879055
+Epoch  0 Update  370 Train cost mean so far 37.8570213318 Train kl_divergence_tot mean so far 0.391053825617  lower_bound mean so far is  5.91380405426 loss mean so far is  39.5307540894 
+ fetching data time spent (sec) 1.111  update time spent (sec) 2.891  
+ lrate is  0.0001  temp_KL is  0.609711289406
+Epoch  0 Update  380 Train cost mean so far 39.726348877 Train kl_divergence_tot mean so far 1.61781728268  lower_bound mean so far is  6.39529800415 loss mean so far is  42.1482086182 
+ fetching data time spent (sec) 4.094  update time spent (sec) 1.952  
+ lrate is  0.0001  temp_KL is  0.609973728657
+Epoch  0 Update  390 Train cost mean so far 40.826675415 Train kl_divergence_tot mean so far 0.454126030207  lower_bound mean so far is  5.54083347321 loss mean so far is  42.537322998 
+ fetching data time spent (sec) 1.608  update time spent (sec) 3.366  
+ lrate is  0.0001  temp_KL is  0.610236227512
+Epoch  0 Update  400 Train cost mean so far 36.124042511 Train kl_divergence_tot mean so far 0.153067260981  lower_bound mean so far is  5.30785655975 loss mean so far is  37.6502990723 
+ fetching data time spent (sec) 1.041  update time spent (sec) 1.869  
+ lrate is  0.0001  temp_KL is  0.610498666763
+------------- sampling from train ----------
+Truth  0 :  a cat search a box
+Sample ( 0 )  :  a cat is playing
+Truth  1 :  a pitcher is being filled with water
+Sample ( 1 )  :  a man is a
+Truth  2 :  two puppies are playing with a piece of paper
+Sample ( 2 )  :  a cat is playing
+Truth  3 :  a plane appears to fly out of the ocean
+Sample ( 3 )  :  a are is running
+Truth  4 :  two boys are trying to communicate about kicking a soccer ball
+Sample ( 4 )  :  a man is are
+Truth  5 :  a dog shaking his tail
+Sample ( 5 )  :  a dog is playing
+Truth  6 :  animal is playing
+Sample ( 6 )  :  a cat is playing
+Truth  7 :  a dog and a child are playing
+Sample ( 7 )  :  a dog is playing are
+Truth  8 :  an excited puppy is sitting and whimpering on the stairs
+Sample ( 8 )  :  a dog is playing
+Truth  9 :  the boy is playing guitar
+Sample ( 9 )  :  a man is playing
+------------- sampling from valid ----------
+Truth  0 :  a man is playing a flute
+Sample ( 0 )  :  a man is dancing
+Truth  1 :  a man is cutting an onion with a cleaver
+Sample ( 1 )  :  a man is the
+Truth  2 :  a man is hitting a knife with a piece of wood
+Sample ( 2 )  :  a man is a
+Truth  3 :  a person moves his finger toward a box and then gets attacked by a cat
+Sample ( 3 )  :  a man is the
+Truth  4 :  a man is cutting something with knife
+Sample ( 4 )  :  a man is cutting
+Truth  5 :  the boy danced on and around a park bench
+Sample ( 5 )  :  a man is running
+Truth  6 :  the boy is playing the piano
+Sample ( 6 )  :  a man is playing
+Truth  7 :  a man plays the guitar
+Sample ( 7 )  :  a man is playing guitar
+Truth  8 :  a man is telling us about two mad brothers
+Sample ( 8 )  :  a man is running
+Truth  9 :  a little boy is getting injections
+Sample ( 9 )  :  a baby is playing
+Epoch  0 Update  410 Train cost mean so far 31.9076347351 Train kl_divergence_tot mean so far 0.173030346632  lower_bound mean so far is  4.94862985611 loss mean so far is  33.4454917908 
+ fetching data time spent (sec) 0.486  update time spent (sec) 2.76  
+ lrate is  0.0001  temp_KL is  0.610761165619
+Epoch  0 Update  420 Train cost mean so far 29.7603092194 Train kl_divergence_tot mean so far 0.32581910491  lower_bound mean so far is  4.96673774719 loss mean so far is  31.3910255432 
+ fetching data time spent (sec) 0.679  update time spent (sec) 1.883  
+ lrate is  0.0001  temp_KL is  0.61102360487
+Epoch  0 Update  430 Train cost mean so far 33.3553161621 Train kl_divergence_tot mean so far 0.317146718502  lower_bound mean so far is  5.12320566177 loss mean so far is  34.9797554016 
+ fetching data time spent (sec) 0.658  update time spent (sec) 9.407  
+ lrate is  0.0001  temp_KL is  0.611286103725
+Epoch  0 Update  440 Train cost mean so far 32.2455024719 Train kl_divergence_tot mean so far 0.367718398571  lower_bound mean so far is  5.22644615173 loss mean so far is  33.9002876282 
+ fetching data time spent (sec) 1.122  update time spent (sec) 1.411  
+ lrate is  0.0001  temp_KL is  0.611548542976
+Epoch  0 Update  450 Train cost mean so far 34.2237625122 Train kl_divergence_tot mean so far 0.460612565279  lower_bound mean so far is  5.33849716187 loss mean so far is  35.9344863892 
+ fetching data time spent (sec) 3.204  update time spent (sec) 1.804  
+ lrate is  0.0001  temp_KL is  0.611811041832
+Epoch  0 Update  460 Train cost mean so far 37.3795585632 Train kl_divergence_tot mean so far 0.60713249445  lower_bound mean so far is  5.75134754181 loss mean so far is  39.1797370911 
+ fetching data time spent (sec) 0.574  update time spent (sec) 1.434  
+ lrate is  0.0001  temp_KL is  0.612073481083
+Epoch  0 Update  470 Train cost mean so far 37.790348053 Train kl_divergence_tot mean so far 0.337015509605  lower_bound mean so far is  5.43617248535 loss mean so far is  39.4242973328 
+ fetching data time spent (sec) 0.467  update time spent (sec) 1.281  
+ lrate is  0.0001  temp_KL is  0.612335979939
+Epoch  0 Update  480 Train cost mean so far 36.0986785889 Train kl_divergence_tot mean so far 0.418531000614  lower_bound mean so far is  5.81214618683 loss mean so far is  37.7819671631 
+ fetching data time spent (sec) 0.417  update time spent (sec) 4.522  
+ lrate is  0.0001  temp_KL is  0.612598419189
+Epoch  0 Update  490 Train cost mean so far 35.2525558472 Train kl_divergence_tot mean so far 0.854846954346  lower_bound mean so far is  5.92993593216 loss mean so far is  37.2031707764 
+ fetching data time spent (sec) 0.626  update time spent (sec) 1.965  
+ lrate is  0.0001  temp_KL is  0.612860918045
+Epoch  0 Update  500 Train cost mean so far 37.7920532227 Train kl_divergence_tot mean so far 0.387145757675  lower_bound mean so far is  5.63263511658 loss mean so far is  39.4551391602 
+ fetching data time spent (sec) 0.373  update time spent (sec) 2.387  
+ lrate is  0.0001  temp_KL is  0.613123357296
+------------- sampling from train ----------
+Truth  0 :  the person move the pencil very awesome
+Sample ( 0 )  :  a man is
+Truth  1 :  a horse is driven by a woman
+Sample ( 1 )  :  a man is riding
+Truth  2 :  a black boar is running in the woods
+Sample ( 2 )  :  a man is
+Truth  3 :  a person is dismantling a camera
+Sample ( 3 )  :  a person is a
+Truth  4 :  cat drinking water
+Sample ( 4 )  :  a cat is
+Truth  5 :  the man jumped off the building to the street
+Sample ( 5 )  :  a man is
+Truth  6 :  the women are dancing
+Sample ( 6 )  :  a are are a
+Truth  7 :  a chef is slicing a piece of raw fish
+Sample ( 7 )  :  a man is slicing
+Truth  8 :  a dog is sitting in a small tub of water and frolicking in it
+Sample ( 8 )  :  a
+Truth  9 :  he is carateman
+Sample ( 9 )  :  a man is
+------------- sampling from valid ----------
+Truth  0 :  a baby is smiling and laughing and crawling on the floor
+Sample ( 0 )  :  a baby is playing
+Truth  1 :  a person stirs a bowl full of food
+Sample ( 1 )  :  a person is
+Truth  2 :  a man is cutting a potato in half
+Sample ( 2 )  :  a man is slicing
+Truth  3 :  frankenstein is carrying a man over his shoulder
+Sample ( 3 )  :  a man is
+Truth  4 :  a lady took her dog for a walk
+Sample ( 4 )  :  a dog is
+Truth  5 :  the person is doing the pencil sharping them
+Sample ( 5 )  :  a man is
+Truth  6 :  a person is playing the guitar
+Sample ( 6 )  :  a man is playing
+Truth  7 :  a man is taking the knife and cut the vegetable
+Sample ( 7 )  :  a man is slicing
+Truth  8 :  kids are playing in a bath tub
+Sample ( 8 )  :  a man is a
+Truth  9 :  two baby beavers moving about in their play pen
+Sample ( 9 )  :  a cat is a
+Epoch  0 Update  510 Train cost mean so far 39.3665390015 Train kl_divergence_tot mean so far 0.54628932476  lower_bound mean so far is  5.78423213959 loss mean so far is  41.1270675659 
+ fetching data time spent (sec) 0.444  update time spent (sec) 1.689  
+ lrate is  0.0001  temp_KL is  0.613385856152
+Epoch  0 Update  520 Train cost mean so far 35.924697876 Train kl_divergence_tot mean so far 0.262848347425  lower_bound mean so far is  5.45590162277 loss mean so far is  37.511177063 
+ fetching data time spent (sec) 0.24  update time spent (sec) 1.476  
+ lrate is  0.0001  temp_KL is  0.613648295403
+Epoch  0 Update  530 Train cost mean so far 33.4934005737 Train kl_divergence_tot mean so far 0.433953106403  lower_bound mean so far is  5.33306741714 loss mean so far is  35.1849555969 
+ fetching data time spent (sec) 0.364  update time spent (sec) 1.547  
+ lrate is  0.0001  temp_KL is  0.613910734653
+Epoch  0 Update  540 Train cost mean so far 33.2344284058 Train kl_divergence_tot mean so far 0.209487736225  lower_bound mean so far is  5.17632865906 loss mean so far is  34.7882080078 
+ fetching data time spent (sec) 0.508  update time spent (sec) 2.767  
+ lrate is  0.0001  temp_KL is  0.614173233509
+Epoch  0 Update  550 Train cost mean so far 36.4926338196 Train kl_divergence_tot mean so far 0.194650053978  lower_bound mean so far is  5.49585676193 loss mean so far is  38.0377655029 
+ fetching data time spent (sec) 0.346  update time spent (sec) 1.716  
+ lrate is  0.0001  temp_KL is  0.61443567276
+Epoch  0 Update  560 Train cost mean so far 38.663105011 Train kl_divergence_tot mean so far 0.367926716805  lower_bound mean so far is  5.55840921402 loss mean so far is  40.3147277832 
+ fetching data time spent (sec) 0.271  update time spent (sec) 1.364  
+ lrate is  0.0001  temp_KL is  0.614698171616
+Epoch  0 Update  570 Train cost mean so far 34.1190414429 Train kl_divergence_tot mean so far 0.320243120193  lower_bound mean so far is  5.11202383041 loss mean so far is  35.7414855957 
+ fetching data time spent (sec) 0.211  update time spent (sec) 1.474  
+ lrate is  0.0001  temp_KL is  0.614960610867
+Epoch  0 Update  580 Train cost mean so far 31.7319564819 Train kl_divergence_tot mean so far 0.230575859547  lower_bound mean so far is  5.16545152664 loss mean so far is  33.2988967896 
+ fetching data time spent (sec) 0.25  update time spent (sec) 3.895  
+ lrate is  0.0001  temp_KL is  0.615223109722
+Epoch  0 Update  590 Train cost mean so far 32.0955963135 Train kl_divergence_tot mean so far 0.334488540888  lower_bound mean so far is  4.94103145599 loss mean so far is  33.7266807556 
+ fetching data time spent (sec) 0.633  update time spent (sec) 2.875  
+ lrate is  0.0001  temp_KL is  0.615485548973
+Epoch  0 Update  600 Train cost mean so far 33.8762626648 Train kl_divergence_tot mean so far 0.201012924314  lower_bound mean so far is  5.18562316895 loss mean so far is  35.42552948 
+ fetching data time spent (sec) 0.332  update time spent (sec) 1.579  
+ lrate is  0.0001  temp_KL is  0.615748047829
+------------- sampling from train ----------
+Truth  0 :  two girls are dancing with funny
+Sample ( 0 )  :  a man is dancing
+Truth  1 :  the two boys are dancing
+Sample ( 1 )  :  a man is dancing
+Truth  2 :  a woman is peeling an apple
+Sample ( 2 )  :  a woman is slicing
+Truth  3 :  the man used a sword to slice the boot
+Sample ( 3 )  :  a man is
+Truth  4 :  the woman is eating
+Sample ( 4 )  :  a woman is
+Truth  5 :  a cat plays the piano
+Sample ( 5 )  :  a cat is playing piano
+Truth  6 :  the foxes ate from the pan
+Sample ( 6 )  :  a are is eating
+Truth  7 :  a man is trying to make many bubbles
+Sample ( 7 )  :  a man is
+Truth  8 :  an elephant drawing a picture with paint
+Sample ( 8 )  :  a man is
+Truth  9 :  one cat is jumping and another is climbing over a barrier
+Sample ( 9 )  :  a cat is
+------------- sampling from valid ----------
+Truth  0 :  a baby is playing
+Sample ( 0 )  :  a baby is
+Truth  1 :  a man plays guitar
+Sample ( 1 )  :  a man is
+Truth  2 :  a man is shot on a horse
+Sample ( 2 )  :  a man is riding
+Truth  3 :  the girl wrote on paper while sitting outside
+Sample ( 3 )  :  a man is
+Truth  4 :  gelato is like a puppy
+Sample ( 4 )  :  a cat is
+Truth  5 :  a person is fighting with the lion
+Sample ( 5 )  :  a man is
+Truth  6 :  a guy is preparing the chicken roast
+Sample ( 6 )  :  a man is
+Truth  7 :  the person is cooking the something
+Sample ( 7 )  :  a man is
+Truth  8 :  bullet holes are appearing on a target
+Sample ( 8 )  :  a man is
+Truth  9 :  a man is pouring a drink into two cups
+Sample ( 9 )  :  a man is
+Epoch  0 Update  610 Train cost mean so far 37.7007369995 Train kl_divergence_tot mean so far 0.177802592516  lower_bound mean so far is  5.15899562836 loss mean so far is  39.2360496521 
+ fetching data time spent (sec) 0.932  update time spent (sec) 8.603  
+ lrate is  0.0001  temp_KL is  0.61601048708
+Epoch  0 Update  620 Train cost mean so far 36.8464012146 Train kl_divergence_tot mean so far 0.302670776844  lower_bound mean so far is  5.2734541893 loss mean so far is  38.4590339661 
+ fetching data time spent (sec) 0.524  update time spent (sec) 1.796  
+ lrate is  0.0001  temp_KL is  0.616272985935
+Epoch  0 Update  630 Train cost mean so far 34.524520874 Train kl_divergence_tot mean so far 0.306582629681  lower_bound mean so far is  5.16067695618 loss mean so far is  36.1399078369 
+ fetching data time spent (sec) 0.39  update time spent (sec) 1.568  
+ lrate is  0.0001  temp_KL is  0.616535425186
+Epoch  0 Update  640 Train cost mean so far 35.4799842834 Train kl_divergence_tot mean so far 0.246798083186  lower_bound mean so far is  5.17745780945 loss mean so far is  37.0589675903 
+ fetching data time spent (sec) 0.437  update time spent (sec) 4.854  
+ lrate is  0.0001  temp_KL is  0.616797924042
+Epoch  0 Update  650 Train cost mean so far 33.0596237183 Train kl_divergence_tot mean so far 0.406296998262  lower_bound mean so far is  5.32748508453 loss mean so far is  34.7376289368 
+ fetching data time spent (sec) 0.343  update time spent (sec) 1.464  
+ lrate is  0.0001  temp_KL is  0.617060363293
+Epoch  0 Update  660 Train cost mean so far 34.2657623291 Train kl_divergence_tot mean so far 0.338865578175  lower_bound mean so far is  5.07222080231 loss mean so far is  35.9024963379 
+ fetching data time spent (sec) 0.617  update time spent (sec) 2.066  
+ lrate is  0.0001  temp_KL is  0.617322862148
+Epoch  0 Update  670 Train cost mean so far 37.2333145142 Train kl_divergence_tot mean so far 0.209155440331  lower_bound mean so far is  5.40819740295 loss mean so far is  38.7909927368 
+ fetching data time spent (sec) 0.349  update time spent (sec) 5.468  
+ lrate is  0.0001  temp_KL is  0.617585301399
+Epoch  0 Update  680 Train cost mean so far 36.2148361206 Train kl_divergence_tot mean so far 0.457572758198  lower_bound mean so far is  5.54893684387 loss mean so far is  37.9269447327 
+ fetching data time spent (sec) 0.819  update time spent (sec) 1.688  
+ lrate is  0.0001  temp_KL is  0.61784774065
+Epoch  0 Update  690 Train cost mean so far 31.6239128113 Train kl_divergence_tot mean so far 0.169878512621  lower_bound mean so far is  5.03777837753 loss mean so far is  33.1588745117 
+ fetching data time spent (sec) 0.284  update time spent (sec) 1.65  
+ lrate is  0.0001  temp_KL is  0.618110239506
+Epoch  0 Update  700 Train cost mean so far 34.618522644 Train kl_divergence_tot mean so far 0.200123608112  lower_bound mean so far is  4.8942732811 loss mean so far is  36.1731567383 
+ fetching data time spent (sec) 0.297  update time spent (sec) 1.61  
+ lrate is  0.0001  temp_KL is  0.618372678757
+------------- sampling from train ----------
+Truth  0 :  women athletes running a marathon
+Sample ( 0 )  :  a man is
+Truth  1 :  gladiators riding on horses and passing througth jungle
+Sample ( 1 )  :  a
+Truth  2 :  a dog is playing with a stick
+Sample ( 2 )  :  a dog is
+Truth  3 :  a dog is driving a car
+Sample ( 3 )  :  a dog is
+Truth  4 :  a wet dog is running around a garden
+Sample ( 4 )  :  a dog is
+Truth  5 :  someone stirred the rice and milk in the pot
+Sample ( 5 )  :  a man is
+Truth  6 :  a man is trying to slice through a package of ground meat
+Sample ( 6 )  :  a man is
+Truth  7 :  a woman cracks an egg
+Sample ( 7 )  :  a woman is a
+Truth  8 :  a woman is chopping octopus
+Sample ( 8 )  :  a woman is slicing
+Truth  9 :  a cow eats grass
+Sample ( 9 )  :  a dog is eating
+------------- sampling from valid ----------
+Truth  0 :  a guy is eating
+Sample ( 0 )  :  a man is
+Truth  1 :  a person is placing strawberries atop a cake
+Sample ( 1 )  :  a man is
+Truth  2 :  a man is cutting a piece of carpet with a knife
+Sample ( 2 )  :  a man is
+Truth  3 :  a man is dancing
+Sample ( 3 )  :  a woman is a
+Truth  4 :  a man is cutting up a cucumber
+Sample ( 4 )  :  a man is slicing
+Truth  5 :  a boy is throwing baseballs at another boy who is not catching but being hit by them
+Sample ( 5 )  :  a man is a
+Truth  6 :  a skater skates on a half pipe
+Sample ( 6 )  :  a man is
+Truth  7 :  the man behind the rock shot the man on the horse
+Sample ( 7 )  :  a man is
+Truth  8 :  some one toucing the baby beavers
+Sample ( 8 )  :  a woman is eating
+Truth  9 :  you are a very good musician but just want a good singer
+Sample ( 9 )  :  a man is playing
+Epoch  0 Update  710 Train cost mean so far 33.3450393677 Train kl_divergence_tot mean so far 0.195591539145  lower_bound mean so far is  5.2769613266 loss mean so far is  34.8978843689 
+ fetching data time spent (sec) 0.415  update time spent (sec) 1.252  
+ lrate is  0.0001  temp_KL is  0.618635177612
+Epoch  0 Update  720 Train cost mean so far 31.9430103302 Train kl_divergence_tot mean so far 0.194679290056  lower_bound mean so far is  4.81649446487 loss mean so far is  33.4965019226 
+ fetching data time spent (sec) 0.698  update time spent (sec) 1.717  
+ lrate is  0.0001  temp_KL is  0.618897616863
+Epoch  0 Update  730 Train cost mean so far 31.6563854218 Train kl_divergence_tot mean so far 0.334604144096  lower_bound mean so far is  5.19261169434 loss mean so far is  33.2973937988 
+ fetching data time spent (sec) 0.634  update time spent (sec) 1.73  
+ lrate is  0.0001  temp_KL is  0.619160115719
+Epoch  0 Update  740 Train cost mean so far 31.8572883606 Train kl_divergence_tot mean so far 1.44632256031  lower_bound mean so far is  5.7737827301 loss mean so far is  34.1885147095 
+ fetching data time spent (sec) 0.435  update time spent (sec) 1.484  
+ lrate is  0.0001  temp_KL is  0.61942255497
+Epoch  0 Update  750 Train cost mean so far 32.0119476318 Train kl_divergence_tot mean so far 0.132081210613  lower_bound mean so far is  5.01092004776 loss mean so far is  33.5299110413 
+ fetching data time spent (sec) 0.448  update time spent (sec) 1.434  
+ lrate is  0.0001  temp_KL is  0.619685053825
+Epoch  0 Update  760 Train cost mean so far 33.7905502319 Train kl_divergence_tot mean so far 0.127893358469  lower_bound mean so far is  4.88876867294 loss mean so far is  35.3070678711 
+ fetching data time spent (sec) 0.779  update time spent (sec) 2.551  
+ lrate is  0.0001  temp_KL is  0.619947493076
+This epoch has seen 48780 samples, train cost 37.22
+Epoch  1
+Epoch  1 Update  770 Train cost mean so far 35.1459732056 Train kl_divergence_tot mean so far 0.108876615763  lower_bound mean so far is  4.86736631393 loss mean so far is  36.6523094177 
+ fetching data time spent (sec) 0.278  update time spent (sec) 1.935  
+ lrate is  0.0001  temp_KL is  0.620209991932
+Epoch  1 Update  780 Train cost mean so far 34.1868667603 Train kl_divergence_tot mean so far 0.124395661056  lower_bound mean so far is  5.05905580521 loss mean so far is  35.7036361694 
+ fetching data time spent (sec) 0.385  update time spent (sec) 1.568  
+ lrate is  0.0001  temp_KL is  0.620472431183
+Epoch  1 Update  790 Train cost mean so far 31.5695724487 Train kl_divergence_tot mean so far 0.249760746956  lower_bound mean so far is  4.72204828262 loss mean so far is  33.1658401489 
+ fetching data time spent (sec) 0.521  update time spent (sec) 1.855  
+ lrate is  0.0001  temp_KL is  0.620734930038
+Epoch  1 Update  800 Train cost mean so far 35.950920105 Train kl_divergence_tot mean so far 0.11629550159  lower_bound mean so far is  5.30375528336 loss mean so far is  37.4655570984 
+ fetching data time spent (sec) 0.923  update time spent (sec) 2.174  
+ lrate is  0.0001  temp_KL is  0.620997369289
+------------- sampling from train ----------
+Truth  0 :  a man is spreading margarine on a tortilla
+Sample ( 0 )  :  a man is
+Truth  1 :  he is cutting green onion
+Sample ( 1 )  :  a is is cutting
+Truth  2 :  a dog barks and then a lady in a kitchen bows
+Sample ( 2 )  :  a dog is
+Truth  3 :  someone is pouring rice into rice cooker
+Sample ( 3 )  :  a man is
+Truth  4 :  a cheetah is chasing a gazelle
+Sample ( 4 )  :  a
+Truth  5 :  someone is using sign language
+Sample ( 5 )  :  a man is
+Truth  6 :  a stunt men is showing the stunt
+Sample ( 6 )  :  a man is riding
+Truth  7 :  using a spoon a woman is stirring a mixture of milk and gelatin powder in a glass
+Sample ( 7 )  :  a woman is a
+Truth  8 :  somebody is cooking
+Sample ( 8 )  :  a is is
+Truth  9 :  a hamster is eating something that looks like nuts
+Sample ( 9 )  :  a is is eating
+------------- sampling from valid ----------
+Truth  0 :  the dog is running and is being hit by a obstacle
+Sample ( 0 )  :  a man is
+Truth  1 :  the boy danced on a park bench
+Sample ( 1 )  :  a man is
+Truth  2 :  a man gets shot on his horse
+Sample ( 2 )  :  a man is
+Truth  3 :  the mouse is eating
+Sample ( 3 )  :  a dog is a
+Truth  4 :  someone is shooting at a target
+Sample ( 4 )  :  a man is
+Truth  5 :  the man played his guitar
+Sample ( 5 )  :  a man is
+Truth  6 :  one man showing stunt during skating
+Sample ( 6 )  :  a man is
+Truth  7 :  a man pours oil over tomato slices
+Sample ( 7 )  :  a is is
+Truth  8 :  one young man is throwing tennis balls at another
+Sample ( 8 )  :  a man is
+Truth  9 :  a man is driving a toy car in office
+Sample ( 9 )  :  a man is
+Epoch  1 Update  810 Train cost mean so far 32.930847168 Train kl_divergence_tot mean so far 0.148129463196  lower_bound mean so far is  4.85070514679 loss mean so far is  34.4668579102 
+ fetching data time spent (sec) 0.728  update time spent (sec) 1.471  
+ lrate is  0.0001  temp_KL is  0.621259868145
+Epoch  1 Update  820 Train cost mean so far 35.8353118896 Train kl_divergence_tot mean so far 0.0977117791772  lower_bound mean so far is  5.0801076889 loss mean so far is  37.3416595459 
+ fetching data time spent (sec) 0.408  update time spent (sec) 1.349  
+ lrate is  0.0001  temp_KL is  0.621522307396
+Epoch  1 Update  830 Train cost mean so far 34.8884353638 Train kl_divergence_tot mean so far 0.212205201387  lower_bound mean so far is  5.00897455215 loss mean so far is  36.4674530029 
+ fetching data time spent (sec) 0.468  update time spent (sec) 1.673  
+ lrate is  0.0001  temp_KL is  0.621784806252
+Epoch  1 Update  840 Train cost mean so far 34.2153320312 Train kl_divergence_tot mean so far 0.196401447058  lower_bound mean so far is  5.14530706406 loss mean so far is  35.7864265442 
+ fetching data time spent (sec) 0.685  update time spent (sec) 1.465  
+ lrate is  0.0001  temp_KL is  0.622047245502
+Epoch  1 Update  850 Train cost mean so far 37.1086502075 Train kl_divergence_tot mean so far 0.109515078366  lower_bound mean so far is  5.05366897583 loss mean so far is  38.6270446777 
+ fetching data time spent (sec) 0.468  update time spent (sec) 1.613  
+ lrate is  0.0001  temp_KL is  0.622309684753
+Epoch  1 Update  860 Train cost mean so far 30.6812534332 Train kl_divergence_tot mean so far 0.127410456538  lower_bound mean so far is  4.63552856445 loss mean so far is  32.2126464844 
+ fetching data time spent (sec) 0.476  update time spent (sec) 1.57  
+ lrate is  0.0001  temp_KL is  0.622572183609
+Epoch  1 Update  870 Train cost mean so far 36.9694442749 Train kl_divergence_tot mean so far 0.186910480261  lower_bound mean so far is  5.16630220413 loss mean so far is  38.5394248962 
+ fetching data time spent (sec) 0.623  update time spent (sec) 1.443  
+ lrate is  0.0001  temp_KL is  0.62283462286
+Epoch  1 Update  880 Train cost mean so far 32.8700485229 Train kl_divergence_tot mean so far 0.156773373485  lower_bound mean so far is  5.09559488297 loss mean so far is  34.4229698181 
+ fetching data time spent (sec) 0.556  update time spent (sec) 1.284  
+ lrate is  0.0001  temp_KL is  0.623097121716
+Epoch  1 Update  890 Train cost mean so far 40.1197891235 Train kl_divergence_tot mean so far 0.105266779661  lower_bound mean so far is  5.36624288559 loss mean so far is  41.6423683167 
+ fetching data time spent (sec) 0.571  update time spent (sec) 1.899  
+ lrate is  0.0001  temp_KL is  0.623359560966
+Epoch  1 Update  900 Train cost mean so far 30.8415374756 Train kl_divergence_tot mean so far 0.141623586416  lower_bound mean so far is  4.79023838043 loss mean so far is  32.3885993958 
+ fetching data time spent (sec) 0.606  update time spent (sec) 2.022  
+ lrate is  0.0001  temp_KL is  0.623622059822
+------------- sampling from train ----------
+Truth  0 :  a man throws his drink on a camera
+Sample ( 0 )  :  a man is
+Truth  1 :  the man is shooting
+Sample ( 1 )  :  a man is shooting
+Truth  2 :  the man did a backward flip jump into the water
+Sample ( 2 )  :  a man is a
+Truth  3 :  a man playing guitar
+Sample ( 3 )  :  a man is playing
+Truth  4 :  a band is performing onstage for a live audience
+Sample ( 4 )  :  a man is playing
+Truth  5 :  the man poured the liquid out of the container
+Sample ( 5 )  :  a man is
+Truth  6 :  a woman dances in the rain out side
+Sample ( 6 )  :  a woman is dancing
+Truth  7 :  a cat plays the piano
+Sample ( 7 )  :  a cat is playing
+Truth  8 :  a boy is flipping on a trampoline
+Sample ( 8 )  :  a man is a
+Truth  9 :  a loris eat her food
+Sample ( 9 )  :  a cat is a
+------------- sampling from valid ----------
+Truth  0 :  a woman making some sort of toy with a piece of paper
+Sample ( 0 )  :  a man is a
+Truth  1 :  a cat performing or playing some sort of game with her master
+Sample ( 1 )  :  a man is
+Truth  2 :  a woman is petting baby beavers
+Sample ( 2 )  :  a animal is eating
+Truth  3 :  amazing catch by jamie dalrymple
+Sample ( 3 )  :  a man is a
+Truth  4 :  the jewish man talked into the camera
+Sample ( 4 )  :  a man is is
+Truth  5 :  a fox is walking in the snow
+Sample ( 5 )  :  a tiger is
+Truth  6 :  a amazing catch
+Sample ( 6 )  :  a man is a
+Truth  7 :  a man trims fat off of a haunch of meat
+Sample ( 7 )  :  a man is a
+Truth  8 :  a man is folding the paper
+Sample ( 8 )  :  a man is a
+Truth  9 :  the little boy received a couple of shots on the arm
+Sample ( 9 )  :  a man is a
+Epoch  1 Update  910 Train cost mean so far 31.4067783356 Train kl_divergence_tot mean so far 0.105752512813  lower_bound mean so far is  4.86986494064 loss mean so far is  32.9335212708 
+ fetching data time spent (sec) 0.672  update time spent (sec) 1.551  
+ lrate is  0.0001  temp_KL is  0.623884499073
+Epoch  1 Update  920 Train cost mean so far 34.7038574219 Train kl_divergence_tot mean so far 0.138229101896  lower_bound mean so far is  4.8301782608 loss mean so far is  36.2527999878 
+ fetching data time spent (sec) 0.888  update time spent (sec) 2.537  
+ lrate is  0.0001  temp_KL is  0.624146997929
+Epoch  1 Update  930 Train cost mean so far 33.8182907104 Train kl_divergence_tot mean so far 0.095588080585  lower_bound mean so far is  4.95740890503 loss mean so far is  35.3425636292 
+ fetching data time spent (sec) 0.468  update time spent (sec) 2.188  
+ lrate is  0.0001  temp_KL is  0.62440943718
+Epoch  1 Update  940 Train cost mean so far 35.3309707642 Train kl_divergence_tot mean so far 0.115963585675  lower_bound mean so far is  5.02718162537 loss mean so far is  36.8703804016 
+ fetching data time spent (sec) 0.429  update time spent (sec) 2.386  
+ lrate is  0.0001  temp_KL is  0.624671936035
+Epoch  1 Update  950 Train cost mean so far 32.3418502808 Train kl_divergence_tot mean so far 0.107542470098  lower_bound mean so far is  4.80942869186 loss mean so far is  33.878238678 
+ fetching data time spent (sec) 0.494  update time spent (sec) 2.857  
+ lrate is  0.0001  temp_KL is  0.624934375286
+Epoch  1 Update  960 Train cost mean so far 36.6400146484 Train kl_divergence_tot mean so far 0.0696718245745  lower_bound mean so far is  4.99756479263 loss mean so far is  38.1546669006 
+ fetching data time spent (sec) 0.813  update time spent (sec) 7.389  
+ lrate is  0.0001  temp_KL is  0.625196874142
+Epoch  1 Update  970 Train cost mean so far 34.5050888062 Train kl_divergence_tot mean so far 0.0898343622684  lower_bound mean so far is  4.97384738922 loss mean so far is  36.0348205566 
+ fetching data time spent (sec) 0.501  update time spent (sec) 3.089  
+ lrate is  0.0001  temp_KL is  0.625459313393
+Epoch  1 Update  980 Train cost mean so far 31.3837089539 Train kl_divergence_tot mean so far 0.079042121768  lower_bound mean so far is  4.98161458969 loss mean so far is  32.9087371826 
+ fetching data time spent (sec) 0.427  update time spent (sec) 2.028  
+ lrate is  0.0001  temp_KL is  0.625721812248
+Epoch  1 Update  990 Train cost mean so far 30.1527404785 Train kl_divergence_tot mean so far 0.0961585268378  lower_bound mean so far is  4.68738603592 loss mean so far is  31.6909389496 
+ fetching data time spent (sec) 0.277  update time spent (sec) 1.701  
+ lrate is  0.0001  temp_KL is  0.625984251499
+Epoch  1 Update  1000 Train cost mean so far 34.5742874146 Train kl_divergence_tot mean so far 0.186327069998  lower_bound mean so far is  5.00474596024 loss mean so far is  36.1708908081 
+ fetching data time spent (sec) 0.279  update time spent (sec) 1.553  
+ lrate is  0.0001  temp_KL is  0.62624669075
+------------- sampling from train ----------
+Truth  0 :  a woman ties a bundle of envelopes together
+Sample ( 0 )  :  a woman is
+Truth  1 :  a woman adds some cream salt and pepper to a glass bowl containing two beaten eggs
+Sample ( 1 )  :  a woman is
+Truth  2 :  women running in the olympic race
+Sample ( 2 )  :  a are are a
+Truth  3 :  two people are eating
+Sample ( 3 )  :  a woman is talking
+Truth  4 :  a badger is digging a hole
+Sample ( 4 )  :  a badger is
+Truth  5 :  a person puts ground beef into a pan
+Sample ( 5 )  :  a woman is
+Truth  6 :  a man is looking at a dead deer
+Sample ( 6 )  :  a man is eating
+Truth  7 :  a small baby lying on the bed on its back and wrapped in a hooded towel is crying bitterly
+Sample ( 7 )  :  a baby is
+Truth  8 :  a person is spreading cheese on a pizza
+Sample ( 8 )  :  a man is preparing
+Truth  9 :  a woman is trying to change a flat tire
+Sample ( 9 )  :  a woman is
+------------- sampling from valid ----------
+Truth  0 :  the dog is running and is being hit by a obstacle
+Sample ( 0 )  :  a man is
+Truth  1 :  the boy danced on a park bench
+Sample ( 1 )  :  a woman is a
+Truth  2 :  a man gets shot on his horse
+Sample ( 2 )  :  a woman is a
+Truth  3 :  the mouse is eating
+Sample ( 3 )  :  a cat is
+Truth  4 :  someone is shooting at a target
+Sample ( 4 )  :  a are is
+Truth  5 :  the man played his guitar
+Sample ( 5 )  :  a man is playing
+Truth  6 :  one man showing stunt during skating
+Sample ( 6 )  :  a are is running
+Truth  7 :  a man pours oil over tomato slices
+Sample ( 7 )  :  a woman is preparing
+Truth  8 :  one young man is throwing tennis balls at another
+Sample ( 8 )  :  a man is
+Truth  9 :  a man is driving a toy car in office
+Sample ( 9 )  :  a man is a a
+validating...
+Computing LL on 200/4291 examplesComputing LL on 400/4291 examplesComputing LL on 600/4291 examplesComputing LL on 800/4291 examplesComputing LL on 1000/4291 examplesComputing LL on 1200/4291 examplesComputing LL on 1400/4291 examplesComputing LL on 1600/4291 examplesComputing LL on 1800/4291 examplesComputing LL on 2000/4291 examplesComputing LL on 2200/4291 examplesComputing LL on 2400/4291 examplesComputing LL on 2600/4291 examplesComputing LL on 2800/4291 examplesComputing LL on 3000/4291 examplesComputing LL on 3200/4291 examplesComputing LL on 3400/4291 examplesComputing LL on 3600/4291 examplesComputing LL on 3800/4291 examplesComputing LL on 4000/4291 examplesComputing LL on 4200/4291 examplesComputing LL on 4291/4291 examples
+testing...
+Computing LL on 200/27768 examplesComputing LL on 400/27768 examplesComputing LL on 600/27768 examplesComputing LL on 800/27768 examplesComputing LL on 1000/27768 examplesComputing LL on 1200/27768 examplesComputing LL on 1400/27768 examplesComputing LL on 1600/27768 examplesComputing LL on 1800/27768 examplesComputing LL on 2000/27768 examplesComputing LL on 2200/27768 examplesComputing LL on 2400/27768 examplesComputing LL on 2600/27768 examplesComputing LL on 2800/27768 examplesComputing LL on 3000/27768 examplesComputing LL on 3200/27768 examplesComputing LL on 3400/27768 examplesComputing LL on 3600/27768 examplesComputing LL on 3800/27768 examplesComputing LL on 4000/27768 examplesComputing LL on 4200/27768 examplesComputing LL on 4400/27768 examplesComputing LL on 4600/27768 examplesComputing LL on 4800/27768 examplesComputing LL on 5000/27768 examplesComputing LL on 5200/27768 examplesComputing LL on 5400/27768 examplesComputing LL on 5600/27768 examplesComputing LL on 5800/27768 examplesComputing LL on 6000/27768 examplesComputing LL on 6200/27768 examplesComputing LL on 6400/27768 examplesComputing LL on 6600/27768 examplesComputing LL on 6800/27768 examplesComputing LL on 7000/27768 examplesComputing LL on 7200/27768 examplesComputing LL on 7400/27768 examplesComputing LL on 7600/27768 examplesComputing LL on 7800/27768 examplesComputing LL on 8000/27768 examplesComputing LL on 8200/27768 examplesComputing LL on 8400/27768 examplesComputing LL on 8600/27768 examplesComputing LL on 8800/27768 examplesComputing LL on 9000/27768 examplesComputing LL on 9200/27768 examplesComputing LL on 9400/27768 examplesComputing LL on 9600/27768 examplesComputing LL on 9800/27768 examplesComputing LL on 10000/27768 examplesComputing LL on 10200/27768 examplesComputing LL on 10400/27768 examplesComputing LL on 10600/27768 examplesComputing LL on 10800/27768 examplesComputing LL on 11000/27768 examplesComputing LL on 11200/27768 examplesComputing LL on 11400/27768 examplesComputing LL on 11600/27768 examplesComputing LL on 11800/27768 examplesComputing LL on 12000/27768 examplesComputing LL on 12200/27768 examplesComputing LL on 12400/27768 examplesComputing LL on 12600/27768 examplesComputing LL on 12800/27768 examplesComputing LL on 13000/27768 examplesComputing LL on 13200/27768 examplesComputing LL on 13400/27768 examplesComputing LL on 13600/27768 examplesComputing LL on 13800/27768 examplesComputing LL on 14000/27768 examplesComputing LL on 14200/27768 examplesComputing LL on 14400/27768 examplesComputing LL on 14600/27768 examplesComputing LL on 14800/27768 examplesComputing LL on 15000/27768 examplesComputing LL on 15200/27768 examplesComputing LL on 15400/27768 examplesComputing LL on 15600/27768 examplesComputing LL on 15800/27768 examplesComputing LL on 16000/27768 examplesComputing LL on 16200/27768 examplesComputing LL on 16400/27768 examplesComputing LL on 16600/27768 examplesComputing LL on 16800/27768 examplesComputing LL on 17000/27768 examplesComputing LL on 17200/27768 examplesComputing LL on 17400/27768 examplesComputing LL on 17600/27768 examplesComputing LL on 17800/27768 examplesComputing LL on 18000/27768 examplesComputing LL on 18200/27768 examplesComputing LL on 18400/27768 examplesComputing LL on 18600/27768 examplesComputing LL on 18800/27768 examplesComputing LL on 19000/27768 examplesComputing LL on 19200/27768 examplesComputing LL on 19400/27768 examplesComputing LL on 19600/27768 examplesComputing LL on 19800/27768 examplesComputing LL on 20000/27768 examplesComputing LL on 20200/27768 examplesComputing LL on 20400/27768 examplesComputing LL on 20600/27768 examplesComputing LL on 20800/27768 examplesComputing LL on 21000/27768 examplesComputing LL on 21200/27768 examplesComputing LL on 21400/27768 examplesComputing LL on 21600/27768 examplesComputing LL on 21800/27768 examplesComputing LL on 22000/27768 examplesComputing LL on 22200/27768 examplesComputing LL on 22400/27768 examplesComputing LL on 22600/27768 examplesComputing LL on 22800/27768 examplesComputing LL on 23000/27768 examplesComputing LL on 23200/27768 examplesComputing LL on 23400/27768 examplesComputing LL on 23600/27768 examplesComputing LL on 23800/27768 examplesComputing LL on 24000/27768 examplesComputing LL on 24200/27768 examplesComputing LL on 24400/27768 examplesComputing LL on 24600/27768 examplesComputing LL on 24800/27768 examplesComputing LL on 25000/27768 examplesComputing LL on 25200/27768 examplesComputing LL on 25400/27768 examplesComputing LL on 25600/27768 examplesComputing LL on 25800/27768 examplesComputing LL on 26000/27768 examplesComputing LL on 26200/27768 examplesComputing LL on 26400/27768 examplesComputing LL on 26600/27768 examplesComputing LL on 26800/27768 examplesComputing LL on 27000/27768 examplesComputing LL on 27200/27768 examplesComputing LL on 27400/27768 examplesComputing LL on 27600/27768 examplesComputing LL on 27768/27768 examples
+Valid Set... sampling 0/100
+sampling 1/100
+sampling 2/100
+sampling 3/100
+sampling 4/100
+sampling 5/100
+sampling 6/100
+sampling 7/100
+sampling 8/100
+sampling 9/100
+sampling 10/100
+sampling 11/100
+sampling 12/100
+sampling 13/100
+sampling 14/100
+sampling 15/100
+sampling 16/100
+sampling 17/100
+sampling 18/100
+sampling 19/100
+sampling 20/100
+sampling 21/100
+sampling 22/100
+sampling 23/100
+sampling 24/100
+sampling 25/100
+sampling 26/100
+sampling 27/100
+sampling 28/100
+sampling 29/100
+sampling 30/100
+sampling 31/100
+sampling 32/100
+sampling 33/100
+sampling 34/100
+sampling 35/100
+sampling 36/100
+sampling 37/100
+sampling 38/100
+sampling 39/100
+sampling 40/100
+sampling 41/100
+sampling 42/100
+sampling 43/100
+sampling 44/100
+sampling 45/100
+sampling 46/100
+sampling 47/100
+sampling 48/100
+sampling 49/100
+sampling 50/100
+sampling 51/100
+sampling 52/100
+sampling 53/100
+sampling 54/100
+sampling 55/100
+sampling 56/100
+sampling 57/100
+sampling 58/100
+sampling 59/100
+sampling 60/100
+sampling 61/100
+sampling 62/100
+sampling 63/100
+sampling 64/100
+sampling 65/100
+sampling 66/100
+sampling 67/100
+sampling 68/100
+sampling 69/100
+sampling 70/100
+sampling 71/100
+sampling 72/100
+sampling 73/100
+sampling 74/100
+sampling 75/100
+sampling 76/100
+sampling 77/100
+sampling 78/100
+sampling 79/100
+sampling 80/100
+sampling 81/100
+sampling 82/100
+sampling 83/100
+sampling 84/100
+sampling 85/100
+sampling 86/100
+sampling 87/100
+sampling 88/100
+sampling 89/100
+sampling 90/100
+sampling 91/100
+sampling 92/100
+sampling 93/100
+sampling 94/100
+sampling 95/100
+sampling 96/100
+sampling 97/100
+sampling 98/100
+sampling 99/100
+Test Set... sampling 0/670
+sampling 1/670
+sampling 2/670
+sampling 3/670
+sampling 4/670
+sampling 5/670
+sampling 6/670
+sampling 7/670
+sampling 8/670
+sampling 9/670
+sampling 10/670
+sampling 11/670
+sampling 12/670
+sampling 13/670
+sampling 14/670
+sampling 15/670
+sampling 16/670
+sampling 17/670
+sampling 18/670
+sampling 19/670
+sampling 20/670
+sampling 21/670
+sampling 22/670
+sampling 23/670
+sampling 24/670
+sampling 25/670
+sampling 26/670
+sampling 27/670
+sampling 28/670
+sampling 29/670
+sampling 30/670
+sampling 31/670
+sampling 32/670
+sampling 33/670
+sampling 34/670
+sampling 35/670
+sampling 36/670
+sampling 37/670
+sampling 38/670
+sampling 39/670
+sampling 40/670
+sampling 41/670
+sampling 42/670
+sampling 43/670
+sampling 44/670
+sampling 45/670
+sampling 46/670
+sampling 47/670
+sampling 48/670
+sampling 49/670
+sampling 50/670
+sampling 51/670
+sampling 52/670
+sampling 53/670
+sampling 54/670
+sampling 55/670
+sampling 56/670
+sampling 57/670
+sampling 58/670
+sampling 59/670
+sampling 60/670
+sampling 61/670
+sampling 62/670
+sampling 63/670
+sampling 64/670
+sampling 65/670
+sampling 66/670
+sampling 67/670
+sampling 68/670
+sampling 69/670
+sampling 70/670
+sampling 71/670
+sampling 72/670
+sampling 73/670
+sampling 74/670
+sampling 75/670
+sampling 76/670
+sampling 77/670
+sampling 78/670
+sampling 79/670
+sampling 80/670
+sampling 81/670
+sampling 82/670
+sampling 83/670
+sampling 84/670
+sampling 85/670
+sampling 86/670
+sampling 87/670
+sampling 88/670
+sampling 89/670
+sampling 90/670
+sampling 91/670
+sampling 92/670
+sampling 93/670
+sampling 94/670
+sampling 95/670
+sampling 96/670
+sampling 97/670
+sampling 98/670
+sampling 99/670
+sampling 100/670
+sampling 101/670
+sampling 102/670
+sampling 103/670
+sampling 104/670
+sampling 105/670
+sampling 106/670
+sampling 107/670
+sampling 108/670
+sampling 109/670
+sampling 110/670
+sampling 111/670
+sampling 112/670
+sampling 113/670
+sampling 114/670
+sampling 115/670
+sampling 116/670
+sampling 117/670
+sampling 118/670
+sampling 119/670
+sampling 120/670
+sampling 121/670
+sampling 122/670
+sampling 123/670
+sampling 124/670
+sampling 125/670
+sampling 126/670
+sampling 127/670
+sampling 128/670
+sampling 129/670
+sampling 130/670
+sampling 131/670
+sampling 132/670
+sampling 133/670
+sampling 134/670
+sampling 135/670
+sampling 136/670
+sampling 137/670
+sampling 138/670
+sampling 139/670
+sampling 140/670
+sampling 141/670
+sampling 142/670
+sampling 143/670
+sampling 144/670
+sampling 145/670
+sampling 146/670
+sampling 147/670
+sampling 148/670
+sampling 149/670
+sampling 150/670
+sampling 151/670
+sampling 152/670
+sampling 153/670
+sampling 154/670
+sampling 155/670
+sampling 156/670
+sampling 157/670
+sampling 158/670
+sampling 159/670
+sampling 160/670
+sampling 161/670
+sampling 162/670
+sampling 163/670
+sampling 164/670
+sampling 165/670
+sampling 166/670
+sampling 167/670
+sampling 168/670
+sampling 169/670
+sampling 170/670
+sampling 171/670
+sampling 172/670
+sampling 173/670
+sampling 174/670
+sampling 175/670
+sampling 176/670
+sampling 177/670
+sampling 178/670
+sampling 179/670
+sampling 180/670
+sampling 181/670
+sampling 182/670
+sampling 183/670
+sampling 184/670
+sampling 185/670
+sampling 186/670
+sampling 187/670
+sampling 188/670
+sampling 189/670
+sampling 190/670
+sampling 191/670
+sampling 192/670
+sampling 193/670
+sampling 194/670
+sampling 195/670
+sampling 196/670
+sampling 197/670
+sampling 198/670
+sampling 199/670
+sampling 200/670
+sampling 201/670
+sampling 202/670
+sampling 203/670
+sampling 204/670
+sampling 205/670
+sampling 206/670
+sampling 207/670
+sampling 208/670
+sampling 209/670
+sampling 210/670
+sampling 211/670
+sampling 212/670
+sampling 213/670
+sampling 214/670
+sampling 215/670
+sampling 216/670
+sampling 217/670
+sampling 218/670
+sampling 219/670
+sampling 220/670
+sampling 221/670
+sampling 222/670
+sampling 223/670
+sampling 224/670
+sampling 225/670
+sampling 226/670
+sampling 227/670
+sampling 228/670
+sampling 229/670
+sampling 230/670
+sampling 231/670
+sampling 232/670
+sampling 233/670
+sampling 234/670
+sampling 235/670
+sampling 236/670
+sampling 237/670
+sampling 238/670
+sampling 239/670
+sampling 240/670
+sampling 241/670
+sampling 242/670
+sampling 243/670
+sampling 244/670
+sampling 245/670
+sampling 246/670
+sampling 247/670
+sampling 248/670
+sampling 249/670
+sampling 250/670
+sampling 251/670
+sampling 252/670
+sampling 253/670
+sampling 254/670
+sampling 255/670
+sampling 256/670
+sampling 257/670
+sampling 258/670
+sampling 259/670
+sampling 260/670
+sampling 261/670
+sampling 262/670
+sampling 263/670
+sampling 264/670
+sampling 265/670
+sampling 266/670
+sampling 267/670
+sampling 268/670
+sampling 269/670
+sampling 270/670
+sampling 271/670
+sampling 272/670
+sampling 273/670
+sampling 274/670
+sampling 275/670
+sampling 276/670
+sampling 277/670
+sampling 278/670
+sampling 279/670
+sampling 280/670
+sampling 281/670
+sampling 282/670
+sampling 283/670
+sampling 284/670
+sampling 285/670
+sampling 286/670
+sampling 287/670
+sampling 288/670
+sampling 289/670
+sampling 290/670
+sampling 291/670
+sampling 292/670
+sampling 293/670
+sampling 294/670
+sampling 295/670
+sampling 296/670
+sampling 297/670
+sampling 298/670
+sampling 299/670
+sampling 300/670
+sampling 301/670
+sampling 302/670
+sampling 303/670
+sampling 304/670
+sampling 305/670
+sampling 306/670
+sampling 307/670
+sampling 308/670
+sampling 309/670
+sampling 310/670
+sampling 311/670
+sampling 312/670
+sampling 313/670
+sampling 314/670
+sampling 315/670
+sampling 316/670
+sampling 317/670
+sampling 318/670
+sampling 319/670
+sampling 320/670
+sampling 321/670
+sampling 322/670
+sampling 323/670
+sampling 324/670
+sampling 325/670
+sampling 326/670
+sampling 327/670
+sampling 328/670
+sampling 329/670
+sampling 330/670
+sampling 331/670
+sampling 332/670
+sampling 333/670
+sampling 334/670
+sampling 335/670
+sampling 336/670
+sampling 337/670
+sampling 338/670
+sampling 339/670
+sampling 340/670
+sampling 341/670
+sampling 342/670
+sampling 343/670
+sampling 344/670
+sampling 345/670
+sampling 346/670
+sampling 347/670
+sampling 348/670
+sampling 349/670
+sampling 350/670
+sampling 351/670
+sampling 352/670
+sampling 353/670
+sampling 354/670
+sampling 355/670
+sampling 356/670
+sampling 357/670
+sampling 358/670
+sampling 359/670
+sampling 360/670
+sampling 361/670
+sampling 362/670
+sampling 363/670
+sampling 364/670
+sampling 365/670
+sampling 366/670
+sampling 367/670
+sampling 368/670
+sampling 369/670
+sampling 370/670
+sampling 371/670
+sampling 372/670
+sampling 373/670
+sampling 374/670
+sampling 375/670
+sampling 376/670
+sampling 377/670
+sampling 378/670
+sampling 379/670
+sampling 380/670
+sampling 381/670
+sampling 382/670
+sampling 383/670
+sampling 384/670
+sampling 385/670
+sampling 386/670
+sampling 387/670
+sampling 388/670
+sampling 389/670
+sampling 390/670
+sampling 391/670
+sampling 392/670
+sampling 393/670
+sampling 394/670
+sampling 395/670
+sampling 396/670
+sampling 397/670
+sampling 398/670
+sampling 399/670
+sampling 400/670
+sampling 401/670
+sampling 402/670
+sampling 403/670
+sampling 404/670
+sampling 405/670
+sampling 406/670
+sampling 407/670
+sampling 408/670
+sampling 409/670
+sampling 410/670
+sampling 411/670
+sampling 412/670
+sampling 413/670
+sampling 414/670
+sampling 415/670
+sampling 416/670
+sampling 417/670
+sampling 418/670
+sampling 419/670
+sampling 420/670
+sampling 421/670
+sampling 422/670
+sampling 423/670
+sampling 424/670
+sampling 425/670
+sampling 426/670
+sampling 427/670
+sampling 428/670
+sampling 429/670
+sampling 430/670
+sampling 431/670
+sampling 432/670
+sampling 433/670
+sampling 434/670
+sampling 435/670
+sampling 436/670
+sampling 437/670
+sampling 438/670
+sampling 439/670
+sampling 440/670
+sampling 441/670
+sampling 442/670
+sampling 443/670
+sampling 444/670
+sampling 445/670
+sampling 446/670
+sampling 447/670
+sampling 448/670
+sampling 449/670
+sampling 450/670
+sampling 451/670
+sampling 452/670
+sampling 453/670
+sampling 454/670
+sampling 455/670
+sampling 456/670
+sampling 457/670
+sampling 458/670
+sampling 459/670
+sampling 460/670
+sampling 461/670
+sampling 462/670
+sampling 463/670
+sampling 464/670
+sampling 465/670
+sampling 466/670
+sampling 467/670
+sampling 468/670
+sampling 469/670
+sampling 470/670
+sampling 471/670
+sampling 472/670
+sampling 473/670
+sampling 474/670
+sampling 475/670
+sampling 476/670
+sampling 477/670
+sampling 478/670
+sampling 479/670
+sampling 480/670
+sampling 481/670
+sampling 482/670
+sampling 483/670
+sampling 484/670
+sampling 485/670
+sampling 486/670
+sampling 487/670
+sampling 488/670
+sampling 489/670
+sampling 490/670
+sampling 491/670
+sampling 492/670
+sampling 493/670
+sampling 494/670
+sampling 495/670
+sampling 496/670
+sampling 497/670
+sampling 498/670
+sampling 499/670
+sampling 500/670
+sampling 501/670
+sampling 502/670
+sampling 503/670
+sampling 504/670
+sampling 505/670
+sampling 506/670
+sampling 507/670
+sampling 508/670
+sampling 509/670
+sampling 510/670
+sampling 511/670
+sampling 512/670
+sampling 513/670
+sampling 514/670
+sampling 515/670
+sampling 516/670
+sampling 517/670
+sampling 518/670
+sampling 519/670
+sampling 520/670
+sampling 521/670
+sampling 522/670
+sampling 523/670
+sampling 524/670
+sampling 525/670
+sampling 526/670
+sampling 527/670
+sampling 528/670
+sampling 529/670
+sampling 530/670
+sampling 531/670
+sampling 532/670
+sampling 533/670
+sampling 534/670
+sampling 535/670
+sampling 536/670
+sampling 537/670
+sampling 538/670
+sampling 539/670
+sampling 540/670
+sampling 541/670
+sampling 542/670
+sampling 543/670
+sampling 544/670
+sampling 545/670
+sampling 546/670
+sampling 547/670
+sampling 548/670
+sampling 549/670
+sampling 550/670
+sampling 551/670
+sampling 552/670
+sampling 553/670
+sampling 554/670
+sampling 555/670
+sampling 556/670
+sampling 557/670
+sampling 558/670
+sampling 559/670
+sampling 560/670
+sampling 561/670
+sampling 562/670
+sampling 563/670
+sampling 564/670
+sampling 565/670
+sampling 566/670
+sampling 567/670
+sampling 568/670
+sampling 569/670
+sampling 570/670
+sampling 571/670
+sampling 572/670
+sampling 573/670
+sampling 574/670
+sampling 575/670
+sampling 576/670
+sampling 577/670
+sampling 578/670
+sampling 579/670
+sampling 580/670
+sampling 581/670
+sampling 582/670
+sampling 583/670
+sampling 584/670
+sampling 585/670
+sampling 586/670
+sampling 587/670
+sampling 588/670
+sampling 589/670
+sampling 590/670
+sampling 591/670
+sampling 592/670
+sampling 593/670
+sampling 594/670
+sampling 595/670
+sampling 596/670
+sampling 597/670
+sampling 598/670
+sampling 599/670
+sampling 600/670
+sampling 601/670
+sampling 602/670
+sampling 603/670
+sampling 604/670
+sampling 605/670
+sampling 606/670
+sampling 607/670
+sampling 608/670
+sampling 609/670
+sampling 610/670
+sampling 611/670
+sampling 612/670
+sampling 613/670
+sampling 614/670
+sampling 615/670
+sampling 616/670
+sampling 617/670
+sampling 618/670
+sampling 619/670
+sampling 620/670
+sampling 621/670
+sampling 622/670
+sampling 623/670
+sampling 624/670
+sampling 625/670
+sampling 626/670
+sampling 627/670
+sampling 628/670
+sampling 629/670
+sampling 630/670
+sampling 631/670
+sampling 632/670
+sampling 633/670
+sampling 634/670
+sampling 635/670
+sampling 636/670
+sampling 637/670
+sampling 638/670
+sampling 639/670
+sampling 640/670
+sampling 641/670
+sampling 642/670
+sampling 643/670
+sampling 644/670
+sampling 645/670
+sampling 646/670
+sampling 647/670
+sampling 648/670
+sampling 649/670
+sampling 650/670
+sampling 651/670
+sampling 652/670
+sampling 653/670
+sampling 654/670
+sampling 655/670
+sampling 656/670
+sampling 657/670
+sampling 658/670
+sampling 659/670
+sampling 660/670
+sampling 661/670
+sampling 662/670
+sampling 663/670
+sampling 664/670
+sampling 665/670
+sampling 666/670
+sampling 667/670
+sampling 668/670
+sampling 669/670
+init COCO-EVAL scorer
+tokenization...
+PTBTokenizer tokenized 38623 tokens at 2380.25 tokens per second.
+PTBTokenizer tokenized 462 tokens at 3586.67 tokens per second.
+setting up scorers...
+computing Bleu score...
+{'reflen': 383, 'guess': [363, 263, 163, 63], 'testlen': 363, 'correct': [308, 130, 61, 9]}
+ratio: 0.947780678849
+Bleu_1: 0.803
+Bleu_2: 0.613
+Bleu_3: 0.511
+Bleu_4: 0.366
+computing METEOR score...
+METEOR: 0.209
+computing Rouge score...
+ROUGE_L: 0.617
+computing CIDEr score...
+CIDEr: 0.348
+CIDEr: 0.348
+Bleu_4: 0.366
+Bleu_3: 0.511
+Bleu_2: 0.613
+Bleu_1: 0.803
+ROUGE_L: 0.617
+METEOR: 0.209
+tokenization...
+PTBTokenizer tokenized 248650 tokens at 201615.63 tokens per second.
+PTBTokenizer tokenized 3054 tokens at 27036.06 tokens per second.
+setting up scorers...
+computing Bleu score...
+{'reflen': 2526, 'guess': [2385, 1715, 1047, 379], 'testlen': 2385, 'correct': [2037, 859, 415, 73]}
+ratio: 0.944180522565
+Bleu_1: 0.805
+Bleu_2: 0.617
+Bleu_3: 0.522
+Bleu_4: 0.401
+computing METEOR score...
+METEOR: 0.219
+computing Rouge score...
+ROUGE_L: 0.624
+computing CIDEr score...
+CIDEr: 0.367
+CIDEr: 0.367
+Bleu_4: 0.401
+Bleu_3: 0.522
+Bleu_2: 0.617
+Bleu_1: 0.805
+ROUGE_L: 0.624
+METEOR: 0.219
+computing meteor/blue score used 411.0249 sec, blue score: 0.4, meteor score: 0.2
+save validation results to /home/guoyu/results/youtube/srnn_lstm_lstmrev_cost_06KL_res_meanpooling_usext_scale0_01/save_dir/
+Train  0.0 Valid  35.0445492005 Test  35.3230119948 best valid err so far 999
+valid took 1298.74 sec
+Epoch  1 Update  1010 Train cost mean so far 29.698135376 Train kl_divergence_tot mean so far 0.0627889931202  lower_bound mean so far is  4.66400814056 loss mean so far is  31.219745636 
+ fetching data time spent (sec) 3.013  update time spent (sec) 1.341  
+ lrate is  0.0001  temp_KL is  0.626509189606
+Epoch  1 Update  1020 Train cost mean so far 32.5194015503 Train kl_divergence_tot mean so far 0.372514933348  lower_bound mean so far is  5.09962320328 loss mean so far is  34.2382202148 
+ fetching data time spent (sec) 1.199  update time spent (sec) 2.559  
+ lrate is  0.0001  temp_KL is  0.626771628857
+Epoch  1 Update  1030 Train cost mean so far 29.5005187988 Train kl_divergence_tot mean so far 0.115416660905  lower_bound mean so far is  4.77584314346 loss mean so far is  31.0601272583 
+ fetching data time spent (sec) 1.091  update time spent (sec) 2.957  
+ lrate is  0.0001  temp_KL is  0.627034127712
+Epoch  1 Update  1040 Train cost mean so far 32.8354759216 Train kl_divergence_tot mean so far 0.0792388319969  lower_bound mean so far is  4.94930934906 loss mean so far is  34.3750152588 
+ fetching data time spent (sec) 0.487  update time spent (sec) 1.489  
+ lrate is  0.0001  temp_KL is  0.627296566963
+Epoch  1 Update  1050 Train cost mean so far 31.0659675598 Train kl_divergence_tot mean so far 0.0576767325401  lower_bound mean so far is  4.43879413605 loss mean so far is  32.5945205688 
+ fetching data time spent (sec) 0.522  update time spent (sec) 2.074  
+ lrate is  0.0001  temp_KL is  0.627559065819
+Epoch  1 Update  1060 Train cost mean so far 30.5639057159 Train kl_divergence_tot mean so far 0.0719792023301  lower_bound mean so far is  4.45559883118 loss mean so far is  32.1039237976 
+ fetching data time spent (sec) 0.33  update time spent (sec) 1.76  
+ lrate is  0.0001  temp_KL is  0.62782150507
+Epoch  1 Update  1070 Train cost mean so far 31.5649585724 Train kl_divergence_tot mean so far 0.078377738595  lower_bound mean so far is  4.70050430298 loss mean so far is  33.1112251282 
+ fetching data time spent (sec) 0.681  update time spent (sec) 3.081  
+ lrate is  0.0001  temp_KL is  0.628084003925
+Epoch  1 Update  1080 Train cost mean so far 31.1843070984 Train kl_divergence_tot mean so far 0.0595425143838  lower_bound mean so far is  4.68735074997 loss mean so far is  32.721206665 
+ fetching data time spent (sec) 0.661  update time spent (sec) 2.74  
+ lrate is  0.0001  temp_KL is  0.628346443176
+Epoch  1 Update  1090 Train cost mean so far 31.5494937897 Train kl_divergence_tot mean so far 0.124661065638  lower_bound mean so far is  4.80123949051 loss mean so far is  33.1299324036 
+ fetching data time spent (sec) 5.367  update time spent (sec) 4.351  
+ lrate is  0.0001  temp_KL is  0.628608942032
+Epoch  1 Update  1100 Train cost mean so far 30.344329834 Train kl_divergence_tot mean so far 0.0974136292934  lower_bound mean so far is  4.57680082321 loss mean so far is  31.9102344513 
+ fetching data time spent (sec) 0.696  update time spent (sec) 1.477  
+ lrate is  0.0001  temp_KL is  0.628871381283
+------------- sampling from train ----------
+Truth  0 :  peoples singing song
+Sample ( 0 )  :  a man
+Truth  1 :  a rabbit is licking its paw
+Sample ( 1 )  :  a rabbit is is
+Truth  2 :  a woman is riding a horse through the snow
+Sample ( 2 )  :  a man is riding
+Truth  3 :  a gang of youngsters bully and beat up a man in crutches in a garden
+Sample ( 3 )  :  a man is fighting
+Truth  4 :  half an onion is sliced horizontally and then vertically
+Sample ( 4 )  :  a man is slicing
+Truth  5 :  a cat is playing with fan
+Sample ( 5 )  :  a man is a a
+Truth  6 :  an asian woman is dabbing foundation powder on her face with a brush
+Sample ( 6 )  :  a woman is is her
+Truth  7 :  a woman is putting on her makeup
+Sample ( 7 )  :  a woman is talking her
+Truth  8 :  the dog is talking
+Sample ( 8 )  :  a dog is
+Truth  9 :  a man is cutting the leaves
+Sample ( 9 )  :  a man is cutting a
+------------- sampling from valid ----------
+Truth  0 :  a girl is flipping pages of a magazine
+Sample ( 0 )  :  a man is a a
+Truth  1 :  a dog is running
+Sample ( 1 )  :  a man is riding
+Truth  2 :  the boy performed on the piano for an audience
+Sample ( 2 )  :  a women are dancing
+Truth  3 :  somebody is slicing a tomatoe
+Sample ( 3 )  :  a man is slicing a
+Truth  4 :  the man is doing magic
+Sample ( 4 )  :  a man is
+Truth  5 :  a boy is screaming
+Sample ( 5 )  :  a man is a
+Truth  6 :  the man is writing a letter
+Sample ( 6 )  :  a man is is a
+Truth  7 :  the computer screen correcting the lines straightly
+Sample ( 7 )  :  a man is doing
+Truth  8 :  a chef is decorating a cake with cherry slices
+Sample ( 8 )  :  a man is slicing a
+Truth  9 :  a cat in a box playing with other
+Sample ( 9 )  :  a man is
+Epoch  1 Update  1110 Train cost mean so far 35.2307319641 Train kl_divergence_tot mean so far 0.0891661271453  lower_bound mean so far is  5.05948019028 loss mean so far is  36.7937393188 
+ fetching data time spent (sec) 2.682  update time spent (sec) 2.26  
+ lrate is  0.0001  temp_KL is  0.629133880138
+Epoch  1 Update  1120 Train cost mean so far 30.7748718262 Train kl_divergence_tot mean so far 0.0902363657951  lower_bound mean so far is  4.70879125595 loss mean so far is  32.3411750793 
+ fetching data time spent (sec) 4.395  update time spent (sec) 0.837  
+ lrate is  0.0001  temp_KL is  0.629396319389
+Epoch  1 Update  1130 Train cost mean so far 36.5713882446 Train kl_divergence_tot mean so far 0.0532048270106  lower_bound mean so far is  4.92981052399 loss mean so far is  38.1177558899 
+ fetching data time spent (sec) 0.789  update time spent (sec) 1.989  
+ lrate is  0.0001  temp_KL is  0.629658818245
+Epoch  1 Update  1140 Train cost mean so far 31.4794502258 Train kl_divergence_tot mean so far 0.0793002545834  lower_bound mean so far is  4.85862445831 loss mean so far is  33.0449523926 
+ fetching data time spent (sec) 0.837  update time spent (sec) 1.87  
+ lrate is  0.0001  temp_KL is  0.629921257496
+Epoch  1 Update  1150 Train cost mean so far 30.7705936432 Train kl_divergence_tot mean so far 0.0826463848352  lower_bound mean so far is  4.87708950043 loss mean so far is  32.340675354 
+ fetching data time spent (sec) 0.641  update time spent (sec) 1.488  
+ lrate is  0.0001  temp_KL is  0.630183756351
+Epoch  1 Update  1160 Train cost mean so far 29.138250351 Train kl_divergence_tot mean so far 0.0603566542268  lower_bound mean so far is  4.48897838593 loss mean so far is  30.6967086792 
+ fetching data time spent (sec) 1.265  update time spent (sec) 6.418  
+ lrate is  0.0001  temp_KL is  0.630446195602
+Epoch  1 Update  1170 Train cost mean so far 35.9098205566 Train kl_divergence_tot mean so far 0.0733422189951  lower_bound mean so far is  5.15572881699 loss mean so far is  37.4793891907 
+ fetching data time spent (sec) 0.752  update time spent (sec) 1.634  
+ lrate is  0.0001  temp_KL is  0.630708634853
+Epoch  1 Update  1180 Train cost mean so far 30.4564247131 Train kl_divergence_tot mean so far 0.0533338338137  lower_bound mean so far is  4.4253616333 loss mean so far is  32.0168190002 
+ fetching data time spent (sec) 0.488  update time spent (sec) 2.335  
+ lrate is  0.0001  temp_KL is  0.630971133709
+Epoch  1 Update  1190 Train cost mean so far 31.1257781982 Train kl_divergence_tot mean so far 0.0831671431661  lower_bound mean so far is  4.64667749405 loss mean so far is  32.7072219849 
+ fetching data time spent (sec) 0.809  update time spent (sec) 2.849  
+ lrate is  0.0001  temp_KL is  0.63123357296
+Epoch  1 Update  1200 Train cost mean so far 34.7900543213 Train kl_divergence_tot mean so far 0.0443674065173  lower_bound mean so far is  4.7143201828 loss mean so far is  36.3502807617 
+ fetching data time spent (sec) 0.796  update time spent (sec) 2.38  
+ lrate is  0.0001  temp_KL is  0.631496071815
+------------- sampling from train ----------
+Truth  0 :  a man is doing a back flip off a cliff
+Sample ( 0 )  :  a man is is a
+Truth  1 :  a group of people are dancing
+Sample ( 1 )  :  a group is dancing a
+Truth  2 :  two sumo fighting with each other
+Sample ( 2 )  :  two man is fighting a
+Truth  3 :  a man is working out in a gym
+Sample ( 3 )  :  a man is doing a a a
+Truth  4 :  a dog walks down a hallway with a ball in his mouth
+Sample ( 4 )  :  a dog is playing a a
+Truth  5 :  a man is loading a rifle
+Sample ( 5 )  :  a man is shooting a a a
+Truth  6 :  the man is playing the guitar
+Sample ( 6 )  :  a man is playing
+Truth  7 :  the boy is stuck in the door of the doghouse
+Sample ( 7 )  :  a man is is a a a a a
+Truth  8 :  a man is lifting weights
+Sample ( 8 )  :  a man is doing a
+Truth  9 :  a boy is looking a grass-hoper
+Sample ( 9 )  :  a man is a a a
+------------- sampling from valid ----------
+Truth  0 :  a baby is smiling and laughing and crawling on the floor
+Sample ( 0 )  :  a baby is is a a
+Truth  1 :  a person stirs a bowl full of food
+Sample ( 1 )  :  a man is pouring a a
+Truth  2 :  a man is cutting a potato in half
+Sample ( 2 )  :  a man is slicing a potato
+Truth  3 :  frankenstein is carrying a man over his shoulder
+Sample ( 3 )  :  a man is is a a
+Truth  4 :  a lady took her dog for a walk
+Sample ( 4 )  :  a man is is a a
+Truth  5 :  the person is doing the pencil sharping them
+Sample ( 5 )  :  a man is the a a
+Truth  6 :  a person is playing the guitar
+Sample ( 6 )  :  a man is playing
+Truth  7 :  a man is taking the knife and cut the vegetable
+Sample ( 7 )  :  a man is slicing a a
+Truth  8 :  kids are playing in a bath tub
+Sample ( 8 )  :  a man is is a in a
+Truth  9 :  two baby beavers moving about in their play pen
+Sample ( 9 )  :  a man is eating a
+Epoch  1 Update  1210 Train cost mean so far 36.415927887 Train kl_divergence_tot mean so far 0.10907522589  lower_bound mean so far is  5.08469724655 loss mean so far is  38.0197753906 
+ fetching data time spent (sec) 0.397  update time spent (sec) 1.329  
+ lrate is  0.0001  temp_KL is  0.631758511066
+Epoch  1 Update  1220 Train cost mean so far 28.7431678772 Train kl_divergence_tot mean so far 0.0334797948599  lower_bound mean so far is  4.44386100769 loss mean so far is  30.3022880554 
+ fetching data time spent (sec) 0.504  update time spent (sec) 1.574  
+ lrate is  0.0001  temp_KL is  0.632021009922
+Epoch  1 Update  1230 Train cost mean so far 31.5326881409 Train kl_divergence_tot mean so far 0.0537727661431  lower_bound mean so far is  4.83983039856 loss mean so far is  33.1076622009 
+ fetching data time spent (sec) 0.487  update time spent (sec) 2.268  
+ lrate is  0.0001  temp_KL is  0.632283449173
+Epoch  1 Update  1240 Train cost mean so far 36.340927124 Train kl_divergence_tot mean so far 0.0560819655657  lower_bound mean so far is  4.93654966354 loss mean so far is  37.9203300476 
+ fetching data time spent (sec) 0.799  update time spent (sec) 2.132  
+ lrate is  0.0001  temp_KL is  0.632545948029
+Epoch  1 Update  1250 Train cost mean so far 30.698135376 Train kl_divergence_tot mean so far 0.132427945733  lower_bound mean so far is  4.75227880478 loss mean so far is  32.3291969299 
+ fetching data time spent (sec) 0.88  update time spent (sec) 2.351  
+ lrate is  0.0001  temp_KL is  0.63280838728
+Epoch  1 Update  1260 Train cost mean so far 32.9574661255 Train kl_divergence_tot mean so far 0.0356187224388  lower_bound mean so far is  4.81185388565 loss mean so far is  34.5310707092 
+ fetching data time spent (sec) 0.455  update time spent (sec) 2.299  
+ lrate is  0.0001  temp_KL is  0.633070886135
+Epoch  1 Update  1270 Train cost mean so far 30.0669021606 Train kl_divergence_tot mean so far 0.12181750685  lower_bound mean so far is  4.6772942543 loss mean so far is  31.6981620789 
+ fetching data time spent (sec) 0.546  update time spent (sec) 1.246  
+ lrate is  0.0001  temp_KL is  0.633333325386
+Epoch  1 Update  1280 Train cost mean so far 36.3515396118 Train kl_divergence_tot mean so far 0.045173086226  lower_bound mean so far is  5.06711483002 loss mean so far is  37.9376831055 
+ fetching data time spent (sec) 1.019  update time spent (sec) 10.006  
+ lrate is  0.0001  temp_KL is  0.633595824242
+Epoch  1 Update  1290 Train cost mean so far 32.9451560974 Train kl_divergence_tot mean so far 0.0581913292408  lower_bound mean so far is  4.76444816589 loss mean so far is  34.5428771973 
+ fetching data time spent (sec) 2.186  update time spent (sec) 3.237  
+ lrate is  0.0001  temp_KL is  0.633858263493
+Epoch  1 Update  1300 Train cost mean so far 34.4273223877 Train kl_divergence_tot mean so far 0.04207418859  lower_bound mean so far is  5.12864208221 loss mean so far is  36.0184631348 
+ fetching data time spent (sec) 1.057  update time spent (sec) 2.274  
+ lrate is  0.0001  temp_KL is  0.634120762348
+------------- sampling from train ----------
+Truth  0 :  a woman is smoking a cigarette
+Sample ( 0 )  :  a woman is
+Truth  1 :  a man is cutting wood with an axe
+Sample ( 1 )  :  a man is cutting
+Truth  2 :  two women are dancing
+Sample ( 2 )  :  two women are dancing
+Truth  3 :  the toad tried to bit the man 's finger
+Sample ( 3 )  :  a frog is playing
+Truth  4 :  a chef doing some preparation for a wedding cake
+Sample ( 4 )  :  a woman is cutting
+Truth  5 :  the team members passed the ball to each other
+Sample ( 5 )  :  a men are playing
+Truth  6 :  a puppy is playing with a ball
+Sample ( 6 )  :  a puppy is playing
+Truth  7 :  a woman is doing aerobics
+Sample ( 7 )  :  a woman is doing
+Truth  8 :  a cat is playing with piano keys
+Sample ( 8 )  :  a cat is playing
+Truth  9 :  the women is making something with boiled eggs
+Sample ( 9 )  :  a woman is
+------------- sampling from valid ----------
+Truth  0 :  a man eating food
+Sample ( 0 )  :  a man is
+Truth  1 :  they are hitting that steel slappin
+Sample ( 1 )  :  a man is
+Truth  2 :  the girl wrote on the paper in the field
+Sample ( 2 )  :  a man is a
+Truth  3 :  a man is doing a wheelie on a moped
+Sample ( 3 )  :  a man is riding
+Truth  4 :  a man shoots another man on a horse
+Sample ( 4 )  :  a man is
+Truth  5 :  a boy is playing a piano and singing
+Sample ( 5 )  :  a man is
+Truth  6 :  a man is cutting a tomato into pieces
+Sample ( 6 )  :  a man is cutting
+Truth  7 :  a woman is reading a bohemian paper
+Sample ( 7 )  :  a man is a
+Truth  8 :  a man plays an acoustic guitar
+Sample ( 8 )  :  a man is playing
+Truth  9 :  two cats were fighting with one another
+Sample ( 9 )  :  a cat is playing
+Epoch  1 Update  1310 Train cost mean so far 36.7824821472 Train kl_divergence_tot mean so far 0.0535903573036  lower_bound mean so far is  5.04683971405 loss mean so far is  38.384223938 
+ fetching data time spent (sec) 1.182  update time spent (sec) 4.012  
+ lrate is  0.0001  temp_KL is  0.634383201599
+Epoch  1 Update  1320 Train cost mean so far 33.6712608337 Train kl_divergence_tot mean so far 0.0390383787453  lower_bound mean so far is  4.79087162018 loss mean so far is  35.2669258118 
+ fetching data time spent (sec) 4.894  update time spent (sec) 3.81  
+ lrate is  0.0001  temp_KL is  0.63464564085
+Epoch  1 Update  1330 Train cost mean so far 34.5324707031 Train kl_divergence_tot mean so far 0.0373559892178  lower_bound mean so far is  4.67571210861 loss mean so far is  36.1305236816 
+ fetching data time spent (sec) 1.072  update time spent (sec) 1.762  
+ lrate is  0.0001  temp_KL is  0.634908139706
+Epoch  1 Update  1340 Train cost mean so far 31.9813652039 Train kl_divergence_tot mean so far 0.145452618599  lower_bound mean so far is  4.96736335754 loss mean so far is  33.6518440247 
+ fetching data time spent (sec) 0.69  update time spent (sec) 2.353  
+ lrate is  0.0001  temp_KL is  0.635170578957
+Epoch  1 Update  1350 Train cost mean so far 28.9122371674 Train kl_divergence_tot mean so far 0.0282914713025  lower_bound mean so far is  4.4478430748 loss mean so far is  30.511888504 
+ fetching data time spent (sec) 0.706  update time spent (sec) 2.734  
+ lrate is  0.0001  temp_KL is  0.635433077812
+Epoch  1 Update  1360 Train cost mean so far 28.5821266174 Train kl_divergence_tot mean so far 0.028400901705  lower_bound mean so far is  4.5174407959 loss mean so far is  30.1853713989 
+ fetching data time spent (sec) 0.377  update time spent (sec) 1.936  
+ lrate is  0.0001  temp_KL is  0.635695517063
+Epoch  1 Update  1370 Train cost mean so far 32.0485496521 Train kl_divergence_tot mean so far 0.105118975043  lower_bound mean so far is  4.89477968216 loss mean so far is  33.7037734985 
+ fetching data time spent (sec) 0.221  update time spent (sec) 1.45  
+ lrate is  0.0001  temp_KL is  0.635958015919
+Epoch  1 Update  1380 Train cost mean so far 35.2601394653 Train kl_divergence_tot mean so far 0.0312191098928  lower_bound mean so far is  4.8612985611 loss mean so far is  36.8725395203 
+ fetching data time spent (sec) 0.681  update time spent (sec) 3.276  
+ lrate is  0.0001  temp_KL is  0.63622045517
+Epoch  1 Update  1390 Train cost mean so far 35.2886543274 Train kl_divergence_tot mean so far 0.0610723383725  lower_bound mean so far is  4.872631073 loss mean so far is  36.9236946106 
+ fetching data time spent (sec) 0.894  update time spent (sec) 1.581  
+ lrate is  0.0001  temp_KL is  0.636482954025
+Epoch  1 Update  1400 Train cost mean so far 34.3261680603 Train kl_divergence_tot mean so far 0.0315275937319  lower_bound mean so far is  4.69119691849 loss mean so far is  35.9467391968 
+ fetching data time spent (sec) 0.512  update time spent (sec) 2.107  
+ lrate is  0.0001  temp_KL is  0.636745393276
+------------- sampling from train ----------
+Truth  0 :  a man is sitting and singing on top of a bus
+Sample ( 0 )  :  the are are are the
+Truth  1 :  a boy playing soccer football alone scores a goal
+Sample ( 1 )  :  a boy is playing the
+Truth  2 :  a woman is peeling some garlic
+Sample ( 2 )  :  a woman is peeling the onion
+Truth  3 :  someone is preparing some food
+Sample ( 3 )  :  a woman is cutting the
+Truth  4 :  a slice of bread is buttered
+Sample ( 4 )  :  a man is bread bread bread
+Truth  5 :  the cat is playing the piano
+Sample ( 5 )  :  a cat is playing piano piano
+Truth  6 :  a squirrel bounds around in circles
+Sample ( 6 )  :  a squirrel is walking the
+Truth  7 :  an animal swims along the water
+Sample ( 7 )  :  a dog is jumping the in
+Truth  8 :  somebody is covering a plate with papers
+Sample ( 8 )  :  a man is putting paper
+Truth  9 :  the cat was swung around the room by the fan pull
+Sample ( 9 )  :  a cat is playing the
+------------- sampling from valid ----------
+Truth  0 :  the man is slicing a vegetable
+Sample ( 0 )  :  a man is cutting the
+Truth  1 :  a women is playing flute
+Sample ( 1 )  :  a girl is playing the flute
+Truth  2 :  a bird is dancing on the back of a chair
+Sample ( 2 )  :  a cat is playing the
+Truth  3 :  somebody is working in a computer
+Sample ( 3 )  :  a man is the the
+Truth  4 :  the woman is writing
+Sample ( 4 )  :  a man is playing the
+Truth  5 :  a woman is taking her pet dog for a walk on the street
+Sample ( 5 )  :  a dog is playing the
+Truth  6 :  women are preforming a traditonal dance
+Sample ( 6 )  :  a man is playing the
+Truth  7 :  a lady is garnishing
+Sample ( 7 )  :  a man is putting the
+Truth  8 :  a gwomen singing with piano
+Sample ( 8 )  :  a man is playing
+Truth  9 :  a kitten is playing on top of a cat toy
+Sample ( 9 )  :  a cat is playing
+Epoch  1 Update  1410 Train cost mean so far 30.4677715302 Train kl_divergence_tot mean so far 0.0770027339458  lower_bound mean so far is  4.80995464325 loss mean so far is  32.1216773987 
+ fetching data time spent (sec) 0.543  update time spent (sec) 3.453  
+ lrate is  0.0001  temp_KL is  0.637007892132
+Epoch  1 Update  1420 Train cost mean so far 31.7340717316 Train kl_divergence_tot mean so far 0.0255890674889  lower_bound mean so far is  4.78729581833 loss mean so far is  33.3592262268 
+ fetching data time spent (sec) 0.77  update time spent (sec) 2.061  
+ lrate is  0.0001  temp_KL is  0.637270331383
+Epoch  1 Update  1430 Train cost mean so far 32.2955780029 Train kl_divergence_tot mean so far 0.0266691688448  lower_bound mean so far is  4.49673032761 loss mean so far is  33.9262428284 
+ fetching data time spent (sec) 2.492  update time spent (sec) 7.739  
+ lrate is  0.0001  temp_KL is  0.637532830238
+Epoch  1 Update  1440 Train cost mean so far 31.0948791504 Train kl_divergence_tot mean so far 0.0473587661982  lower_bound mean so far is  4.5860118866 loss mean so far is  32.7441673279 
+ fetching data time spent (sec) 1.502  update time spent (sec) 2.644  
+ lrate is  0.0001  temp_KL is  0.637795269489
+Epoch  1 Update  1450 Train cost mean so far 30.1822414398 Train kl_divergence_tot mean so far 1.28104877472  lower_bound mean so far is  5.60232973099 loss mean so far is  32.6229515076 
+ fetching data time spent (sec) 1.151  update time spent (sec) 3.247  
+ lrate is  0.0001  temp_KL is  0.638057768345
+Epoch  1 Update  1460 Train cost mean so far 31.4605426788 Train kl_divergence_tot mean so far 0.809185445309  lower_bound mean so far is  5.25555849075 loss mean so far is  33.6043357849 
+ fetching data time spent (sec) 2.447  update time spent (sec) 3.358  
+ lrate is  0.0001  temp_KL is  0.638320207596
+Epoch  1 Update  1470 Train cost mean so far 33.5112266541 Train kl_divergence_tot mean so far 0.0369515866041  lower_bound mean so far is  4.77742385864 loss mean so far is  35.1668014526 
+ fetching data time spent (sec) 1.586  update time spent (sec) 2.675  
+ lrate is  0.0001  temp_KL is  0.638582706451
+Epoch  1 Update  1480 Train cost mean so far 38.3789176941 Train kl_divergence_tot mean so far 0.0292844362557  lower_bound mean so far is  4.83211231232 loss mean so far is  40.0350875854 
+ fetching data time spent (sec) 1.172  update time spent (sec) 3.442  
+ lrate is  0.0001  temp_KL is  0.638845145702
+Epoch  1 Update  1490 Train cost mean so far 30.8706703186 Train kl_divergence_tot mean so far 0.0295889768749  lower_bound mean so far is  4.36655807495 loss mean so far is  32.5321235657 
+ fetching data time spent (sec) 0.795  update time spent (sec) 2.885  
+ lrate is  0.0001  temp_KL is  0.639107584953
+Epoch  1 Update  1500 Train cost mean so far 28.9648323059 Train kl_divergence_tot mean so far 0.0312641263008  lower_bound mean so far is  4.38950777054 loss mean so far is  30.6325016022 
+ fetching data time spent (sec) 0.618  update time spent (sec) 4.039  
+ lrate is  0.0001  temp_KL is  0.639370083809
+------------- sampling from train ----------
+Truth  0 :  a woman is making a tofu wrap
+Sample ( 0 )  :  a woman is peeling
+Truth  1 :  a person opening food cover
+Sample ( 1 )  :  a man is eating
+Truth  2 :  a woman is preparing some food
+Sample ( 2 )  :  a woman is slicing
+Truth  3 :  a musician plays a drum kit
+Sample ( 3 )  :  a man is playing
+Truth  4 :  the man is walking down the path
+Sample ( 4 )  :  a man is riding
+Truth  5 :  a girl is kissing a man
+Sample ( 5 )  :  a woman is kissing
+Truth  6 :  a man is shooting with his gun
+Sample ( 6 )  :  a person is shooting
+Truth  7 :  a man is peeling a carrot
+Sample ( 7 )  :  a person is peeling
+Truth  8 :  the man took a picture of a bug
+Sample ( 8 )  :  a person is taking a gun
+Truth  9 :  a person is slicing an onion
+Sample ( 9 )  :  a person is slicing
+------------- sampling from valid ----------
+Truth  0 :  a man is dancing on a bench
+Sample ( 0 )  :  a woman is riding a horse
+Truth  1 :  a man is cutting something with a knife
+Sample ( 1 )  :  a man is cutting a gun
+Truth  2 :  somebody is folding the paper
+Sample ( 2 )  :  a person is slicing
+Truth  3 :  a potato is being cut into pieces
+Sample ( 3 )  :  a person is peeling
+Truth  4 :  a man is talking
+Sample ( 4 )  :  a man is eating
+Truth  5 :  the man played his flute
+Sample ( 5 )  :  a person is playing
+Truth  6 :  a child playing with a girl
+Sample ( 6 )  :  a woman is talking
+Truth  7 :  the man poured the sauce over the chicken in the bag
+Sample ( 7 )  :  a person is slicing
+Truth  8 :  someone is writing
+Sample ( 8 )  :  a person is playing
+Truth  9 :  the man is playing the drums
+Sample ( 9 )  :  a woman is playing
+Epoch  1 Update  1510 Train cost mean so far 36.4910888672 Train kl_divergence_tot mean so far 0.0373419001698  lower_bound mean so far is  4.63684415817 loss mean so far is  38.1678657532 
+ fetching data time spent (sec) 0.631  update time spent (sec) 3.85  
+ lrate is  0.0001  temp_KL is  0.63963252306
+Epoch  1 Update  1520 Train cost mean so far 26.1849498749 Train kl_divergence_tot mean so far 0.046420186758  lower_bound mean so far is  4.17891454697 loss mean so far is  27.8730258942 
+ fetching data time spent (sec) 0.67  update time spent (sec) 2.417  
+ lrate is  0.0001  temp_KL is  0.639895021915
+This epoch has seen 48780 samples, train cost 32.66
+Epoch  2
+Epoch  2 Update  1530 Train cost mean so far 27.9404640198 Train kl_divergence_tot mean so far 0.0255642496049  lower_bound mean so far is  4.37902545929 loss mean so far is  29.6200675964 
+ fetching data time spent (sec) 2.208  update time spent (sec) 1.728  
+ lrate is  0.0001  temp_KL is  0.640157461166
+Epoch  2 Update  1540 Train cost mean so far 30.9880485535 Train kl_divergence_tot mean so far 0.0377810373902  lower_bound mean so far is  4.55516910553 loss mean so far is  32.6807899475 
+ fetching data time spent (sec) 0.489  update time spent (sec) 1.412  
+ lrate is  0.0001  temp_KL is  0.640419960022
+Epoch  2 Update  1550 Train cost mean so far 28.9499092102 Train kl_divergence_tot mean so far 0.035442262888  lower_bound mean so far is  4.41023015976 loss mean so far is  30.6459712982 
+ fetching data time spent (sec) 0.38  update time spent (sec) 2.857  
+ lrate is  0.0001  temp_KL is  0.640682399273
+Epoch  2 Update  1560 Train cost mean so far 32.708770752 Train kl_divergence_tot mean so far 0.0292074680328  lower_bound mean so far is  4.82082128525 loss mean so far is  34.4052581787 
+ fetching data time spent (sec) 0.567  update time spent (sec) 1.373  
+ lrate is  0.0001  temp_KL is  0.640944898129
+Epoch  2 Update  1570 Train cost mean so far 30.6617584229 Train kl_divergence_tot mean so far 0.0975710004568  lower_bound mean so far is  4.59245347977 loss mean so far is  32.4066047668 
+ fetching data time spent (sec) 1.047  update time spent (sec) 31.351  
+ lrate is  0.0001  temp_KL is  0.641207337379
+Epoch  2 Update  1580 Train cost mean so far 29.3557834625 Train kl_divergence_tot mean so far 0.0244416892529  lower_bound mean so far is  4.5271487236 loss mean so far is  31.0579681396 
+ fetching data time spent (sec) 1.099  update time spent (sec) 2.841  
+ lrate is  0.0001  temp_KL is  0.641469836235
+Epoch  2 Update  1590 Train cost mean so far 28.4516620636 Train kl_divergence_tot mean so far 0.0928307026625  lower_bound mean so far is  4.30680656433 loss mean so far is  30.2030963898 
+ fetching data time spent (sec) 1.042  update time spent (sec) 27.208  
+ lrate is  0.0001  temp_KL is  0.641732275486
+Epoch  2 Update  1600 Train cost mean so far 30.3261642456 Train kl_divergence_tot mean so far 0.0364513397217  lower_bound mean so far is  4.41318559647 loss mean so far is  32.0472221375 
+ fetching data time spent (sec) 0.608  update time spent (sec) 3.362  
+ lrate is  0.0001  temp_KL is  0.641994774342
+------------- sampling from train ----------
+Truth  0 :  a man is lifting weights
+Sample ( 0 )  :  a man is lifting
+Truth  1 :  a puppy is shaking its tail
+Sample ( 1 )  :  a dog is playing
+Truth  2 :  a woman witha knife is slicing a carrot
+Sample ( 2 )  :  a woman is slicing
+Truth  3 :  a man is playing a guitar
+Sample ( 3 )  :  a man is playing
+Truth  4 :  a kid is performing
+Sample ( 4 )  :  a man
+Truth  5 :  a group of boys enjoying the dance of one boy
+Sample ( 5 )  :  a man
+Truth  6 :  a woman is peeling a potato
+Sample ( 6 )  :  a woman is peeling
+Truth  7 :  the man walked the tight rope
+Sample ( 7 )  :  a man
+Truth  8 :  girls are dancing on the stage
+Sample ( 8 )  :  three are dancing
+Truth  9 :  tamil song
+Sample ( 9 )  :  a man is playing
+------------- sampling from valid ----------
+Truth  0 :  the dog is running and is being hit by a obstacle
+Sample ( 0 )  :  a man is riding
+Truth  1 :  the boy danced on a park bench
+Sample ( 1 )  :  a woman is riding
+Truth  2 :  a man gets shot on his horse
+Sample ( 2 )  :  a woman
+Truth  3 :  the mouse is eating
+Sample ( 3 )  :  a kitten is playing
+Truth  4 :  someone is shooting at a target
+Sample ( 4 )  :  a man
+Truth  5 :  the man played his guitar
+Sample ( 5 )  :  a man is playing
+Truth  6 :  one man showing stunt during skating
+Sample ( 6 )  :  a man is playing
+Truth  7 :  a man pours oil over tomato slices
+Sample ( 7 )  :  a woman is adding
+Truth  8 :  one young man is throwing tennis balls at another
+Sample ( 8 )  :  a boy is riding
+Truth  9 :  a man is driving a toy car in office
+Sample ( 9 )  :  a man
+Epoch  2 Update  1610 Train cost mean so far 31.3830432892 Train kl_divergence_tot mean so far 0.0257952678949  lower_bound mean so far is  4.3195810318 loss mean so far is  33.1017799377 
+ fetching data time spent (sec) 1.466  update time spent (sec) 3.322  
+ lrate is  0.0001  temp_KL is  0.642257213593
+Epoch  2 Update  1620 Train cost mean so far 34.3031578064 Train kl_divergence_tot mean so far 0.0494183115661  lower_bound mean so far is  4.48866415024 loss mean so far is  36.0418815613 
+ fetching data time spent (sec) 1.463  update time spent (sec) 3.004  
+ lrate is  0.0001  temp_KL is  0.642519712448
+Epoch  2 Update  1630 Train cost mean so far 24.8946075439 Train kl_divergence_tot mean so far 0.0309831537306  lower_bound mean so far is  4.04050207138 loss mean so far is  26.6261558533 
+ fetching data time spent (sec) 0.844  update time spent (sec) 2.8  
+ lrate is  0.0001  temp_KL is  0.642782151699
+Epoch  2 Update  1640 Train cost mean so far 26.4789676666 Train kl_divergence_tot mean so far 0.073378443718  lower_bound mean so far is  4.21206617355 loss mean so far is  28.24193573 
+ fetching data time spent (sec) 0.701  update time spent (sec) 2.422  
+ lrate is  0.0001  temp_KL is  0.64304459095
+Epoch  2 Update  1650 Train cost mean so far 28.2891159058 Train kl_divergence_tot mean so far 0.021580953151  lower_bound mean so far is  4.10094308853 loss mean so far is  30.0229663849 
+ fetching data time spent (sec) 0.705  update time spent (sec) 2.373  
+ lrate is  0.0001  temp_KL is  0.643307089806
+Epoch  2 Update  1660 Train cost mean so far 30.2499637604 Train kl_divergence_tot mean so far 0.0275723040104  lower_bound mean so far is  4.66464185715 loss mean so far is  31.9927024841 
+ fetching data time spent (sec) 0.4  update time spent (sec) 1.258  
+ lrate is  0.0001  temp_KL is  0.643569529057
+Epoch  2 Update  1670 Train cost mean so far 32.7459030151 Train kl_divergence_tot mean so far 0.0405402556062  lower_bound mean so far is  4.66331863403 loss mean so far is  34.5021629333 
+ fetching data time spent (sec) 0.743  update time spent (sec) 2.871  
+ lrate is  0.0001  temp_KL is  0.643832027912
+Epoch  2 Update  1680 Train cost mean so far 31.6291427612 Train kl_divergence_tot mean so far 0.0271633975208  lower_bound mean so far is  4.3408780098 loss mean so far is  33.3809013367 
+ fetching data time spent (sec) 0.554  update time spent (sec) 2.254  
+ lrate is  0.0001  temp_KL is  0.644094467163
+Epoch  2 Update  1690 Train cost mean so far 28.6893005371 Train kl_divergence_tot mean so far 0.0316991582513  lower_bound mean so far is  4.15262985229 loss mean so far is  30.4488334656 
+ fetching data time spent (sec) 1.497  update time spent (sec) 5.147  
+ lrate is  0.0001  temp_KL is  0.644356966019
+Epoch  2 Update  1700 Train cost mean so far 35.2825813293 Train kl_divergence_tot mean so far 0.0291787739843  lower_bound mean so far is  4.5886592865 loss mean so far is  37.0456619263 
+ fetching data time spent (sec) 1.097  update time spent (sec) 3.303  
+ lrate is  0.0001  temp_KL is  0.64461940527
+------------- sampling from train ----------
+Truth  0 :  a group of puppies are looking at a cat
+Sample ( 0 )  :  a cat is playing
+Truth  1 :  cooking with jack shows how to make fasta pasta
+Sample ( 1 )  :  a man is eating
+Truth  2 :  the woman is writing on the chalk board
+Sample ( 2 )  :  a man is talking
+Truth  3 :  two girls are dancing
+Sample ( 3 )  :  two girls are dancing
+Truth  4 :  a frog jumps out of the water trying to catch a bug
+Sample ( 4 )  :  a frog is jumping
+Truth  5 :  the lady scratched the little monkey 's armpits
+Sample ( 5 )  :  a man is playing
+Truth  6 :  people are walking in a store
+Sample ( 6 )  :  a man is walking
+Truth  7 :  a woman is cutting food
+Sample ( 7 )  :  a man is cutting
+Truth  8 :  a woman is wrapping a cord around a pack of letters
+Sample ( 8 )  :  a woman is talking
+Truth  9 :  she is talking with hands
+Sample ( 9 )  :  a man is talking
+------------- sampling from valid ----------
+Truth  0 :  a baby is playing
+Sample ( 0 )  :  a baby is playing
+Truth  1 :  a man plays guitar
+Sample ( 1 )  :  a man is playing
+Truth  2 :  a man is shot on a horse
+Sample ( 2 )  :  a man
+Truth  3 :  the girl wrote on paper while sitting outside
+Sample ( 3 )  :  a man is cutting
+Truth  4 :  gelato is like a puppy
+Sample ( 4 )  :  a cat is playing
+Truth  5 :  a person is fighting with the lion
+Sample ( 5 )  :  a man
+Truth  6 :  a guy is preparing the chicken roast
+Sample ( 6 )  :  a man
+Truth  7 :  the person is cooking the something
+Sample ( 7 )  :  a man is cooking
+Truth  8 :  bullet holes are appearing on a target
+Sample ( 8 )  :  a man is walking
+Truth  9 :  a man is pouring a drink into two cups
+Sample ( 9 )  :  a man is talking
+Epoch  2 Update  1710 Train cost mean so far 33.7180862427 Train kl_divergence_tot mean so far 0.0329363942146  lower_bound mean so far is  4.49077892303 loss mean so far is  35.4886512756 
+ fetching data time spent (sec) 2.489  update time spent (sec) 1.857  
+ lrate is  0.0001  temp_KL is  0.644881904125
+Epoch  2 Update  1720 Train cost mean so far 26.5237293243 Train kl_divergence_tot mean so far 0.0478460863233  lower_bound mean so far is  3.96577882767 loss mean so far is  28.308795929 
+ fetching data time spent (sec) 1.388  update time spent (sec) 3.449  
+ lrate is  0.0001  temp_KL is  0.645144343376
+Epoch  2 Update  1730 Train cost mean so far 27.8202972412 Train kl_divergence_tot mean so far 0.0213395506144  lower_bound mean so far is  4.22033834457 loss mean so far is  29.592420578 
+ fetching data time spent (sec) 1.069  update time spent (sec) 3.579  
+ lrate is  0.0001  temp_KL is  0.645406842232
+Epoch  2 Update  1740 Train cost mean so far 29.718952179 Train kl_divergence_tot mean so far 0.219377234578  lower_bound mean so far is  4.5498251915 loss mean so far is  31.6236743927 
+ fetching data time spent (sec) 0.427  update time spent (sec) 1.878  
+ lrate is  0.0001  temp_KL is  0.645669281483
+Epoch  2 Update  1750 Train cost mean so far 28.0318927765 Train kl_divergence_tot mean so far 0.019067550078  lower_bound mean so far is  4.14603567123 loss mean so far is  29.8122940063 
+ fetching data time spent (sec) 0.724  update time spent (sec) 7.524  
+ lrate is  0.0001  temp_KL is  0.645931780338
+Epoch  2 Update  1760 Train cost mean so far 27.6582946777 Train kl_divergence_tot mean so far 0.0208593420684  lower_bound mean so far is  4.12962388992 loss mean so far is  29.4449157715 
+ fetching data time spent (sec) 1.638  update time spent (sec) 3.396  
+ lrate is  0.0001  temp_KL is  0.646194219589
+Epoch  2 Update  1770 Train cost mean so far 28.1905536652 Train kl_divergence_tot mean so far 0.0176643282175  lower_bound mean so far is  4.11906528473 loss mean so far is  29.980047226 
+ fetching data time spent (sec) 0.934  update time spent (sec) 2.613  
+ lrate is  0.0001  temp_KL is  0.646456718445
+Epoch  2 Update  1780 Train cost mean so far 30.6172771454 Train kl_divergence_tot mean so far 0.0371973663568  lower_bound mean so far is  4.69551467896 loss mean so far is  32.424571991 
+ fetching data time spent (sec) 0.863  update time spent (sec) 2.839  
+ lrate is  0.0001  temp_KL is  0.646719157696
+Epoch  2 Update  1790 Train cost mean so far 24.4683437347 Train kl_divergence_tot mean so far 0.022689383477  lower_bound mean so far is  3.80614304543 loss mean so far is  26.2704734802 
+ fetching data time spent (sec) 0.686  update time spent (sec) 2.191  
+ lrate is  0.0001  temp_KL is  0.646981656551
+Epoch  2 Update  1800 Train cost mean so far 26.5622558594 Train kl_divergence_tot mean so far 0.0229677353054  lower_bound mean so far is  4.40221214294 loss mean so far is  28.3698577881 
+ fetching data time spent (sec) 0.445  update time spent (sec) 1.356  
+ lrate is  0.0001  temp_KL is  0.647244095802
+------------- sampling from train ----------
+Truth  0 :  a woman is brushing and straightening her hair with a straightening iron while talking
+Sample ( 0 )  :  a girl is talking
+Truth  1 :  a dog is driving a car
+Sample ( 1 )  :  a dog is driving
+Truth  2 :  a small squirrel is eating a peanut
+Sample ( 2 )  :  a cat is eating
+Truth  3 :  a man sings into a microphone
+Sample ( 3 )  :  a man is singing
+Truth  4 :  slicing white onions for soup
+Sample ( 4 )  :  a woman is slicing onion
+Truth  5 :  this is lazy man 's pork chops
+Sample ( 5 )  :  a man is cooking
+Truth  6 :  two boys kung-fu sparring
+Sample ( 6 )  :  a man is fighting
+Truth  7 :  a man is smashing clay pots
+Sample ( 7 )  :  a man is playing
+Truth  8 :  a man is eating
+Sample ( 8 )  :  a man is eating
+Truth  9 :  a large amount of penguins are heading to the ocean
+Sample ( 9 )  :  a group of penguins penguins
+------------- sampling from valid ----------
+Truth  0 :  a woman making some sort of toy with a piece of paper
+Sample ( 0 )  :  a person is slicing
+Truth  1 :  a cat performing or playing some sort of game with her master
+Sample ( 1 )  :  a man is playing
+Truth  2 :  a woman is petting baby beavers
+Sample ( 2 )  :  a animal is eating
+Truth  3 :  amazing catch by jamie dalrymple
+Sample ( 3 )  :  a man is playing
+Truth  4 :  the jewish man talked into the camera
+Sample ( 4 )  :  a man is talking
+Truth  5 :  a fox is walking in the snow
+Sample ( 5 )  :  a cat is licking
+Truth  6 :  a amazing catch
+Sample ( 6 )  :  a man is playing
+Truth  7 :  a man trims fat off of a haunch of meat
+Sample ( 7 )  :  a man is slicing meat
+Truth  8 :  a man is folding the paper
+Sample ( 8 )  :  a man is slicing
+Truth  9 :  the little boy received a couple of shots on the arm
+Sample ( 9 )  :  a boy is talking
+Epoch  2 Update  1810 Train cost mean so far 33.5053405762 Train kl_divergence_tot mean so far 0.0904852598906  lower_bound mean so far is  4.61483478546 loss mean so far is  35.3610458374 
+ fetching data time spent (sec) 0.789  update time spent (sec) 3.061  
+ lrate is  0.0001  temp_KL is  0.647506535053
+Epoch  2 Update  1820 Train cost mean so far 32.1819992065 Train kl_divergence_tot mean so far 0.0224895328283  lower_bound mean so far is  4.49752235413 loss mean so far is  33.9990653992 
+ fetching data time spent (sec) 0.36  update time spent (sec) 4.052  
+ lrate is  0.0001  temp_KL is  0.647769033909
+Epoch  2 Update  1830 Train cost mean so far 29.9704685211 Train kl_divergence_tot mean so far 0.0187681149691  lower_bound mean so far is  4.47280263901 loss mean so far is  31.7897853851 
+ fetching data time spent (sec) 0.596  update time spent (sec) 1.492  
+ lrate is  0.0001  temp_KL is  0.64803147316
+Epoch  2 Update  1840 Train cost mean so far 25.218547821 Train kl_divergence_tot mean so far 0.0471379980445  lower_bound mean so far is  4.37990236282 loss mean so far is  27.0613002777 
+ fetching data time spent (sec) 1.645  update time spent (sec) 4.511  
+ lrate is  0.0001  temp_KL is  0.648293972015
+Epoch  2 Update  1850 Train cost mean so far 28.5793418884 Train kl_divergence_tot mean so far 0.0238373354077  lower_bound mean so far is  4.57377958298 loss mean so far is  30.4116001129 
+ fetching data time spent (sec) 0.797  update time spent (sec) 1.351  
+ lrate is  0.0001  temp_KL is  0.648556411266
+Epoch  2 Update  1860 Train cost mean so far 29.5877952576 Train kl_divergence_tot mean so far 0.079949349165  lower_bound mean so far is  4.41536998749 loss mean so far is  31.4612960815 
+ fetching data time spent (sec) 1.594  update time spent (sec) 3.758  
+ lrate is  0.0001  temp_KL is  0.648818910122
+Epoch  2 Update  1870 Train cost mean so far 25.2241725922 Train kl_divergence_tot mean so far 0.0233488492668  lower_bound mean so far is  4.20592737198 loss mean so far is  27.0656719208 
+ fetching data time spent (sec) 1.15  update time spent (sec) 0.917  
+ lrate is  0.0001  temp_KL is  0.649081349373
+Epoch  2 Update  1880 Train cost mean so far 31.4372444153 Train kl_divergence_tot mean so far 0.0240109302104  lower_bound mean so far is  4.32199954987 loss mean so far is  33.2838287354 
+ fetching data time spent (sec) 0.683  update time spent (sec) 1.804  
+ lrate is  0.0001  temp_KL is  0.649343848228
+Epoch  2 Update  1890 Train cost mean so far 30.0912895203 Train kl_divergence_tot mean so far 0.0252034850419  lower_bound mean so far is  4.47971391678 loss mean so far is  31.9444561005 
+ fetching data time spent (sec) 0.665  update time spent (sec) 2.62  
+ lrate is  0.0001  temp_KL is  0.649606287479
+Epoch  2 Update  1900 Train cost mean so far 22.4089355469 Train kl_divergence_tot mean so far 0.0187048502266  lower_bound mean so far is  3.97879719734 loss mean so far is  24.2629680634 
+ fetching data time spent (sec) 0.65  update time spent (sec) 2.292  
+ lrate is  0.0001  temp_KL is  0.649868786335
+------------- sampling from train ----------
+Truth  0 :  a person is prepair jusee
+Sample ( 0 )  :  a man is cutting
+Truth  1 :  a dog brings a ball
+Sample ( 1 )  :  a dog is playing
+Truth  2 :  filtering the ingredients
+Sample ( 2 )  :  a woman is stirring
+Truth  3 :  a builder is doing the exercise
+Sample ( 3 )  :  a man is doing exercise
+Truth  4 :  a woman is making sushi
+Sample ( 4 )  :  a woman is cutting
+Truth  5 :  a sexy woman does a workout
+Sample ( 5 )  :  a woman
+Truth  6 :  a woman is dancing
+Sample ( 6 )  :  a woman is dancing
+Truth  7 :  a man is cutting a loaf of bread
+Sample ( 7 )  :  a man is bread
+Truth  8 :  the loris is eating and staring
+Sample ( 8 )  :  a monkey is eating
+Truth  9 :  a man takes off his glasses
+Sample ( 9 )  :  a man
+------------- sampling from valid ----------
+Truth  0 :  a man is playing a flute
+Sample ( 0 )  :  a woman
+Truth  1 :  a man is cutting an onion with a cleaver
+Sample ( 1 )  :  a man is cutting a apple
+Truth  2 :  a man is hitting a knife with a piece of wood
+Sample ( 2 )  :  a man is cutting
+Truth  3 :  a person moves his finger toward a box and then gets attacked by a cat
+Sample ( 3 )  :  a man is showing a bag
+Truth  4 :  a man is cutting something with knife
+Sample ( 4 )  :  a man is showing
+Truth  5 :  the boy danced on and around a park bench
+Sample ( 5 )  :  a man is riding
+Truth  6 :  the boy is playing the piano
+Sample ( 6 )  :  a man is playing a piano
+Truth  7 :  a man plays the guitar
+Sample ( 7 )  :  a man is playing
+Truth  8 :  a man is telling us about two mad brothers
+Sample ( 8 )  :  a man is riding
+Truth  9 :  a little boy is getting injections
+Sample ( 9 )  :  a boy
+Epoch  2 Update  1910 Train cost mean so far 27.1509857178 Train kl_divergence_tot mean so far 0.0834147259593  lower_bound mean so far is  4.03883934021 loss mean so far is  29.0511302948 
+ fetching data time spent (sec) 0.558  update time spent (sec) 2.592  
+ lrate is  0.0001  temp_KL is  0.650131225586
+Epoch  2 Update  1920 Train cost mean so far 25.9131202698 Train kl_divergence_tot mean so far 0.0190904270858  lower_bound mean so far is  4.17575454712 loss mean so far is  27.7765426636 
+ fetching data time spent (sec) 0.298  update time spent (sec) 1.879  
+ lrate is  0.0001  temp_KL is  0.650393724442
+Epoch  2 Update  1930 Train cost mean so far 27.6656703949 Train kl_divergence_tot mean so far 0.0119768735021  lower_bound mean so far is  4.16754055023 loss mean so far is  29.5289497375 
+ fetching data time spent (sec) 0.336  update time spent (sec) 2.405  
+ lrate is  0.0001  temp_KL is  0.650656163692
+Epoch  2 Update  1940 Train cost mean so far 27.668258667 Train kl_divergence_tot mean so far 0.016525182873  lower_bound mean so far is  4.09410381317 loss mean so far is  29.5398139954 
+ fetching data time spent (sec) 0.126  update time spent (sec) 3.162  
+ lrate is  0.0001  temp_KL is  0.650918662548
+Epoch  2 Update  1950 Train cost mean so far 32.2807312012 Train kl_divergence_tot mean so far 0.0199991744012  lower_bound mean so far is  4.56593370438 loss mean so far is  34.1590766907 
+ fetching data time spent (sec) 0.083  update time spent (sec) 1.765  
+ lrate is  0.0001  temp_KL is  0.651181101799
+Epoch  2 Update  1960 Train cost mean so far 30.930316925 Train kl_divergence_tot mean so far 0.0148899070919  lower_bound mean so far is  4.45107746124 loss mean so far is  32.8108100891 
+ fetching data time spent (sec) 0.128  update time spent (sec) 3.202  
+ lrate is  0.0001  temp_KL is  0.65144354105
+Epoch  2 Update  1970 Train cost mean so far 26.0591564178 Train kl_divergence_tot mean so far 0.0395485945046  lower_bound mean so far is  3.89929819107 loss mean so far is  27.9610137939 
+ fetching data time spent (sec) 0.239  update time spent (sec) 2.637  
+ lrate is  0.0001  temp_KL is  0.651706039906
+Epoch  2 Update  1980 Train cost mean so far 24.3197040558 Train kl_divergence_tot mean so far 0.0158101506531  lower_bound mean so far is  3.97613739967 loss mean so far is  26.2111530304 
+ fetching data time spent (sec) 0.247  update time spent (sec) 2.487  
+ lrate is  0.0001  temp_KL is  0.651968479156
+Epoch  2 Update  1990 Train cost mean so far 28.4691619873 Train kl_divergence_tot mean so far 0.0170679911971  lower_bound mean so far is  4.2125658989 loss mean so far is  30.3669605255 
+ fetching data time spent (sec) 0.533  update time spent (sec) 1.728  
+ lrate is  0.0001  temp_KL is  0.652230978012
+Epoch  2 Update  2000 Train cost mean so far 26.3787498474 Train kl_divergence_tot mean so far 0.0152980908751  lower_bound mean so far is  4.04840087891 loss mean so far is  28.2804145813 
+ fetching data time spent (sec) 0.599  update time spent (sec) 2.814  
+ lrate is  0.0001  temp_KL is  0.652493417263
+------------- sampling from train ----------
+Truth  0 :  a parrot which is lying on its back motionless suddenly flips over and stands on its feet
+Sample ( 0 )  :  a bird is playing
+Truth  1 :  an animal bites a person 's finger
+Sample ( 1 )  :  a animal is playing a finger
+Truth  2 :  someone is chopping potatoes into cube sized pieces
+Sample ( 2 )  :  a person is cutting potatoes
+Truth  3 :  a woman breaks up cooked chicken
+Sample ( 3 )  :  a woman is cutting meat
+Truth  4 :  a girl is filling a pot with tap water
+Sample ( 4 )  :  a woman is putting a water
+Truth  5 :  a man is indoors playing the guitar and singing
+Sample ( 5 )  :  a man is playing a guitar
+Truth  6 :  a girl riding her motorcycle
+Sample ( 6 )  :  a girl is riding
+Truth  7 :  they are going to drinking something
+Sample ( 7 )  :  a woman is playing
+Truth  8 :  a woman is galloping a horse around an inside arena
+Sample ( 8 )  :  a girl is riding a horse
+Truth  9 :  a teacher teching math
+Sample ( 9 )  :  a man is playing on
+------------- sampling from valid ----------
+Truth  0 :  a man is cuting a fish
+Sample ( 0 )  :  a person is cutting
+Truth  1 :  a person is mixing a salad
+Sample ( 1 )  :  a man is stirring a bowl
+Truth  2 :  a man is writing in a notebook
+Sample ( 2 )  :  a man is reading on
+Truth  3 :  a boy is playing a flute
+Sample ( 3 )  :  a man is playing a guitar
+Truth  4 :  a man is sharpening a pencil with a large knife
+Sample ( 4 )  :  a man is cutting a paper
+Truth  5 :  the skateboarder fell off his board while doing a trick
+Sample ( 5 )  :  a man is playing on
+Truth  6 :  the boy is playing the key borad
+Sample ( 6 )  :  a man is playing a piano
+Truth  7 :  a woman is pouring coffee into a mug and adding sugar cubes
+Sample ( 7 )  :  a man is putting a water
+Truth  8 :  a man is cutting potatoes
+Sample ( 8 )  :  a person is peeling an potato
+Truth  9 :  an uncaged bird dances to a song
+Sample ( 9 )  :  a cat is playing
+validating...
+Computing LL on 200/4291 examplesComputing LL on 400/4291 examplesComputing LL on 600/4291 examplesComputing LL on 800/4291 examplesComputing LL on 1000/4291 examplesComputing LL on 1200/4291 examplesComputing LL on 1400/4291 examplesComputing LL on 1600/4291 examplesComputing LL on 1800/4291 examplesComputing LL on 2000/4291 examplesComputing LL on 2200/4291 examplesComputing LL on 2400/4291 examplesComputing LL on 2600/4291 examplesComputing LL on 2800/4291 examplesComputing LL on 3000/4291 examplesComputing LL on 3200/4291 examplesComputing LL on 3400/4291 examplesComputing LL on 3600/4291 examplesComputing LL on 3800/4291 examplesComputing LL on 4000/4291 examplesComputing LL on 4200/4291 examplesComputing LL on 4291/4291 examples
+testing...
+Computing LL on 200/27768 examplesComputing LL on 400/27768 examplesComputing LL on 600/27768 examplesComputing LL on 800/27768 examplesComputing LL on 1000/27768 examplesComputing LL on 1200/27768 examplesComputing LL on 1400/27768 examplesComputing LL on 1600/27768 examplesComputing LL on 1800/27768 examplesComputing LL on 2000/27768 examplesComputing LL on 2200/27768 examplesComputing LL on 2400/27768 examplesComputing LL on 2600/27768 examplesComputing LL on 2800/27768 examplesComputing LL on 3000/27768 examplesComputing LL on 3200/27768 examplesComputing LL on 3400/27768 examplesComputing LL on 3600/27768 examplesComputing LL on 3800/27768 examplesComputing LL on 4000/27768 examplesComputing LL on 4200/27768 examplesComputing LL on 4400/27768 examplesComputing LL on 4600/27768 examplesComputing LL on 4800/27768 examplesComputing LL on 5000/27768 examplesComputing LL on 5200/27768 examplesComputing LL on 5400/27768 examplesComputing LL on 5600/27768 examplesComputing LL on 5800/27768 examplesComputing LL on 6000/27768 examplesComputing LL on 6200/27768 examplesComputing LL on 6400/27768 examplesComputing LL on 6600/27768 examplesComputing LL on 6800/27768 examplesComputing LL on 7000/27768 examplesComputing LL on 7200/27768 examplesComputing LL on 7400/27768 examplesComputing LL on 7600/27768 examplesComputing LL on 7800/27768 examplesComputing LL on 8000/27768 examplesComputing LL on 8200/27768 examplesComputing LL on 8400/27768 examplesComputing LL on 8600/27768 examplesComputing LL on 8800/27768 examplesComputing LL on 9000/27768 examplesComputing LL on 9200/27768 examplesComputing LL on 9400/27768 examplesComputing LL on 9600/27768 examplesComputing LL on 9800/27768 examplesComputing LL on 10000/27768 examplesComputing LL on 10200/27768 examplesComputing LL on 10400/27768 examplesComputing LL on 10600/27768 examplesComputing LL on 10800/27768 examplesComputing LL on 11000/27768 examplesComputing LL on 11200/27768 examplesComputing LL on 11400/27768 examplesComputing LL on 11600/27768 examplesComputing LL on 11800/27768 examplesComputing LL on 12000/27768 examplesComputing LL on 12200/27768 examplesComputing LL on 12400/27768 examplesComputing LL on 12600/27768 examplesComputing LL on 12800/27768 examplesComputing LL on 13000/27768 examplesComputing LL on 13200/27768 examplesComputing LL on 13400/27768 examplesComputing LL on 13600/27768 examplesComputing LL on 13800/27768 examplesComputing LL on 14000/27768 examplesComputing LL on 14200/27768 examplesComputing LL on 14400/27768 examplesComputing LL on 14600/27768 examplesComputing LL on 14800/27768 examplesComputing LL on 15000/27768 examplesComputing LL on 15200/27768 examplesComputing LL on 15400/27768 examplesComputing LL on 15600/27768 examplesComputing LL on 15800/27768 examplesComputing LL on 16000/27768 examplesComputing LL on 16200/27768 examplesComputing LL on 16400/27768 examplesComputing LL on 16600/27768 examplesComputing LL on 16800/27768 examplesComputing LL on 17000/27768 examplesComputing LL on 17200/27768 examplesComputing LL on 17400/27768 examplesComputing LL on 17600/27768 examplesComputing LL on 17800/27768 examplesComputing LL on 18000/27768 examplesComputing LL on 18200/27768 examplesComputing LL on 18400/27768 examplesComputing LL on 18600/27768 examplesComputing LL on 18800/27768 examplesComputing LL on 19000/27768 examplesComputing LL on 19200/27768 examplesComputing LL on 19400/27768 examplesComputing LL on 19600/27768 examplesComputing LL on 19800/27768 examplesComputing LL on 20000/27768 examplesComputing LL on 20200/27768 examplesComputing LL on 20400/27768 examplesComputing LL on 20600/27768 examplesComputing LL on 20800/27768 examplesComputing LL on 21000/27768 examplesComputing LL on 21200/27768 examplesComputing LL on 21400/27768 examplesComputing LL on 21600/27768 examplesComputing LL on 21800/27768 examplesComputing LL on 22000/27768 examplesComputing LL on 22200/27768 examplesComputing LL on 22400/27768 examplesComputing LL on 22600/27768 examplesComputing LL on 22800/27768 examplesComputing LL on 23000/27768 examplesComputing LL on 23200/27768 examplesComputing LL on 23400/27768 examplesComputing LL on 23600/27768 examplesComputing LL on 23800/27768 examplesComputing LL on 24000/27768 examplesComputing LL on 24200/27768 examplesComputing LL on 24400/27768 examplesComputing LL on 24600/27768 examplesComputing LL on 24800/27768 examplesComputing LL on 25000/27768 examplesComputing LL on 25200/27768 examplesComputing LL on 25400/27768 examplesComputing LL on 25600/27768 examplesComputing LL on 25800/27768 examplesComputing LL on 26000/27768 examplesComputing LL on 26200/27768 examplesComputing LL on 26400/27768 examplesComputing LL on 26600/27768 examplesComputing LL on 26800/27768 examplesComputing LL on 27000/27768 examplesComputing LL on 27200/27768 examplesComputing LL on 27400/27768 examplesComputing LL on 27600/27768 examplesComputing LL on 27768/27768 examples
+Valid Set... sampling 0/100
+sampling 1/100
+sampling 2/100
+sampling 3/100
+sampling 4/100
+sampling 5/100
+sampling 6/100
+sampling 7/100
+sampling 8/100
+sampling 9/100
+sampling 10/100
+sampling 11/100
+sampling 12/100
+sampling 13/100
+sampling 14/100
+sampling 15/100
+sampling 16/100
+sampling 17/100
+sampling 18/100
+sampling 19/100
+sampling 20/100
+sampling 21/100
+sampling 22/100
+sampling 23/100
+sampling 24/100
+sampling 25/100
+sampling 26/100
+sampling 27/100
+sampling 28/100
+sampling 29/100
+sampling 30/100
+sampling 31/100
+sampling 32/100
+sampling 33/100
+sampling 34/100
+sampling 35/100
+sampling 36/100
+sampling 37/100
+sampling 38/100
+sampling 39/100
+sampling 40/100
+sampling 41/100
+sampling 42/100
+sampling 43/100
+sampling 44/100
+sampling 45/100
+sampling 46/100
+sampling 47/100
+sampling 48/100
+sampling 49/100
+sampling 50/100
+sampling 51/100
+sampling 52/100
+sampling 53/100
+sampling 54/100
+sampling 55/100
+sampling 56/100
+sampling 57/100
+sampling 58/100
+sampling 59/100
+sampling 60/100
+sampling 61/100
+sampling 62/100
+sampling 63/100
+sampling 64/100
+sampling 65/100
+sampling 66/100
+sampling 67/100
+sampling 68/100
+sampling 69/100
+sampling 70/100
+sampling 71/100
+sampling 72/100
+sampling 73/100
+sampling 74/100
+sampling 75/100
+sampling 76/100
+sampling 77/100
+sampling 78/100
+sampling 79/100
+sampling 80/100
+sampling 81/100
+sampling 82/100
+sampling 83/100
+sampling 84/100
+sampling 85/100
+sampling 86/100
+sampling 87/100
+sampling 88/100
+sampling 89/100
+sampling 90/100
+sampling 91/100
+sampling 92/100
+sampling 93/100
+sampling 94/100
+sampling 95/100
+sampling 96/100
+sampling 97/100
+sampling 98/100
+sampling 99/100
+Test Set... sampling 0/670
+sampling 1/670
+sampling 2/670
+sampling 3/670
+sampling 4/670
+sampling 5/670
+sampling 6/670
+sampling 7/670
+sampling 8/670
+sampling 9/670
+sampling 10/670
+sampling 11/670
+sampling 12/670
+sampling 13/670
+sampling 14/670
+sampling 15/670
+sampling 16/670
+sampling 17/670
+sampling 18/670
+sampling 19/670
+sampling 20/670
+sampling 21/670
+sampling 22/670
+sampling 23/670
+sampling 24/670
+sampling 25/670
+sampling 26/670
+sampling 27/670
+sampling 28/670
+sampling 29/670
+sampling 30/670
+sampling 31/670
+sampling 32/670
+sampling 33/670
+sampling 34/670
+sampling 35/670
+sampling 36/670
+sampling 37/670
+sampling 38/670
+sampling 39/670
+sampling 40/670
+sampling 41/670
+sampling 42/670
+sampling 43/670
+sampling 44/670
+sampling 45/670
+sampling 46/670
+sampling 47/670
+sampling 48/670
+sampling 49/670
+sampling 50/670
+sampling 51/670
+sampling 52/670
+sampling 53/670
+sampling 54/670
+sampling 55/670
+sampling 56/670
+sampling 57/670
+sampling 58/670
+sampling 59/670
+sampling 60/670
+sampling 61/670
+sampling 62/670
+sampling 63/670
+sampling 64/670
+sampling 65/670
+sampling 66/670
+sampling 67/670
+sampling 68/670
+sampling 69/670
+sampling 70/670
+sampling 71/670
+sampling 72/670
+sampling 73/670
+sampling 74/670
+sampling 75/670
+sampling 76/670
+sampling 77/670
+sampling 78/670
+sampling 79/670
+sampling 80/670
+sampling 81/670
+sampling 82/670
+sampling 83/670
+sampling 84/670
+sampling 85/670
+sampling 86/670
+sampling 87/670
+sampling 88/670
+sampling 89/670
+sampling 90/670
+sampling 91/670
+sampling 92/670
+sampling 93/670
+sampling 94/670
+sampling 95/670
+sampling 96/670
+sampling 97/670
+sampling 98/670
+sampling 99/670
+sampling 100/670
+sampling 101/670
+sampling 102/670
+sampling 103/670
+sampling 104/670
+sampling 105/670
+sampling 106/670
+sampling 107/670
+sampling 108/670
+sampling 109/670
+sampling 110/670
+sampling 111/670
+sampling 112/670
+sampling 113/670
+sampling 114/670
+sampling 115/670
+sampling 116/670
+sampling 117/670
+sampling 118/670
+sampling 119/670
+sampling 120/670
+sampling 121/670
+sampling 122/670
+sampling 123/670
+sampling 124/670
+sampling 125/670
+sampling 126/670
+sampling 127/670
+sampling 128/670
+sampling 129/670
+sampling 130/670
+sampling 131/670
+sampling 132/670
+sampling 133/670
+sampling 134/670
+sampling 135/670
+sampling 136/670
+sampling 137/670
+sampling 138/670
+sampling 139/670
+sampling 140/670
+sampling 141/670
+sampling 142/670
+sampling 143/670
+sampling 144/670
+sampling 145/670
+sampling 146/670
+sampling 147/670
+sampling 148/670
+sampling 149/670
+sampling 150/670
+sampling 151/670
+sampling 152/670
+sampling 153/670
+sampling 154/670
+sampling 155/670
+sampling 156/670
+sampling 157/670
+sampling 158/670
+sampling 159/670
+sampling 160/670
+sampling 161/670
+sampling 162/670
+sampling 163/670
+sampling 164/670
+sampling 165/670
+sampling 166/670
+sampling 167/670
+sampling 168/670
+sampling 169/670
+sampling 170/670
+sampling 171/670
+sampling 172/670
+sampling 173/670
+sampling 174/670
+sampling 175/670
+sampling 176/670
+sampling 177/670
+sampling 178/670
+sampling 179/670
+sampling 180/670
+sampling 181/670
+sampling 182/670
+sampling 183/670
+sampling 184/670
+sampling 185/670
+sampling 186/670
+sampling 187/670
+sampling 188/670
+sampling 189/670
+sampling 190/670
+sampling 191/670
+sampling 192/670
+sampling 193/670
+sampling 194/670
+sampling 195/670
+sampling 196/670
+sampling 197/670
+sampling 198/670
+sampling 199/670
+sampling 200/670
+sampling 201/670
+sampling 202/670
+sampling 203/670
+sampling 204/670
+sampling 205/670
+sampling 206/670
+sampling 207/670
+sampling 208/670
+sampling 209/670
+sampling 210/670
+sampling 211/670
+sampling 212/670
+sampling 213/670
+sampling 214/670
+sampling 215/670
+sampling 216/670
+sampling 217/670
+sampling 218/670
+sampling 219/670
+sampling 220/670
+sampling 221/670
+sampling 222/670
+sampling 223/670
+sampling 224/670
+sampling 225/670
+sampling 226/670
+sampling 227/670
+sampling 228/670
+sampling 229/670
+sampling 230/670
+sampling 231/670
+sampling 232/670
+sampling 233/670
+sampling 234/670
+sampling 235/670
+sampling 236/670
+sampling 237/670
+sampling 238/670
+sampling 239/670
+sampling 240/670
+sampling 241/670
+sampling 242/670
+sampling 243/670
+sampling 244/670
+sampling 245/670
+sampling 246/670
+sampling 247/670
+sampling 248/670
+sampling 249/670
+sampling 250/670
+sampling 251/670
+sampling 252/670
+sampling 253/670
+sampling 254/670
+sampling 255/670
+sampling 256/670
+sampling 257/670
+sampling 258/670
+sampling 259/670
+sampling 260/670
+sampling 261/670
+sampling 262/670
+sampling 263/670
+sampling 264/670
+sampling 265/670
+sampling 266/670
+sampling 267/670
+sampling 268/670
+sampling 269/670
+sampling 270/670
+sampling 271/670
+sampling 272/670
+sampling 273/670
+sampling 274/670
+sampling 275/670
+sampling 276/670
+sampling 277/670
+sampling 278/670
+sampling 279/670
+sampling 280/670
+sampling 281/670
+sampling 282/670
+sampling 283/670
+sampling 284/670
+sampling 285/670
+sampling 286/670
+sampling 287/670
+sampling 288/670
+sampling 289/670
+sampling 290/670
+sampling 291/670
+sampling 292/670
+sampling 293/670
+sampling 294/670
+sampling 295/670
+sampling 296/670
+sampling 297/670
+sampling 298/670
+sampling 299/670
+sampling 300/670
+sampling 301/670
+sampling 302/670
+sampling 303/670
+sampling 304/670
+sampling 305/670
+sampling 306/670
+sampling 307/670
+sampling 308/670
+sampling 309/670
+sampling 310/670
+sampling 311/670
+sampling 312/670
+sampling 313/670
+sampling 314/670
+sampling 315/670
+sampling 316/670
+sampling 317/670
+sampling 318/670
+sampling 319/670
+sampling 320/670
+sampling 321/670
+sampling 322/670
+sampling 323/670
+sampling 324/670
+sampling 325/670
+sampling 326/670
+sampling 327/670
+sampling 328/670
+sampling 329/670
+sampling 330/670
+sampling 331/670
+sampling 332/670
+sampling 333/670
+sampling 334/670
+sampling 335/670
+sampling 336/670
+sampling 337/670
+sampling 338/670
+sampling 339/670
+sampling 340/670
+sampling 341/670
+sampling 342/670
+sampling 343/670
+sampling 344/670
+sampling 345/670
+sampling 346/670
+sampling 347/670
+sampling 348/670
+sampling 349/670
+sampling 350/670
+sampling 351/670
+sampling 352/670
+sampling 353/670
+sampling 354/670
+sampling 355/670
+sampling 356/670
+sampling 357/670
+sampling 358/670
+sampling 359/670
+sampling 360/670
+sampling 361/670
+sampling 362/670
+sampling 363/670
+sampling 364/670
+sampling 365/670
+sampling 366/670
+sampling 367/670
+sampling 368/670
+sampling 369/670
+sampling 370/670
+sampling 371/670
+sampling 372/670
+sampling 373/670
+sampling 374/670
+sampling 375/670
+sampling 376/670
+sampling 377/670
+sampling 378/670
+sampling 379/670
+sampling 380/670
+sampling 381/670
+sampling 382/670
+sampling 383/670
+sampling 384/670
+sampling 385/670
+sampling 386/670
+sampling 387/670
+sampling 388/670
+sampling 389/670
+sampling 390/670
+sampling 391/670
+sampling 392/670
+sampling 393/670
+sampling 394/670
+sampling 395/670
+sampling 396/670
+sampling 397/670
+sampling 398/670
+sampling 399/670
+sampling 400/670
+sampling 401/670
+sampling 402/670
+sampling 403/670
+sampling 404/670
+sampling 405/670
+sampling 406/670
+sampling 407/670
+sampling 408/670
+sampling 409/670
+sampling 410/670
+sampling 411/670
+sampling 412/670
+sampling 413/670
+sampling 414/670
+sampling 415/670
+sampling 416/670
+sampling 417/670
+sampling 418/670
+sampling 419/670
+sampling 420/670
+sampling 421/670
+sampling 422/670
+sampling 423/670
+sampling 424/670
+sampling 425/670
+sampling 426/670
+sampling 427/670
+sampling 428/670
+sampling 429/670
+sampling 430/670
+sampling 431/670
+sampling 432/670
+sampling 433/670
+sampling 434/670
+sampling 435/670
+sampling 436/670
+sampling 437/670
+sampling 438/670
+sampling 439/670
+sampling 440/670
+sampling 441/670
+sampling 442/670
+sampling 443/670
+sampling 444/670
+sampling 445/670
+sampling 446/670
+sampling 447/670
+sampling 448/670
+sampling 449/670
+sampling 450/670
+sampling 451/670
+sampling 452/670
+sampling 453/670
+sampling 454/670
+sampling 455/670
+sampling 456/670
+sampling 457/670
+sampling 458/670
+sampling 459/670
+sampling 460/670
+sampling 461/670
+sampling 462/670
+sampling 463/670
+sampling 464/670
+sampling 465/670
+sampling 466/670
+sampling 467/670
+sampling 468/670
+sampling 469/670
+sampling 470/670
+sampling 471/670
+sampling 472/670
+sampling 473/670
+sampling 474/670
+sampling 475/670
+sampling 476/670
+sampling 477/670
+sampling 478/670
+sampling 479/670
+sampling 480/670
+sampling 481/670
+sampling 482/670
+sampling 483/670
+sampling 484/670
+sampling 485/670
+sampling 486/670
+sampling 487/670
+sampling 488/670
+sampling 489/670
+sampling 490/670
+sampling 491/670
+sampling 492/670
+sampling 493/670
+sampling 494/670
+sampling 495/670
+sampling 496/670
+sampling 497/670
+sampling 498/670
+sampling 499/670
+sampling 500/670
+sampling 501/670
+sampling 502/670
+sampling 503/670
+sampling 504/670
+sampling 505/670
+sampling 506/670
+sampling 507/670
+sampling 508/670
+sampling 509/670
+sampling 510/670
+sampling 511/670
+sampling 512/670
+sampling 513/670
+sampling 514/670
+sampling 515/670
+sampling 516/670
+sampling 517/670
+sampling 518/670
+sampling 519/670
+sampling 520/670
+sampling 521/670
+sampling 522/670
+sampling 523/670
+sampling 524/670
+sampling 525/670
+sampling 526/670
+sampling 527/670
+sampling 528/670
+sampling 529/670
+sampling 530/670
+sampling 531/670
+sampling 532/670
+sampling 533/670
+sampling 534/670
+sampling 535/670
+sampling 536/670
+sampling 537/670
+sampling 538/670
+sampling 539/670
+sampling 540/670
+sampling 541/670
+sampling 542/670
+sampling 543/670
+sampling 544/670
+sampling 545/670
+sampling 546/670
+sampling 547/670
+sampling 548/670
+sampling 549/670
+sampling 550/670
+sampling 551/670
+sampling 552/670
+sampling 553/670
+sampling 554/670
+sampling 555/670
+sampling 556/670
+sampling 557/670
+sampling 558/670
+sampling 559/670
+sampling 560/670
+sampling 561/670
+sampling 562/670
+sampling 563/670
+sampling 564/670
+sampling 565/670
+sampling 566/670
+sampling 567/670
+sampling 568/670
+sampling 569/670
+sampling 570/670
+sampling 571/670
+sampling 572/670
+sampling 573/670
+sampling 574/670
+sampling 575/670
+sampling 576/670
+sampling 577/670
+sampling 578/670
+sampling 579/670
+sampling 580/670
+sampling 581/670
+sampling 582/670
+sampling 583/670
+sampling 584/670
+sampling 585/670
+sampling 586/670
+sampling 587/670
+sampling 588/670
+sampling 589/670
+sampling 590/670
+sampling 591/670
+sampling 592/670
+sampling 593/670
+sampling 594/670
+sampling 595/670
+sampling 596/670
+sampling 597/670
+sampling 598/670
+sampling 599/670
+sampling 600/670
+sampling 601/670
+sampling 602/670
+sampling 603/670
+sampling 604/670
+sampling 605/670
+sampling 606/670
+sampling 607/670
+sampling 608/670
+sampling 609/670
+sampling 610/670
+sampling 611/670
+sampling 612/670
+sampling 613/670
+sampling 614/670
+sampling 615/670
+sampling 616/670
+sampling 617/670
+sampling 618/670
+sampling 619/670
+sampling 620/670
+sampling 621/670
+sampling 622/670
+sampling 623/670
+sampling 624/670
+sampling 625/670
+sampling 626/670
+sampling 627/670
+sampling 628/670
+sampling 629/670
+sampling 630/670
+sampling 631/670
+sampling 632/670
+sampling 633/670
+sampling 634/670
+sampling 635/670
+sampling 636/670
+sampling 637/670
+sampling 638/670
+sampling 639/670
+sampling 640/670
+sampling 641/670
+sampling 642/670
+sampling 643/670
+sampling 644/670
+sampling 645/670
+sampling 646/670
+sampling 647/670
+sampling 648/670
+sampling 649/670
+sampling 650/670
+sampling 651/670
+sampling 652/670
+sampling 653/670
+sampling 654/670
+sampling 655/670
+sampling 656/670
+sampling 657/670
+sampling 658/670
+sampling 659/670
+sampling 660/670
+sampling 661/670
+sampling 662/670
+sampling 663/670
+sampling 664/670
+sampling 665/670
+sampling 666/670
+sampling 667/670
+sampling 668/670
+sampling 669/670
+init COCO-EVAL scorer
+tokenization...
+PTBTokenizer tokenized 38623 tokens at 729.06 tokens per second.
+PTBTokenizer tokenized 592 tokens at 3546.36 tokens per second.
+setting up scorers...
+computing Bleu score...
+{'reflen': 500, 'guess': [493, 393, 293, 198], 'testlen': 493, 'correct': [408, 232, 123, 50]}
+ratio: 0.985999999998
+Bleu_1: 0.816
+Bleu_2: 0.689
+Bleu_3: 0.581
+Bleu_4: 0.470
+computing METEOR score...
+METEOR: 0.309
+computing Rouge score...
+ROUGE_L: 0.681
+computing CIDEr score...
+CIDEr: 0.600
+CIDEr: 0.600
+Bleu_4: 0.470
+Bleu_3: 0.581
+Bleu_2: 0.689
+Bleu_1: 0.816
+ROUGE_L: 0.681
+METEOR: 0.309
+tokenization...
+PTBTokenizer tokenized 248650 tokens at 219682.25 tokens per second.
+PTBTokenizer tokenized 4046 tokens at 39059.67 tokens per second.
+setting up scorers...
+computing Bleu score...
+{'reflen': 3396, 'guess': [3377, 2707, 2037, 1384], 'testlen': 3377, 'correct': [2767, 1527, 802, 302]}
+ratio: 0.994405182567
+Bleu_1: 0.815
+Bleu_2: 0.676
+Bleu_3: 0.564
+Bleu_4: 0.444
+computing METEOR score...
+METEOR: 0.310
+computing Rouge score...
+ROUGE_L: 0.676
+computing CIDEr score...
+CIDEr: 0.619
+CIDEr: 0.619
+Bleu_4: 0.444
+Bleu_3: 0.564
+Bleu_2: 0.676
+Bleu_1: 0.815
+ROUGE_L: 0.676
+METEOR: 0.310
+computing meteor/blue score used 641.1176 sec, blue score: 0.5, meteor score: 0.3
+save validation results to /home/guoyu/results/youtube/srnn_lstm_lstmrev_cost_06KL_res_meanpooling_usext_scale0_01/save_dir/
+Saving to /home/guoyu/results/youtube/srnn_lstm_lstmrev_cost_06KL_res_meanpooling_usext_scale0_01/save_dir/... Saving to /home/guoyu/results/youtube/srnn_lstm_lstmrev_cost_06KL_res_meanpooling_usext_scale0_01/save_dir/... Saving to /home/guoyu/results/youtube/srnn_lstm_lstmrev_cost_06KL_res_meanpooling_usext_scale0_01/save_dir/... Done
+Train  0.0 Valid  31.5559923708 Test  31.9868270415 best valid err so far 31.5559923708
+valid took 1507.19 sec
+Epoch  2 Update  2010 Train cost mean so far 29.6906776428 Train kl_divergence_tot mean so far 0.0129536502063  lower_bound mean so far is  4.13311052322 loss mean so far is  31.5952320099 
+ fetching data time spent (sec) 1.121  update time spent (sec) 1.677  
+ lrate is  0.0001  temp_KL is  0.652755916119
+Epoch  2 Update  2020 Train cost mean so far 26.1956977844 Train kl_divergence_tot mean so far 0.0322855189443  lower_bound mean so far is  3.87505984306 loss mean so far is  28.1178035736 
+ fetching data time spent (sec) 0.775  update time spent (sec) 1.758  
+ lrate is  0.0001  temp_KL is  0.65301835537
+Epoch  2 Update  2030 Train cost mean so far 26.9378089905 Train kl_divergence_tot mean so far 0.0156053844839  lower_bound mean so far is  3.98353075981 loss mean so far is  28.8541240692 
+ fetching data time spent (sec) 0.699  update time spent (sec) 1.479  
+ lrate is  0.0001  temp_KL is  0.653280854225
+Epoch  2 Update  2040 Train cost mean so far 22.0482120514 Train kl_divergence_tot mean so far 0.0137436278164  lower_bound mean so far is  3.6868789196 loss mean so far is  23.9680957794 
+ fetching data time spent (sec) 0.424  update time spent (sec) 1.337  
+ lrate is  0.0001  temp_KL is  0.653543293476
+Epoch  2 Update  2050 Train cost mean so far 25.1507568359 Train kl_divergence_tot mean so far 0.0218429490924  lower_bound mean so far is  4.07696485519 loss mean so far is  27.082359314 
+ fetching data time spent (sec) 0.547  update time spent (sec) 2.174  
+ lrate is  0.0001  temp_KL is  0.653805792332
+Epoch  2 Update  2060 Train cost mean so far 28.5556182861 Train kl_divergence_tot mean so far 0.0228111259639  lower_bound mean so far is  4.03494691849 loss mean so far is  30.4933757782 
+ fetching data time spent (sec) 0.294  update time spent (sec) 1.601  
+ lrate is  0.0001  temp_KL is  0.654068231583
+Epoch  2 Update  2070 Train cost mean so far 25.4936161041 Train kl_divergence_tot mean so far 0.0160652212799  lower_bound mean so far is  3.92890644073 loss mean so far is  27.4311408997 
+ fetching data time spent (sec) 0.232  update time spent (sec) 1.301  
+ lrate is  0.0001  temp_KL is  0.654330730438
+Epoch  2 Update  2080 Train cost mean so far 24.4423828125 Train kl_divergence_tot mean so far 0.112592428923  lower_bound mean so far is  4.01014137268 loss mean so far is  26.4482879639 
+ fetching data time spent (sec) 0.226  update time spent (sec) 1.603  
+ lrate is  0.0001  temp_KL is  0.654593169689
+Epoch  2 Update  2090 Train cost mean so far 28.2106342316 Train kl_divergence_tot mean so far 0.0116907637566  lower_bound mean so far is  4.03889036179 loss mean so far is  30.1557712555 
+ fetching data time spent (sec) 0.466  update time spent (sec) 1.905  
+ lrate is  0.0001  temp_KL is  0.654855668545
+Epoch  2 Update  2100 Train cost mean so far 26.8642787933 Train kl_divergence_tot mean so far 0.0135334692895  lower_bound mean so far is  3.84105324745 loss mean so far is  28.815574646 
+ fetching data time spent (sec) 0.301  update time spent (sec) 1.809  
+ lrate is  0.0001  temp_KL is  0.655118107796
+------------- sampling from train ----------
+Truth  0 :  a dog quickly runs up the stairs
+Sample ( 0 )  :  a dog is running
+Truth  1 :  actor and actress are riding on a motorbyke in a film shot
+Sample ( 1 )  :  a man is riding
+Truth  2 :  a dog chases a large ball around a field
+Sample ( 2 )  :  a dog is playing
+Truth  3 :  a kid is playing guitar
+Sample ( 3 )  :  a man is playing a guitar
+Truth  4 :  a cat is looking out a window
+Sample ( 4 )  :  a cat is looking
+Truth  5 :  a man is riding a motor scooter
+Sample ( 5 )  :  a man is riding
+Truth  6 :  man lying on the ground and shooting with the gun
+Sample ( 6 )  :  a man is shooting
+Truth  7 :  bulls are pulling an object
+Sample ( 7 )  :  a man is riding
+Truth  8 :  a man is preparing pancake
+Sample ( 8 )  :  a man is adding a pan
+Truth  9 :  a man cooking his kichen
+Sample ( 9 )  :  a woman is slicing a onion
+------------- sampling from valid ----------
+Truth  0 :  the person is playing the guitar
+Sample ( 0 )  :  a man is playing a guitar
+Truth  1 :  a man is cutting a potato in half
+Sample ( 1 )  :  a man is peeling a potato
+Truth  2 :  two girls are dancing
+Sample ( 2 )  :  a man is talking
+Truth  3 :  a woman is dancing on s stage
+Sample ( 3 )  :  a man is playing
+Truth  4 :  a woman is walking along a pavement
+Sample ( 4 )  :  a man are dancing
+Truth  5 :  a person puts potato wedges into a pot of boiling water
+Sample ( 5 )  :  a man is adding a pan
+Truth  6 :  the person is playing the keyboard
+Sample ( 6 )  :  a man is playing a hair
+Truth  7 :  a woman is walking down a street
+Sample ( 7 )  :  a man is dancing
+Truth  8 :  people getting into a swimming pool
+Sample ( 8 )  :  a man is riding
+Truth  9 :  someone is putting french fries into a pot
+Sample ( 9 )  :  a man is adding a pan
+Epoch  2 Update  2110 Train cost mean so far 27.3840370178 Train kl_divergence_tot mean so far 0.0147578753531  lower_bound mean so far is  4.1060590744 loss mean so far is  29.3411979675 
+ fetching data time spent (sec) 0.303  update time spent (sec) 1.93  
+ lrate is  0.0001  temp_KL is  0.655380606651
+Epoch  2 Update  2120 Train cost mean so far 25.509437561 Train kl_divergence_tot mean so far 0.0297539737076  lower_bound mean so far is  3.88579750061 loss mean so far is  27.4809360504 
+ fetching data time spent (sec) 0.277  update time spent (sec) 1.391  
+ lrate is  0.0001  temp_KL is  0.655643045902
+Epoch  2 Update  2130 Train cost mean so far 31.0014190674 Train kl_divergence_tot mean so far 0.0145922061056  lower_bound mean so far is  4.26882648468 loss mean so far is  32.9672164917 
+ fetching data time spent (sec) 0.146  update time spent (sec) 1.714  
+ lrate is  0.0001  temp_KL is  0.655905485153
+Epoch  2 Update  2140 Train cost mean so far 33.3131752014 Train kl_divergence_tot mean so far 0.0393807813525  lower_bound mean so far is  4.238093853 loss mean so far is  35.3008728027 
+ fetching data time spent (sec) 0.364  update time spent (sec) 2.494  
+ lrate is  0.0001  temp_KL is  0.656167984009
+Epoch  2 Update  2150 Train cost mean so far 29.0928268433 Train kl_divergence_tot mean so far 0.0137061178684  lower_bound mean so far is  4.15318584442 loss mean so far is  31.0694046021 
+ fetching data time spent (sec) 0.295  update time spent (sec) 1.556  
+ lrate is  0.0001  temp_KL is  0.65643042326
+Epoch  2 Update  2160 Train cost mean so far 23.2276382446 Train kl_divergence_tot mean so far 0.0116215962917  lower_bound mean so far is  3.78734445572 loss mean so far is  25.2077960968 
+ fetching data time spent (sec) 0.184  update time spent (sec) 1.31  
+ lrate is  0.0001  temp_KL is  0.656692922115
+Epoch  2 Update  2170 Train cost mean so far 29.1911869049 Train kl_divergence_tot mean so far 0.0139875374734  lower_bound mean so far is  4.01365327835 loss mean so far is  31.1781768799 
+ fetching data time spent (sec) 0.295  update time spent (sec) 1.826  
+ lrate is  0.0001  temp_KL is  0.656955361366
+Epoch  2 Update  2180 Train cost mean so far 29.4494609833 Train kl_divergence_tot mean so far 0.0121732000262  lower_bound mean so far is  4.01098155975 loss mean so far is  31.4403057098 
+ fetching data time spent (sec) 0.29  update time spent (sec) 1.666  
+ lrate is  0.0001  temp_KL is  0.657217860222
+Epoch  2 Update  2190 Train cost mean so far 27.8615074158 Train kl_divergence_tot mean so far 0.011040202342  lower_bound mean so far is  4.64347600937 loss mean so far is  29.8569278717 
+ fetching data time spent (sec) 0.3  update time spent (sec) 1.37  
+ lrate is  0.0001  temp_KL is  0.657480299473
+Epoch  2 Update  2200 Train cost mean so far 29.4732475281 Train kl_divergence_tot mean so far 0.0116580352187  lower_bound mean so far is  4.47980546951 loss mean so far is  31.4751186371 
+ fetching data time spent (sec) 0.759  update time spent (sec) 3.178  
+ lrate is  0.0001  temp_KL is  0.657742798328
+------------- sampling from train ----------
+Truth  0 :  a cat is licking a piece of candy
+Sample ( 0 )  :  a cat is licking
+Truth  1 :  a man is saying something
+Sample ( 1 )  :  a woman is drinking
+Truth  2 :  a group is standing in the airport
+Sample ( 2 )  :  a group is dancing
+Truth  3 :  a guy pulls a bottle of juice from the refrigerator
+Sample ( 3 )  :  a man is playing
+Truth  4 :  the persons are participate in the race
+Sample ( 4 )  :  a group is skating
+Truth  5 :  johor chingay
+Sample ( 5 )  :  people are people
+Truth  6 :  a dolphin is jumping out from water
+Sample ( 6 )  :  a dolphin is jumping
+Truth  7 :  a person is kneading some dough
+Sample ( 7 )  :  a man is kneading dough
+Truth  8 :  a carrot is being chopped
+Sample ( 8 )  :  a woman is slicing
+Truth  9 :  a woman is doing exercises
+Sample ( 9 )  :  a woman is doing
+------------- sampling from valid ----------
+Truth  0 :  a hamster is playing with the vacuum cleaner
+Sample ( 0 )  :  a kitten is playing
+Truth  1 :  rat is looking nice
+Sample ( 1 )  :  a baby is playing
+Truth  2 :  a reverent is speaking
+Sample ( 2 )  :  a man is talking
+Truth  3 :  a woman is playing a flute
+Sample ( 3 )  :  a girl is playing
+Truth  4 :  the man is playing the guitar
+Sample ( 4 )  :  a man is playing guitar
+Truth  5 :  a chef is peeling the stalk of a broccoli
+Sample ( 5 )  :  a man is slicing some
+Truth  6 :  a man sits at a table and consumes lots of food
+Sample ( 6 )  :  a man
+Truth  7 :  a man is dancing
+Sample ( 7 )  :  a man is dancing
+Truth  8 :  someone is playing with a bunny
+Sample ( 8 )  :  a kitten is playing
+Truth  9 :  two boys playing cricket
+Sample ( 9 )  :  a man is doing on
+Epoch  2 Update  2210 Train cost mean so far 26.6994075775 Train kl_divergence_tot mean so far 0.0651667937636  lower_bound mean so far is  4.12212276459 loss mean so far is  28.7426795959 
+ fetching data time spent (sec) 0.079  update time spent (sec) 2.535  
+ lrate is  0.0001  temp_KL is  0.658005237579
+Epoch  2 Update  2220 Train cost mean so far 27.4170608521 Train kl_divergence_tot mean so far 0.0138519592583  lower_bound mean so far is  4.27358627319 loss mean so far is  29.4315567017 
+ fetching data time spent (sec) 0.638  update time spent (sec) 2.483  
+ lrate is  0.0001  temp_KL is  0.658267736435
+Epoch  2 Update  2230 Train cost mean so far 22.9829940796 Train kl_divergence_tot mean so far 0.0157753042877  lower_bound mean so far is  3.94905853271 loss mean so far is  25.0036582947 
+ fetching data time spent (sec) 0.442  update time spent (sec) 2.238  
+ lrate is  0.0001  temp_KL is  0.658530175686
+Epoch  2 Update  2240 Train cost mean so far 27.4765872955 Train kl_divergence_tot mean so far 0.0122429728508  lower_bound mean so far is  4.06514692307 loss mean so far is  29.500207901 
+ fetching data time spent (sec) 0.496  update time spent (sec) 2.156  
+ lrate is  0.0001  temp_KL is  0.658792674541
+Epoch  2 Update  2250 Train cost mean so far 26.3444137573 Train kl_divergence_tot mean so far 0.0311803631485  lower_bound mean so far is  4.09455013275 loss mean so far is  28.3861064911 
+ fetching data time spent (sec) 0.566  update time spent (sec) 2.292  
+ lrate is  0.0001  temp_KL is  0.659055113792
+Epoch  2 Update  2260 Train cost mean so far 28.1589565277 Train kl_divergence_tot mean so far 0.0122924111784  lower_bound mean so far is  4.03022623062 loss mean so far is  30.1927928925 
+ fetching data time spent (sec) 0.256  update time spent (sec) 1.632  
+ lrate is  0.0001  temp_KL is  0.659317612648
+Epoch  2 Update  2270 Train cost mean so far 25.3016357422 Train kl_divergence_tot mean so far 0.0167476106435  lower_bound mean so far is  3.87951517105 loss mean so far is  27.3434486389 
+ fetching data time spent (sec) 0.221  update time spent (sec) 1.355  
+ lrate is  0.0001  temp_KL is  0.659580051899
+Epoch  2 Update  2280 Train cost mean so far 24.3818759918 Train kl_divergence_tot mean so far 0.0136477109045  lower_bound mean so far is  3.97962355614 loss mean so far is  26.4277954102 
+ fetching data time spent (sec) 0.336  update time spent (sec) 1.904  
+ lrate is  0.0001  temp_KL is  0.65984249115
+This epoch has seen 48780 samples, train cost 28.64
+Epoch  3
+Epoch  3 Update  2290 Train cost mean so far 33.1487426758 Train kl_divergence_tot mean so far 0.0225876960903  lower_bound mean so far is  4.47135782242 loss mean so far is  35.205329895 
+ fetching data time spent (sec) 0.407  update time spent (sec) 1.818  
+ lrate is  0.0001  temp_KL is  0.660104990005
+Epoch  3 Update  2300 Train cost mean so far 23.2031745911 Train kl_divergence_tot mean so far 0.0137409009039  lower_bound mean so far is  3.78348135948 loss mean so far is  25.260093689 
+ fetching data time spent (sec) 0.202  update time spent (sec) 1.311  
+ lrate is  0.0001  temp_KL is  0.660367429256
+------------- sampling from train ----------
+Truth  0 :  a dog recognizing a known person and wagging tail
+Sample ( 0 )  :  a dog is barking
+Truth  1 :  the kitten played the person 's finger
+Sample ( 1 )  :  a kitten is playing
+Truth  2 :  a elite deer is jumping over the fence
+Sample ( 2 )  :  a deer is running
+Truth  3 :  a woman plays a flute
+Sample ( 3 )  :  a woman is playing a flute
+Truth  4 :  a man is being interviewed
+Sample ( 4 )  :  a man is talking
+Truth  5 :  a person is peeling off skin of a vegetable
+Sample ( 5 )  :  a man is peeling a potato
+Truth  6 :  motor bikes are racing in motogp
+Sample ( 6 )  :  a man is racing
+Truth  7 :  a cute cat jumps playfully
+Sample ( 7 )  :  a cat is playing
+Truth  8 :  a man is lifting weights in a garage
+Sample ( 8 )  :  a man is lifting weights
+Truth  9 :  a man is playing a guitar
+Sample ( 9 )  :  a man is playing a guitar
+------------- sampling from valid ----------
+Truth  0 :  a cat is walking on it 's front legs
+Sample ( 0 )  :  a dog is running
+Truth  1 :  people are jumping in the water
+Sample ( 1 )  :  a man is jumping
+Truth  2 :  a man pours oil on tomato slices
+Sample ( 2 )  :  a person is pouring a dish
+Truth  3 :  a cat is playing
+Sample ( 3 )  :  a cat is playing
+Truth  4 :  two black men are walking down the isle near the dance floor in a bar
+Sample ( 4 )  :  men are people
+Truth  5 :  a man is cutting a carrot
+Sample ( 5 )  :  a man is cutting
+Truth  6 :  a little boy is playing guitar on a stage
+Sample ( 6 )  :  a man is playing a man
+Truth  7 :  someone is working on computer
+Sample ( 7 )  :  a person is flying
+Truth  8 :  a dog eating a watermelon
+Sample ( 8 )  :  a dog is playing
+Truth  9 :  the target got more bullet holes in it
+Sample ( 9 )  :  a man is walking
+Epoch  3 Update  2310 Train cost mean so far 25.7305030823 Train kl_divergence_tot mean so far 0.0139150414616  lower_bound mean so far is  3.93819880486 loss mean so far is  27.7914981842 
+ fetching data time spent (sec) 0.261  update time spent (sec) 1.693  
+ lrate is  0.0001  temp_KL is  0.660629928112
+Epoch  3 Update  2320 Train cost mean so far 28.4154758453 Train kl_divergence_tot mean so far 0.0148816509172  lower_bound mean so far is  4.35010147095 loss mean so far is  30.4829769135 
+ fetching data time spent (sec) 0.603  update time spent (sec) 3.085  
+ lrate is  0.0001  temp_KL is  0.660892367363
+Epoch  3 Update  2330 Train cost mean so far 28.2380275726 Train kl_divergence_tot mean so far 0.0123683968559  lower_bound mean so far is  4.03593444824 loss mean so far is  30.3083629608 
+ fetching data time spent (sec) 0.351  update time spent (sec) 1.912  
+ lrate is  0.0001  temp_KL is  0.661154866219
+Epoch  3 Update  2340 Train cost mean so far 27.8892288208 Train kl_divergence_tot mean so far 0.0127966608852  lower_bound mean so far is  4.18197488785 loss mean so far is  29.9647731781 
+ fetching data time spent (sec) 0.281  update time spent (sec) 1.459  
+ lrate is  0.0001  temp_KL is  0.66141730547
+Epoch  3 Update  2350 Train cost mean so far 26.2152671814 Train kl_divergence_tot mean so far 0.0127517236397  lower_bound mean so far is  4.09123134613 loss mean so far is  28.2955665588 
+ fetching data time spent (sec) 0.317  update time spent (sec) 1.51  
+ lrate is  0.0001  temp_KL is  0.661679804325
+Epoch  3 Update  2360 Train cost mean so far 26.0811462402 Train kl_divergence_tot mean so far 0.0141198625788  lower_bound mean so far is  3.90595316887 loss mean so far is  28.1676464081 
+ fetching data time spent (sec) 0.287  update time spent (sec) 1.468  
+ lrate is  0.0001  temp_KL is  0.661942243576
+Epoch  3 Update  2370 Train cost mean so far 24.8798084259 Train kl_divergence_tot mean so far 0.0236536897719  lower_bound mean so far is  3.868891716 loss mean so far is  26.9775428772 
+ fetching data time spent (sec) 0.186  update time spent (sec) 1.377  
+ lrate is  0.0001  temp_KL is  0.662204742432
+Epoch  3 Update  2380 Train cost mean so far 29.5035686493 Train kl_divergence_tot mean so far 0.0121720656753  lower_bound mean so far is  3.95415878296 loss mean so far is  31.5987567902 
+ fetching data time spent (sec) 0.294  update time spent (sec) 1.665  
+ lrate is  0.0001  temp_KL is  0.662467181683
+Epoch  3 Update  2390 Train cost mean so far 23.8979682922 Train kl_divergence_tot mean so far 0.0230540707707  lower_bound mean so far is  3.67441391945 loss mean so far is  26.0051116943 
+ fetching data time spent (sec) 0.194  update time spent (sec) 1.362  
+ lrate is  0.0001  temp_KL is  0.662729680538
+Epoch  3 Update  2400 Train cost mean so far 26.4472084045 Train kl_divergence_tot mean so far 0.0158615261316  lower_bound mean so far is  3.9964568615 loss mean so far is  28.5549411774 
+ fetching data time spent (sec) 0.291  update time spent (sec) 2.057  
+ lrate is  0.0001  temp_KL is  0.662992119789
+------------- sampling from train ----------
+Truth  0 :  a girl making chicken
+Sample ( 0 )  :  a woman is making chicken
+Truth  1 :  someone cooked broccoli in hot water
+Sample ( 1 )  :  a person is cooking broccoli
+Truth  2 :  a man is putting flour on chicken
+Sample ( 2 )  :  a man is putting the chicken
+Truth  3 :  a king and his army is riding the horse
+Sample ( 3 )  :  a man is riding the horse
+Truth  4 :  the guy is riding on a bike with the front wheel elevated
+Sample ( 4 )  :  a man is riding the bike
+Truth  5 :  a man throws a basketball into a hoop from far away
+Sample ( 5 )  :  a man is jumping
+Truth  6 :  a small dog barks and wags his tail
+Sample ( 6 )  :  a dog is barking
+Truth  7 :  someone is cutting a couple of shrimp into small pieces and putting the pieces into a salad
+Sample ( 7 )  :  a woman is slicing the shrimp
+Truth  8 :  the dog is driving the car
+Sample ( 8 )  :  a dog is driving the car
+Truth  9 :  a person pealing a potato
+Sample ( 9 )  :  a person is peeling the potato
+------------- sampling from valid ----------
+Truth  0 :  the person is playing the guitar
+Sample ( 0 )  :  a man is playing the guitar
+Truth  1 :  a man is cutting a potato in half
+Sample ( 1 )  :  a woman is peeling the potato
+Truth  2 :  two girls are dancing
+Sample ( 2 )  :  a man is dancing
+Truth  3 :  a woman is dancing on s stage
+Sample ( 3 )  :  a man is playing on the stage
+Truth  4 :  a woman is walking along a pavement
+Sample ( 4 )  :  two women are dancing
+Truth  5 :  a person puts potato wedges into a pot of boiling water
+Sample ( 5 )  :  a person is making the pan
+Truth  6 :  the person is playing the keyboard
+Sample ( 6 )  :  a man is doing the hair
+Truth  7 :  a woman is walking down a street
+Sample ( 7 )  :  two men are dancing
+Truth  8 :  people getting into a swimming pool
+Sample ( 8 )  :  a man is running
+Truth  9 :  someone is putting french fries into a pot
+Sample ( 9 )  :  a person is putting a pan
+Epoch  3 Update  2410 Train cost mean so far 23.2218074799 Train kl_divergence_tot mean so far 0.0133402943611  lower_bound mean so far is  3.57737779617 loss mean so far is  25.3321094513 
+ fetching data time spent (sec) 0.241  update time spent (sec) 1.246  
+ lrate is  0.0001  temp_KL is  0.663254618645
+Epoch  3 Update  2420 Train cost mean so far 25.8233146667 Train kl_divergence_tot mean so far 0.0107184732333  lower_bound mean so far is  4.03419733047 loss mean so far is  27.9379177094 
+ fetching data time spent (sec) 0.612  update time spent (sec) 1.916  
+ lrate is  0.0001  temp_KL is  0.663517057896
