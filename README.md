@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## From Deterministic to Generative: Multi-Modal Stochastic RNNs for Video Captioning
 ### Run the code
 1. Train a model: python train_model.py </br>
@@ -8,3 +9,6 @@
 3. The definition of our Stochastic layer is written in: stochastic_layer.py </br>
 4. Before running our codes, please make sure you installed the default deep learning libaries/framework, such as theano and lasagne. </br> 
 
+=======
+# MSRNN
+>>>>>>> 5e76ee72a002240b1e871a57fc685b3a45076321
