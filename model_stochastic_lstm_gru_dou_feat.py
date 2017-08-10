@@ -792,18 +792,6 @@ class Attention(object):
                         np.savez(
                             save_model_dir+'model_best_blue_or_meteor.npz',
                             history_errs=history_errs, **best_p)
-                    if len(history_errs) > 1 and test_B4 > np.array(history_errs)[:-1,18].max():
-                        print 'Saving to %s...'%save_model_dir,
-                        best_p_B4 = unzip(tparams)
-                        np.savez(
-                            save_model_dir+'model_best_test_blue.npz',
-                            history_errs=history_errs, **best_p_B4)                    
-                    if len(history_errs) > 1 and test_meteor > np.array(history_errs)[:-1,19].max():
-                        print 'Saving to %s...'%save_model_dir,
-                        best_p_M = unzip(tparams)
-                        np.savez(
-                            save_model_dir+'model_best_test_meteor.npz',
-                            history_errs=history_errs, **best_p_M)  
                     if len(history_errs) > 1 and valid_err < np.array(history_errs)[:-1,6].min():
                         best_p = unzip(tparams)
                         bad_counter = 0
