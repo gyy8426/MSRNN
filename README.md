@@ -7,6 +7,6 @@
 1. Please make sure the path is correct, when you run the code. </br>
 2. The structures of our trained models are listed in: model_\*.py </br>
 3. The definition of our Stochastic layer is written in: stochastic_layer.py </br>
-4. Before running our codes, please make sure you installed the default deep learning libaries/framework, such as theano and lasagne. </br> 
+4. Before running our codes, please make sure you installed the default deep learning libaries/framework, such as theano, lasagne,  parmesa and so on. </br> 
 
 =======
