@@ -596,7 +596,7 @@ class Attention(object):
             train_LBs = []
             grads_record = []
             print 'Epoch ', eidx
-            lrate=decay_learning_rate.get_decay(eidx)
+            lrate = model_options['lrate'] * decay_learning_rate.get_decay(eidx)
             if (lrate >= model_options['lrate']):
                 lrate = model_options['lrate']
             for idx in self.engine.kf_train:
